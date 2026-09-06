@@ -1,6 +1,6 @@
 # プロジェクト概要 — dev_vocabulary_quiz
 
-> **企画書（正本）**: [doc/spec/企画書.md](../spec/企画書.md) · [doc/spec/README.md](../spec/README.md)
+> **要件定義（正本）**: [doc/spec/要件定義書.md](../spec/要件定義書.md) · **企画書**: [doc/spec/企画書.md](../spec/企画書.md) · [doc/spec/README.md](../spec/README.md)
 
 ## 目的
 
