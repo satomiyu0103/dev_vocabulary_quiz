@@ -102,6 +102,14 @@
     .result.ok { color: var(--ok); }
     .result.ng { color: var(--bad); }
     #q-label { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.5rem; }
+    #q-term {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+    .direction-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+    button.direction.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    button.direction:hover:not(.active) { background: var(--accent-tint); }
     #question-panel strong { font-size: 1.1rem; }
     #q-general, #q-prog {
       font-size: 1.05rem;
@@ -160,11 +168,17 @@
         <button type="button" class="mode" data-mode="anti">単体の汎用名</button>
         <button type="button" class="mode" data-mode="lib">ライブラリ・API</button>
       </div>
+      <div class="direction-bar" id="directions">
+        <button type="button" class="direction active" data-direction="ja2en">日→英</button>
+        <button type="button" class="direction" data-direction="en2ja">英→日</button>
+        <button type="button" class="direction" data-direction="mixed">ミックス</button>
+      </div>
       <p class="stats" id="stats"></p>
 
       <div id="question-panel" class="panel">
         <p id="q-label"></p>
-        <p><strong>次の説明に合う英単語はどれ？</strong></p>
+        <p id="q-prompt"><strong>次の説明に合う英単語はどれ？</strong></p>
+        <p id="q-term" class="hidden"></p>
         <p id="q-general"></p>
         <p id="q-prog"></p>
         <div class="choices" id="choices"></div>
@@ -185,17 +199,40 @@
       lib: "ライブラリ・API",
     };
 
+    const DIRECTION_LABELS = {
+      ja2en: "日→英",
+      en2ja: "英→日",
+      mixed: "ミックス",
+    };
+
     let allCards = [];
     let pool = [];
     let current = null;
     let choices = [];
     let correctIndex = -1;
     let mode = "basic";
+    let questionDirection = "ja2en";
+    let effectiveDirection = "ja2en";
+    let meaningKind = "general";
     let questionNum = 0;
     let usedIds = new Set();
     let answered = false;
 
     const $ = (id) => document.getElementById(id);
+
+    function getMeaningText(card, kind) {
+      if (kind === "general") {
+        return card.meaning_general_ja || "—";
+      }
+      return card.meaning_programming_ja || "—";
+    }
+
+    function resolveEffectiveDirection() {
+      if (questionDirection === "mixed") {
+        return Math.random() < 0.5 ? "ja2en" : "en2ja";
+      }
+      return questionDirection;
+    }
 
     function filterCards(cards) {
       if (mode === "basic") {
@@ -232,6 +269,34 @@
       return out.slice(0, 3);
     }
 
+    function pickDistractorsJa(card, candidates, kind) {
+      const correctText = getMeaningText(card, kind);
+      const texts = new Set([correctText]);
+      const out = [];
+      const relatedTerms = [
+        ...(card.confusable_with || []).map((x) => x.term),
+        ...(card.related_terms || []),
+      ];
+      for (const term of relatedTerms) {
+        const relatedCard = candidates.find((c) => c.term === term);
+        if (!relatedCard) continue;
+        const text = getMeaningText(relatedCard, kind);
+        if (!text || text === "—" || texts.has(text)) continue;
+        out.push(text);
+        texts.add(text);
+        if (out.length >= 3) break;
+      }
+      for (const c of shuffle(candidates)) {
+        if (out.length >= 3) break;
+        const text = getMeaningText(c, kind);
+        if (!text || text === "—" || texts.has(text)) continue;
+        out.push(text);
+        texts.add(text);
+      }
+      while (out.length < 3) out.push("—");
+      return out.slice(0, 3);
+    }
+
     function shuffle(arr) {
       const a = [...arr];
       for (let i = a.length - 1; i > 0; i--) {
@@ -260,22 +325,51 @@
       }
       current = pool[Math.floor(Math.random() * pool.length)];
       questionNum += 1;
+      effectiveDirection = resolveEffectiveDirection();
       const candidates = filterCards(allCards);
-      const distractors = pickDistractors(current, candidates);
-      choices = shuffle([current.term, ...distractors]);
-      correctIndex = choices.indexOf(current.term);
 
-      $("q-label").textContent = `【問題 ${questionNum}】${MODE_LABELS[mode]}`;
-      $("q-general").textContent = `■ 日常の意味: ${current.meaning_general_ja || "—"}`;
-      $("q-prog").textContent = `■ プログラミングでの意味: ${current.meaning_programming_ja || "—"}`;
+      const qPrompt = $("q-prompt");
+      const qTerm = $("q-term");
+      const qGeneral = $("q-general");
+      const qProg = $("q-prog");
+
+      if (effectiveDirection === "ja2en") {
+        qPrompt.innerHTML = "<strong>次の説明に合う英単語はどれ？</strong>";
+        qTerm.classList.add("hidden");
+        qGeneral.classList.remove("hidden");
+        qProg.classList.remove("hidden");
+        qGeneral.textContent = `■ 日常の意味: ${current.meaning_general_ja || "—"}`;
+        qProg.textContent = `■ プログラミングでの意味: ${current.meaning_programming_ja || "—"}`;
+        const distractors = pickDistractors(current, candidates);
+        choices = shuffle([current.term, ...distractors]);
+        correctIndex = choices.indexOf(current.term);
+      } else {
+        meaningKind = Math.random() < 0.5 ? "general" : "programming";
+        const kindLabel = meaningKind === "general" ? "日常の意味" : "プログラミングでの意味";
+        qPrompt.innerHTML = `<strong>この単語の意味として正しいのはどれ？</strong>（${kindLabel}）`;
+        qTerm.textContent = current.term;
+        qTerm.classList.remove("hidden");
+        qGeneral.classList.add("hidden");
+        qProg.classList.add("hidden");
+        const correctText = getMeaningText(current, meaningKind);
+        const distractors = pickDistractorsJa(current, candidates, meaningKind);
+        choices = shuffle([correctText, ...distractors]);
+        correctIndex = choices.indexOf(correctText);
+      }
+
+      const directionNote =
+        questionDirection === "mixed"
+          ? ` · この問題: ${DIRECTION_LABELS[effectiveDirection]}`
+          : "";
+      $("q-label").textContent = `【問題 ${questionNum}】${MODE_LABELS[mode]}${directionNote}`;
 
       const box = $("choices");
       box.innerHTML = "";
-      choices.forEach((term, i) => {
+      choices.forEach((choiceText, i) => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "choice";
-        btn.textContent = `${"ABCD"[i]}) ${term}`;
+        btn.textContent = `${"ABCD"[i]}) ${choiceText}`;
         btn.addEventListener("click", () => answer(i, btn));
         box.appendChild(btn);
       });
@@ -327,7 +421,12 @@
       $("question-panel").classList.add("hidden");
       $("feedback-panel").classList.remove("hidden");
       const line = $("result-line");
-      line.textContent = ok ? "【結果】正解！" : `【結果】不正解（正解は ${"ABCD"[correctIndex]}）`;
+      if (ok) {
+        line.textContent = "【結果】正解！";
+      } else {
+        const correctLabel = `${"ABCD"[correctIndex]}) ${choices[correctIndex]}`;
+        line.textContent = `【結果】不正解（正解は ${correctLabel}）`;
+      }
       line.className = "result " + (ok ? "ok" : "ng");
 
       const exampleRows = (current.examples_general || []).slice(0, 2);
@@ -365,7 +464,8 @@
 
     function updateStats() {
       const total = filterCards(allCards).length;
-      $("stats").textContent = `モード: ${MODE_LABELS[mode]} · 出題済み ${usedIds.size} / ${total} 語`;
+      $("stats").textContent =
+        `モード: ${MODE_LABELS[mode]} · 方向: ${DIRECTION_LABELS[questionDirection]} · 出題済み ${usedIds.size} / ${total} 語`;
     }
 
     function startQuiz(cards) {
@@ -409,6 +509,17 @@
       document.querySelectorAll(".mode").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       mode = btn.dataset.mode;
+      usedIds.clear();
+      questionNum = 0;
+      nextQuestion();
+    });
+
+    $("directions").addEventListener("click", (e) => {
+      const btn = e.target.closest(".direction");
+      if (!btn) return;
+      document.querySelectorAll(".direction").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      questionDirection = btn.dataset.direction;
       usedIds.clear();
       questionNum = 0;
       nextQuestion();
