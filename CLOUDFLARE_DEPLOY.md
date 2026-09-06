@@ -1,6 +1,6 @@
 # Cloudflare Pages デプロイ手順
 
-企画・受け入れ基準: [doc/spec/企画書.md](doc/spec/企画書.md)（§5.4）
+企画・受け入れ基準: [doc/spec/テスト設計書.md](doc/spec/テスト設計書.md) §9
 
 1. GitHub にリポジトリを push
 2. Cloudflare Dashboard → Workers & Pages → Connect to Git
