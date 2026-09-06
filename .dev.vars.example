@@ -1,0 +1,2 @@
+# Cloudflare Wrangler / Pages ローカル開発用の秘密情報サンプル。
+# 実際の値は .dev.vars にコピーして使う（.dev.vars は Git に含めない）。
