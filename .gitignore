@@ -54,7 +54,7 @@ ehthumbs.db
 .cache/
 *.bak
 
-# --- Cursor / local agent ops (public GitHub には不要) ---
+# --- Cursor / local agent ops (public GitHub には push しない) ---
 .cursor/
 AGENTS.md
 TEMPLATE_SETUP.md

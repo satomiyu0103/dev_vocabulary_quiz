@@ -27,7 +27,7 @@
 | Cloudflare ローカル | `.wrangler/` | Wrangler のローカル状態 |
 | Playwright | `.playwright-cli/`, `*.auth-state.json` | ブラウザ自動化の認証状態 |
 | 実行環境 | `__pycache__/`, `.venv/`, `node_modules/` | 検証スクリプト・将来ツールの生成物 |
-| Cursor / ローカル運用 | `.cursor/`, `AGENTS.md`, `doc/ai/` | 公開 GitHub（Cloudflare Pages）には不要。ローカル開発のみ |
+| Cursor / ローカル運用 | `.cursor/`, `AGENTS.md`, `doc/ai/` 等 | 公開 GitHub（Cloudflare Pages）には **push しない**。詳細: [public-github-boundary.md](public-github-boundary.md) |
 
 ## 検証スクリプト
 
