@@ -19,12 +19,14 @@ REQUIRED_FILES = [
     ".cursor/rules/junior_friendly_explanations.mdc",
     ".cursor/skills/known-error-entry/SKILL.md",
     ".cursor/skills/web-local-preview/SKILL.md",
+    ".cursor/skills/web-implementation/SKILL.md",
     ".cursor/skills/agent-session-record/SKILL.md",
     ".cursor/doc/memory_stream.md",
     "doc/agent/project-overview.md",
     "doc/agent/security-and-privacy.md",
     "doc/agent/agent-behavior.md",
     "doc/ai/guidelines/試験実装のエラー.md",
+    "doc/reference/cheatsheets/git.md",
     "CLOUDFLARE_DEPLOY.md",
 ]
 
