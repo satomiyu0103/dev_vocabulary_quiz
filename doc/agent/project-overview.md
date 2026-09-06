@@ -1,6 +1,6 @@
 # プロジェクト概要 — dev_vocabulary_quiz
 
-> **要件定義**: [doc/spec/要件定義書.md](../spec/要件定義書.md) · **設計**: [設計書_基礎](../spec/設計書_基礎.md) / [詳細](../spec/設計書_詳細.md) · **テスト**: [テスト設計書](../spec/テスト設計書.md) · [doc/spec/README.md](../spec/README.md)
+> **要件定義**: [doc/spec/要件定義書.md](../spec/要件定義書.md) · **設計**: [設計書_基礎](../spec/設計書_基礎.md) / [詳細](../spec/設計書_詳細.md) · **デザイン**: [デザイン書](../spec/デザイン書.md) · **テスト**: [テスト設計書](../spec/テスト設計書.md) · [doc/spec/README.md](../spec/README.md)
 
 ## 目的
 

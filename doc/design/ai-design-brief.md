@@ -1,7 +1,8 @@
 # AIデザイン依頼手順書（Web / アプリ / パワポ）
 
 > **出典**: [AIでおしゃれな画面を作るためのデザインシステムを学ぼう！](https://qiita.com/yusuke_ando_vj/items/dd17a285217a15841a3a)（Yusuke Ando / VISIONARY JAPAN、2026-06）
-> **正本アーティファクト**: [`DESIGN.md`](../../DESIGN.md)（プロジェクトルート）
+> **正本アーティファクト**: [`DESIGN.md`](../../DESIGN.md)（プロジェクトルート・テンプレ雛形）  
+> **本プロジェクトの充填版**: [`doc/spec/デザイン書.md`](../spec/デザイン書.md)
 > **上位正本**（Documents 秘書層）: `doc/life/playbook/ai-design-brief.md` — `sync-design-pack.ps1` で同期
 > **関連 skill**: `design-md`, `awesome-design-md-jp`（`~/.agents/skills/`）、`playwright-cli`（グローバル skill。Documents ワークスペースでは `.cursor/skills/playwright-cli/`）
 
