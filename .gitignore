@@ -53,3 +53,11 @@ ehthumbs.db
 *.log
 .cache/
 *.bak
+
+# --- Cursor / local agent ops (public GitHub には不要) ---
+.cursor/
+AGENTS.md
+TEMPLATE_SETUP.md
+doc/ai/
+doc/reference/
+doc/初心者ガイド.md
