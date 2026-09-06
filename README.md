@@ -1,22 +1,23 @@
-# web-static-template
+# dev_vocabulary_quiz
 
-Cloudflare Pages 向けの静的 Web サイトテンプレ（**lite+** — `.cursor` 運用基盤付き）。
+開発語彙（schema v2）の **4 択クイズ**。Cloudflare Pages で公開する静的 Web アプリ。
 
-## 新規プロジェクト
+## ドキュメント
 
-1. `Development/Web_apps/<project_name>/` を作成
-2. 本テンプレから `AGENTS.md` `README.md` `public/` をコピー
-3. `git init` → commit
-4. GitHub push → Cloudflare Pages（出力 `public`、ビルドなし）
-5. `dev-projects-manifest.json` に登録（`deploy.url` を記録）
+| 文書 | 内容 |
+|---|---|
+| [doc/spec/企画書.md](doc/spec/企画書.md) | **企画書**（背景・要件・設計・アーキテクチャ・テスト） |
+| [doc/spec/README.md](doc/spec/README.md) | spec 索引 |
+| [doc/agent/project-overview.md](doc/agent/project-overview.md) | プロジェクト概要 |
+| [CLOUDFLARE_DEPLOY.md](CLOUDFLARE_DEPLOY.md) | デプロイ手順 |
 
-## 配布（Documents 同居時）
+Phase 2 以降の実装は **本リポジトリ内**で行う（[企画書 §6](doc/spec/企画書.md#6-開発フェーズ)）。
+
+## ローカル確認
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/scripts/sync-dev-template.ps1 publish --template web
+cd public
+python -m http.server 8080
 ```
 
-## 関連
-
-- [development-layout.md](../../doc/life/playbook/development-layout.md)
-- [dev_task_entry_web.mdc](../../.cursor/rules/dev_task_entry_web.mdc)
+→ http://localhost:8080/
