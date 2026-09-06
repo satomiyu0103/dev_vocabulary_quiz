@@ -6,14 +6,14 @@
   <title>開発語彙 4択クイズ</title>
   <style>
     :root {
-      --bg: #f6f7f9;
+      --bg: #eef1f5;
       --card: #fff;
-      --text: #1a1a1a;
-      --muted: #555;
-      --ok: #0d7a4a;
-      --bad: #b42318;
-      --accent: #2563eb;
-      --border: #dde1e6;
+      --text: #0f1419;
+      --muted: #3d4a56;
+      --ok: #0a6b40;
+      --bad: #9f1f16;
+      --accent: #1d4ed8;
+      --border: #c5cdd6;
     }
     * { box-sizing: border-box; }
     body {
@@ -22,11 +22,30 @@
       color: var(--text);
       margin: 0;
       padding: 1rem;
-      line-height: 1.6;
+      font-size: 1.0625rem;
+      line-height: 1.65;
     }
     main { max-width: 640px; margin: 0 auto; }
-    h1 { font-size: 1.25rem; margin: 0 0 0.5rem; }
-    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .site-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    h1 { font-size: 1.5rem; font-weight: 700; margin: 0; line-height: 1.3; }
+    .sub { color: var(--muted); font-size: 1rem; margin: 0.35rem 0 1rem; }
+    .top-link {
+      flex-shrink: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+    }
+    .top-link:hover { background: #e8eefc; }
+    .top-link.hidden { display: none; }
     .panel {
       background: var(--card);
       border: 1px solid var(--border);
@@ -62,13 +81,40 @@
     .choice:hover:not(:disabled) { background: #eef4ff; }
     .choice.correct { border-color: var(--ok); background: #ecfdf3; }
     .choice.wrong { border-color: var(--bad); background: #fef3f2; }
-    .result { font-weight: 700; font-size: 1.1rem; }
+    .result { font-weight: 800; font-size: 1.25rem; }
     .result.ok { color: var(--ok); }
     .result.ng { color: var(--bad); }
-    .explain dt { font-weight: 600; margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; }
-    .explain dd { margin: 0.15rem 0 0; }
-    .examples li { margin: 0.25rem 0; }
-    code { background: #f0f2f5; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+    #q-label { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.5rem; }
+    #question-panel strong { font-size: 1.1rem; }
+    #q-general, #q-prog {
+      font-size: 1.05rem;
+      margin: 0.5rem 0;
+      padding: 0.65rem 0.75rem;
+      background: #f3f6fa;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+    }
+    .choice { font-size: 1.05rem; font-weight: 500; }
+    .explain dt {
+      font-weight: 700;
+      margin-top: 0.75rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      text-transform: none;
+    }
+    .explain dd { margin: 0.2rem 0 0; font-size: 1.02rem; }
+    .examples { margin: 0.35rem 0 0; padding-left: 1.25rem; }
+    .examples li { margin: 0.35rem 0; }
+    code {
+      display: block;
+      background: #e8ecf2;
+      color: #0f1419;
+      padding: 0.5rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.95em;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
     .hidden { display: none; }
     #load-hint { font-size: 0.9rem; color: var(--muted); }
     .stats { font-size: 0.85rem; color: var(--muted); }
@@ -76,8 +122,13 @@
 </head>
 <body>
   <main>
-    <h1>開発語彙 4択クイズ</h1>
-    <p class="sub">英単語の学習用。採点はブラウザで確実に行います（Gem 不要）。</p>
+    <header class="site-header">
+      <div>
+        <h1>開発語彙 4択クイズ</h1>
+        <p class="sub">日常の意味とプログラミングでの意味をセットで学ぶ。</p>
+      </div>
+      <a href="#" id="top-link" class="top-link hidden" aria-label="トップページに戻る">トップに戻る</a>
+    </header>
 
     <div id="setup" class="panel">
       <p id="load-hint">同じフォルダの <code>all_cards_v2.json</code> を読み込みます。</p>
@@ -89,7 +140,7 @@
     <div id="quiz" class="hidden">
       <div class="mode-bar" id="modes">
         <button type="button" class="mode active" data-mode="basic">基本の動詞・名詞</button>
-        <button type="button" class="mode" data-mode="anti">避けたい命名</button>
+        <button type="button" class="mode" data-mode="anti">単体の汎用名</button>
         <button type="button" class="mode" data-mode="lib">ライブラリ・API</button>
       </div>
       <p class="stats" id="stats"></p>
@@ -113,7 +164,7 @@
   <script>
     const MODE_LABELS = {
       basic: "基本の動詞・名詞",
-      anti: "避けたい命名",
+      anti: "単体の汎用名",
       lib: "ライブラリ・API",
     };
 
@@ -228,6 +279,33 @@
       showFeedback(ok);
     }
 
+    function appendExplainRow(explainRoot, labelText, valueNode) {
+      const label = document.createElement("dt");
+      label.textContent = labelText;
+      const value = document.createElement("dd");
+      value.appendChild(valueNode);
+      explainRoot.appendChild(label);
+      explainRoot.appendChild(value);
+    }
+
+    function buildExampleList(exampleRows) {
+      if (!exampleRows.length) {
+        const emptyText = document.createElement("span");
+        emptyText.textContent = "—";
+        return emptyText;
+      }
+      const list = document.createElement("ul");
+      list.className = "examples";
+      exampleRows.forEach((row) => {
+        const item = document.createElement("li");
+        const english = row.en || "";
+        const japanese = row.ja ? `（${row.ja}）` : "";
+        item.textContent = `${english}${japanese}`;
+        list.appendChild(item);
+      });
+      return list;
+    }
+
     function showFeedback(ok) {
       $("question-panel").classList.add("hidden");
       $("feedback-panel").classList.remove("hidden");
@@ -235,20 +313,35 @@
       line.textContent = ok ? "【結果】正解！" : `【結果】不正解（正解は ${"ABCD"[correctIndex]}）`;
       line.className = "result " + (ok ? "ok" : "ng");
 
-      const eg = (current.examples_general || []).slice(0, 2);
-      const ec = (current.examples_code || [])[0];
-      const exHtml = eg.length
-        ? `<ul class="examples">${eg.map((e) => `<li>${e.en}${e.ja ? `（${e.ja}）` : ""}</li>`).join("")}</ul>`
-        : "—";
+      const exampleRows = (current.examples_general || []).slice(0, 2);
+      const codeExample = (current.examples_code || [])[0];
+      const explainRoot = $("explain");
+      explainRoot.replaceChildren();
 
-      $("explain").innerHTML = `
-        <dt>単語</dt><dd><strong>${current.term}</strong></dd>
-        <dt>日常の意味</dt><dd>${current.meaning_general_ja || "—"}</dd>
-        <dt>プログラミングでの意味</dt><dd>${current.meaning_programming_ja || "—"}</dd>
-        <dt>プロでの使われ方</dt><dd>${current.usage_note_ja || "—"}</dd>
-        <dt>日常英語の例文</dt><dd>${exHtml}</dd>
-        <dt>コードでの例</dt><dd><code>${ec ? ec.snippet : "—"}</code></dd>
-      `;
+      const termStrong = document.createElement("strong");
+      termStrong.textContent = current.term;
+      appendExplainRow(explainRoot, "単語", termStrong);
+      appendExplainRow(
+        explainRoot,
+        "日常の意味",
+        document.createTextNode(current.meaning_general_ja || "—")
+      );
+      appendExplainRow(
+        explainRoot,
+        "プログラミングでの意味",
+        document.createTextNode(current.meaning_programming_ja || "—")
+      );
+      appendExplainRow(
+        explainRoot,
+        "プロでの使われ方",
+        document.createTextNode(current.usage_note_ja || "—")
+      );
+      appendExplainRow(explainRoot, "日常英語の例文", buildExampleList(exampleRows));
+
+      const codeBlock = document.createElement("code");
+      codeBlock.textContent = codeExample ? codeExample.snippet : "—";
+      appendExplainRow(explainRoot, "コードでの例", codeBlock);
+
       usedIds.add(current.id);
       updateStats();
     }
@@ -264,8 +357,14 @@
       questionNum = 0;
       $("setup").classList.add("hidden");
       $("quiz").classList.remove("hidden");
+      $("top-link").classList.remove("hidden");
       nextQuestion();
     }
+
+    $("top-link").addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.reload();
+    });
 
     async function loadJson() {
       try {
