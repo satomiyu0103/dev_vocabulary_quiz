@@ -1,30 +1,12 @@
 # Cloudflare Pages デプロイ手順
 
-## 前提
+1. GitHub にリポジトリを push
+2. Cloudflare Dashboard → Workers & Pages → Connect to Git
+3. Build command: （空）
+4. Build output directory: `public`
+5. 公開 URL を `dev-projects-manifest.json` の `deploy.url` に記録（Documents 秘書層の [dev-projects-manifest.json](../../.cursor/scripts/dev-projects-manifest.json)）
 
-- GitHub に `dev_vocabulary_quiz` リポジトリを作成済み
-- Cloudflare アカウントあり
+## デプロイ後
 
-## 手順
-
-1. 本フォルダを GitHub に push（利用者操作・承認必須）
-2. [Cloudflare Dashboard](https://dash.cloudflare.com/) → Workers & Pages → Create application → Pages → Connect to Git
-3. リポジトリ `dev_vocabulary_quiz` を選択
-4. 設定:
-   - **Build command**: （空）
-   - **Build output directory**: `public`
-   - **Framework preset**: None
-5. Save and Deploy
-6. 発行 URL（例: `https://dev-vocabulary-quiz.pages.dev`）を以下に記録:
-   - `.cursor/scripts/dev-projects-manifest.json` の `deploy.url`
-   - `doc/life/preferences.md`
-   - Drive `03_Agent_Reference` 索引（URL のみ）
-
-## ローカル確認
-
-```powershell
-cd public
-python -m http.server 8080
-```
-
-→ http://localhost:8080/
+- ブラウザで公開 URL を開き、コンソールエラーが無いことを確認
+- URL を manifest に記録したら `update-dev-project-index.ps1` で索引を再生成

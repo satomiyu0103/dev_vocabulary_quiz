@@ -1,33 +1,22 @@
-# dev_vocabulary_quiz
+# web-static-template
 
-開発語彙（schema v2）の 4 択クイズ。Cloudflare Pages で公開する静的サイト。
+Cloudflare Pages 向けの静的 Web サイトテンプレ（**lite+** — `.cursor` 運用基盤付き）。
 
-## 構成
+## 新規プロジェクト
 
-| パス | 内容 |
-|---|---|
-| `public/index.html` | クイズ UI（`doc/life/career/dev-vocabulary/export/quiz.html` 由来） |
-| `public/all_cards_v2.json` | 265 枚統合カード |
+1. `Development/Web_apps/<project_name>/` を作成
+2. 本テンプレから `AGENTS.md` `README.md` `public/` をコピー
+3. `git init` → commit
+4. GitHub push → Cloudflare Pages（出力 `public`、ビルドなし）
+5. `dev-projects-manifest.json` に登録（`deploy.url` を記録）
 
-## カード更新（正本 → 本 repo）
+## 配布（Documents 同居時）
 
 ```powershell
-# Documents ルートで
-python doc/life/career/dev-vocabulary/tools/build_decks.py
-python doc/life/career/dev-vocabulary/tools/validate_decks.py
-powershell -NoProfile -ExecutionPolicy Bypass -File doc/life/career/dev-vocabulary/tools/sync_to_web.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/scripts/sync-dev-template.ps1 publish --template web
 ```
 
-その後本 repo で commit → push → Cloudflare Pages が自動デプロイ。
+## 関連
 
-## Cloudflare Pages
-
-手順: [CLOUDFLARE_DEPLOY.md](CLOUDFLARE_DEPLOY.md)
-
-- ビルドコマンド: なし
-- 出力ディレクトリ: `public`
-- フレームワーク: None
-
-## データ正本
-
-`doc/life/career/dev-vocabulary/`（Documents 秘書層 git）。本 repo は配信用のみ。
+- [development-layout.md](../../doc/life/playbook/development-layout.md)
+- [dev_task_entry_web.mdc](../../.cursor/rules/dev_task_entry_web.mdc)
