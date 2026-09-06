@@ -3,7 +3,8 @@
 企画・受け入れ基準: [doc/spec/テスト設計書.md](doc/spec/テスト設計書.md) §9
 
 1. GitHub にリポジトリを push
-2. Cloudflare Dashboard → Workers & Pages → Connect to Git
+2. 配布前: `python scripts/validate_export_json.py public/all_cards_v2.json`（CR-30/31）
+3. Cloudflare Dashboard → Workers & Pages → Connect to Git
 3. Build command: （空）
 4. Build output directory: `public`
 5. 公開 URL を `dev-projects-manifest.json` の `deploy.url` に記録（Documents 秘書層の [dev-projects-manifest.json](../../.cursor/scripts/dev-projects-manifest.json)）
