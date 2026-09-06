@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>開発語彙 4択クイズ</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #fff;
+      --text: #1a1a1a;
+      --muted: #555;
+      --ok: #0d7a4a;
+      --bad: #b42318;
+      --accent: #2563eb;
+      --border: #dde1e6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    main { max-width: 640px; margin: 0 auto; }
+    h1 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .mode-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    button, .choice {
+      font: inherit;
+      cursor: pointer;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 0.55rem 0.9rem;
+    }
+    button.mode.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    button.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      width: 100%;
+      margin-top: 0.75rem;
+      font-weight: 600;
+    }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .choices { display: grid; gap: 0.5rem; margin: 1rem 0; }
+    .choice {
+      text-align: left;
+      width: 100%;
+      transition: background 0.15s;
+    }
+    .choice:hover:not(:disabled) { background: #eef4ff; }
+    .choice.correct { border-color: var(--ok); background: #ecfdf3; }
+    .choice.wrong { border-color: var(--bad); background: #fef3f2; }
+    .result { font-weight: 700; font-size: 1.1rem; }
+    .result.ok { color: var(--ok); }
+    .result.ng { color: var(--bad); }
+    .explain dt { font-weight: 600; margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; }
+    .explain dd { margin: 0.15rem 0 0; }
+    .examples li { margin: 0.25rem 0; }
+    code { background: #f0f2f5; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+    .hidden { display: none; }
+    #load-hint { font-size: 0.9rem; color: var(--muted); }
+    .stats { font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>開発語彙 4択クイズ</h1>
+    <p class="sub">英単語の学習用。採点はブラウザで確実に行います（Gem 不要）。</p>
+
+    <div id="setup" class="panel">
+      <p id="load-hint">同じフォルダの <code>all_cards_v2.json</code> を読み込みます。</p>
+      <input type="file" id="file-input" accept=".json" class="hidden">
+      <button type="button" id="pick-file">JSON を選ぶ</button>
+      <button type="button" id="retry-fetch" class="hidden">再読み込み</button>
+    </div>
+
+    <div id="quiz" class="hidden">
+      <div class="mode-bar" id="modes">
+        <button type="button" class="mode active" data-mode="basic">基本の動詞・名詞</button>
+        <button type="button" class="mode" data-mode="anti">避けたい命名</button>
+        <button type="button" class="mode" data-mode="lib">ライブラリ・API</button>
+      </div>
+      <p class="stats" id="stats"></p>
+
+      <div id="question-panel" class="panel">
+        <p id="q-label"></p>
+        <p><strong>次の説明に合う英単語はどれ？</strong></p>
+        <p id="q-general"></p>
+        <p id="q-prog"></p>
+        <div class="choices" id="choices"></div>
+      </div>
+
+      <div id="feedback-panel" class="panel hidden">
+        <p id="result-line" class="result"></p>
+        <dl class="explain" id="explain"></dl>
+        <button type="button" class="primary" id="next-btn">次の問題</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const MODE_LABELS = {
+      basic: "基本の動詞・名詞",
+      anti: "避けたい命名",
+      lib: "ライブラリ・API",
+    };
+
+    let allCards = [];
+    let pool = [];
+    let current = null;
+    let choices = [];
+    let correctIndex = -1;
+    let mode = "basic";
+    let questionNum = 0;
+    let usedIds = new Set();
+    let answered = false;
+
+    const $ = (id) => document.getElementById(id);
+
+    function filterCards(cards) {
+      if (mode === "basic") {
+        return cards.filter((c) => c.type === "identifier" && c.tier === "P0");
+      }
+      if (mode === "anti") {
+        return cards.filter((c) => c.type === "anti_pattern");
+      }
+      return cards.filter((c) => c.type === "method" || c.type === "package" || c.type === "stdlib");
+    }
+
+    function pickDistractors(card, candidates) {
+      const terms = new Set([card.term]);
+      const out = [];
+      const related = [
+        ...(card.confusable_with || []).map((x) => x.term),
+        ...(card.related_terms || []),
+      ];
+      for (const t of related) {
+        if (!terms.has(t) && candidates.some((c) => c.term === t)) {
+          out.push(t);
+          terms.add(t);
+        }
+        if (out.length >= 3) break;
+      }
+      for (const c of shuffle(candidates)) {
+        if (out.length >= 3) break;
+        if (!terms.has(c.term)) {
+          out.push(c.term);
+          terms.add(c.term);
+        }
+      }
+      while (out.length < 3) out.push("—");
+      return out.slice(0, 3);
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function refreshPool() {
+      pool = filterCards(allCards).filter((c) => !usedIds.has(c.id));
+      if (pool.length === 0) {
+        usedIds.clear();
+        pool = filterCards(allCards);
+      }
+    }
+
+    function nextQuestion() {
+      answered = false;
+      $("feedback-panel").classList.add("hidden");
+      $("question-panel").classList.remove("hidden");
+      refreshPool();
+      if (pool.length === 0) {
+        $("q-label").textContent = "カードがありません";
+        return;
+      }
+      current = pool[Math.floor(Math.random() * pool.length)];
+      questionNum += 1;
+      const candidates = filterCards(allCards);
+      const distractors = pickDistractors(current, candidates);
+      choices = shuffle([current.term, ...distractors]);
+      correctIndex = choices.indexOf(current.term);
+
+      $("q-label").textContent = `【問題 ${questionNum}】${MODE_LABELS[mode]}`;
+      $("q-general").textContent = `■ 日常の意味: ${current.meaning_general_ja || "—"}`;
+      $("q-prog").textContent = `■ プログラミングでの意味: ${current.meaning_programming_ja || "—"}`;
+
+      const box = $("choices");
+      box.innerHTML = "";
+      choices.forEach((term, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "choice";
+        btn.textContent = `${"ABCD"[i]}) ${term}`;
+        btn.addEventListener("click", () => answer(i, btn));
+        box.appendChild(btn);
+      });
+      updateStats();
+    }
+
+    function answer(index, btn) {
+      if (answered) return;
+      answered = true;
+      const buttons = $("choices").querySelectorAll(".choice");
+      buttons.forEach((b) => (b.disabled = true));
+      const ok = index === correctIndex;
+      if (ok) btn.classList.add("correct");
+      else {
+        btn.classList.add("wrong");
+        buttons[correctIndex].classList.add("correct");
+      }
+      showFeedback(ok);
+    }
+
+    function showFeedback(ok) {
+      $("question-panel").classList.add("hidden");
+      $("feedback-panel").classList.remove("hidden");
+      const line = $("result-line");
+      line.textContent = ok ? "【結果】正解！" : `【結果】不正解（正解は ${"ABCD"[correctIndex]}）`;
+      line.className = "result " + (ok ? "ok" : "ng");
+
+      const eg = (current.examples_general || []).slice(0, 2);
+      const ec = (current.examples_code || [])[0];
+      const exHtml = eg.length
+        ? `<ul class="examples">${eg.map((e) => `<li>${e.en}${e.ja ? `（${e.ja}）` : ""}</li>`).join("")}</ul>`
+        : "—";
+
+      $("explain").innerHTML = `
+        <dt>単語</dt><dd><strong>${current.term}</strong></dd>
+        <dt>日常の意味</dt><dd>${current.meaning_general_ja || "—"}</dd>
+        <dt>プログラミングでの意味</dt><dd>${current.meaning_programming_ja || "—"}</dd>
+        <dt>プロでの使われ方</dt><dd>${current.usage_note_ja || "—"}</dd>
+        <dt>日常英語の例文</dt><dd>${exHtml}</dd>
+        <dt>コードでの例</dt><dd><code>${ec ? ec.snippet : "—"}</code></dd>
+      `;
+      usedIds.add(current.id);
+      updateStats();
+    }
+
+    function updateStats() {
+      const total = filterCards(allCards).length;
+      $("stats").textContent = `モード: ${MODE_LABELS[mode]} · 出題済み ${usedIds.size} / ${total} 語`;
+    }
+
+    function startQuiz(cards) {
+      allCards = cards;
+      usedIds.clear();
+      questionNum = 0;
+      $("setup").classList.add("hidden");
+      $("quiz").classList.remove("hidden");
+      nextQuestion();
+    }
+
+    async function loadJson() {
+      try {
+        const res = await fetch("./all_cards_v2.json");
+        if (!res.ok) throw new Error("fetch failed");
+        const data = await res.json();
+        startQuiz(data.cards || data);
+        return true;
+      } catch {
+        return false;
+      }
+    }
+
+    $("pick-file").addEventListener("click", () => $("file-input").click());
+    $("file-input").addEventListener("change", async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const data = JSON.parse(await file.text());
+      startQuiz(data.cards || data);
+    });
+    $("next-btn").addEventListener("click", nextQuestion);
+    $("modes").addEventListener("click", (e) => {
+      const btn = e.target.closest(".mode");
+      if (!btn) return;
+      document.querySelectorAll(".mode").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      mode = btn.dataset.mode;
+      usedIds.clear();
+      questionNum = 0;
+      nextQuestion();
+    });
+
+    loadJson().then((ok) => {
+      if (!ok) {
+        $("load-hint").textContent =
+          "ファイルを直接開いた場合は下のボタンで all_cards_v2.json を選んでください。または export フォルダで python -m http.server 8080 を実行して http://localhost:8080/quiz.html を開く。";
+      }
+    });
+  </script>
+</body>
+</html>
