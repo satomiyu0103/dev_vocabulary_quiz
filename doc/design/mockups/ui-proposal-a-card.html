@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>案A: カード＋タブ型 — DADSモックアップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* DADS トークン（Blue キーカラー + Neutral） */
+    :root {
+      --primary: #0017C1;
+      --primary-hover: #00118F;
+      --primary-light: #E8F1FE;
+      --bg-page: #F8F8FB;
+      --bg-surface: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #626264;
+      --border: #D8D8DB;
+      --success: #1D7A4E;
+      --success-bg: #EAF5EE;
+      --warning: #B45309;
+      --warning-bg: #FEF3E6;
+      --focus-yellow: #FFEE00;
+      --radius: 8px;
+      --font: "Noto Sans JP", sans-serif;
+      --mono: "Noto Sans Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg-page);
+    }
+    a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    :focus-visible {
+      outline: 2px solid var(--focus-yellow);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px #000;
+    }
+    .mockup-banner {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+    .mockup-banner a { color: #fff; }
+    .site-header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
+    }
+    .site-header h1 { font-size: 1.25rem; font-weight: 700; margin: 0; }
+    .site-header p { margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--text-muted); }
+    main { max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+    .state-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 1.5rem 0 0.5rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid var(--primary);
+    }
+    /* DADS Tab */
+    .dads-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .dads-tab {
+      font: inherit;
+      font-weight: 500;
+      padding: 0.65rem 1rem;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+    .dads-tab[aria-selected="true"] {
+      color: var(--primary);
+      font-weight: 700;
+      border-bottom-color: var(--primary);
+      background: var(--primary-light);
+    }
+    /* Direction: outline buttons */
+    .dads-segment {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .dads-btn {
+      font: inherit;
+      font-weight: 500;
+      min-height: 44px;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .dads-btn--outline {
+      background: var(--bg-surface);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+    .dads-btn--outline.is-active {
+      background: var(--primary);
+      color: #fff;
+    }
+    .dads-btn--outline:hover:not(.is-active) { background: var(--primary-light); }
+    .dads-btn--filled {
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      width: 100%;
+      font-weight: 700;
+    }
+    .dads-btn--filled:hover { background: var(--primary-hover); }
+    .dads-btn--choice {
+      width: 100%;
+      text-align: left;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.75rem 1rem;
+    }
+    .dads-btn--choice:hover:not(:disabled) { background: var(--primary-light); border-color: var(--primary); }
+    .dads-btn--choice.is-correct {
+      border: 2px solid var(--success);
+      background: var(--success-bg);
+    }
+    .dads-btn--choice.is-wrong {
+      border: 2px dashed var(--warning);
+      background: var(--warning-bg);
+    }
+    .dads-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .dads-card__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin: 0 0 0.5rem;
+    }
+    .dads-card__prompt {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+    /* DADS Notice Block */
+    .dads-notice {
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+      border-left: 4px solid var(--primary);
+      background: var(--primary-light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.9375rem;
+    }
+    .dads-notice strong { display: block; font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 0.15rem; }
+    .choices { display: grid; gap: 0.5rem; margin-top: 1rem; }
+    .stats { font-size: 0.8125rem; color: var(--text-muted); margin: 0 0 1rem; }
+    .result-line { font-size: 1.25rem; font-weight: 700; margin: 0 0 1rem; }
+    .result-line--ok { color: var(--success); }
+    .result-line--ng { color: var(--warning); }
+    .explain dt { font-weight: 700; font-size: 0.875rem; margin-top: 0.75rem; }
+    .explain dd { margin: 0.15rem 0 0; }
+    .explain code {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      background: #E8ECF2;
+      padding: 0.5rem 0.75rem;
+      border-radius: 6px;
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="mockup-banner">
+    案A: カード＋タブ型（DADSモックアップ） — <a href="index.html">一覧に戻る</a>
+  </div>
+
+  <header class="site-header">
+    <h1>開発語彙 4択クイズ</h1>
+    <p>日常の意味とプログラミングでの意味をセットで学ぶ</p>
+  </header>
+
+  <main>
+    <p class="state-label">状態1: 出題中</p>
+
+    <nav class="dads-tabs" role="tablist" aria-label="クイズモード">
+      <button type="button" class="dads-tab" role="tab" aria-selected="true">基本の動詞・名詞</button>
+      <button type="button" class="dads-tab" role="tab" aria-selected="false">単体の汎用名</button>
+      <button type="button" class="dads-tab" role="tab" aria-selected="false">ライブラリ・API</button>
+    </nav>
+
+    <div class="dads-segment" role="group" aria-label="出題方向">
+      <button type="button" class="dads-btn dads-btn--outline is-active">日→英</button>
+      <button type="button" class="dads-btn dads-btn--outline">英→日</button>
+      <button type="button" class="dads-btn dads-btn--outline">ミックス</button>
+    </div>
+
+    <p class="stats">出題済み 12 / 48 語 · モード: 基本の動詞・名詞 · 方向: 日→英</p>
+
+    <section class="dads-card" aria-labelledby="q-label-a">
+      <p class="dads-card__label" id="q-label-a">【問題 13】基本の動詞・名詞</p>
+      <p class="dads-card__prompt">次の説明に合う英単語はどれ？</p>
+
+      <div class="dads-notice">
+        <strong>日常の意味</strong>
+        変更できる、後から書き換え可能な
+      </div>
+      <div class="dads-notice">
+        <strong>プログラミングでの意味</strong>
+        作成後に値や内容を変更できる（mutable）
+      </div>
+
+      <div class="choices" role="group" aria-label="選択肢">
+        <button type="button" class="dads-btn dads-btn--choice">A) immutable</button>
+        <button type="button" class="dads-btn dads-btn--choice">B) mutable</button>
+        <button type="button" class="dads-btn dads-btn--choice">C) constant</button>
+        <button type="button" class="dads-btn dads-btn--choice">D) static</button>
+      </div>
+    </section>
+
+    <p class="state-label">状態2: 回答後（フィードバック）</p>
+
+    <section class="dads-card">
+      <p class="dads-card__label">【問題 13】基本の動詞・名詞</p>
+      <p class="result-line result-line--ok">【結果】正解！</p>
+
+      <div class="choices">
+        <button type="button" class="dads-btn dads-btn--choice" disabled>A) immutable</button>
+        <button type="button" class="dads-btn dads-btn--choice is-correct" disabled aria-current="true">B) mutable ✓</button>
+        <button type="button" class="dads-btn dads-btn--choice" disabled>C) constant</button>
+        <button type="button" class="dads-btn dads-btn--choice" disabled>D) static</button>
+      </div>
+
+      <dl class="explain">
+        <dt>単語</dt>
+        <dd><strong>mutable</strong></dd>
+        <dt>コードもしくはプログラミングでの使われ方</dt>
+        <dd>リストや辞書など、代入で内容を変えられるオブジェクトを指す</dd>
+        <dt>コードでの例</dt>
+        <dd><code>items = [1, 2, 3]
+items.append(4)  # OK: リストは mutable</code></dd>
+      </dl>
+
+      <button type="button" class="dads-btn dads-btn--filled" style="margin-top: 1rem;">次の問題</button>
+    </section>
+  </main>
+</body>
+</html>

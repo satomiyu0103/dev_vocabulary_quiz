@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>案C: モバイル・ボトム固定型 — DADSモックアップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0017C1;
+      --primary-hover: #00118F;
+      --primary-light: #E8F1FE;
+      --bg-page: #EDECEA;
+      --bg-surface: #FAFAF8;
+      --text: #1A2332;
+      --text-muted: #4A5568;
+      --border: #C8CDD4;
+      --success: #0D6E6E;
+      --success-bg: #E6F4F1;
+      --warning: #B45309;
+      --warning-bg: #FEF3E6;
+      --focus-yellow: #FFEE00;
+      --radius: 8px;
+      --font: "Noto Sans JP", sans-serif;
+      --mono: "Noto Sans Mono", monospace;
+      --sticky-h: 72px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg-page);
+      padding-bottom: calc(var(--sticky-h) + 1rem);
+    }
+    :focus-visible { outline: 2px solid var(--focus-yellow); outline-offset: 2px; box-shadow: 0 0 0 2px #000; }
+    .mockup-banner {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+    }
+    .mockup-banner a { color: #fff; text-decoration: underline; }
+    .compact-header {
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .compact-header h1 { font-size: 1.125rem; font-weight: 700; margin: 0; }
+    .compact-header a { font-size: 0.8125rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+    main { max-width: 640px; margin: 0 auto; padding: 0 1rem; }
+    .state-label {
+      font-size: 0.7rem; font-weight: 700; color: var(--primary);
+      margin: 1rem 0 0.5rem; text-align: center;
+    }
+    /* DADS Chip Label */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .chip {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+    }
+    .chip--active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .progress-bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .progress-bar__fill {
+      height: 100%;
+      width: 25%;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .progress-text { font-size: 0.75rem; color: var(--text-muted); margin: -0.5rem 0 1rem; }
+    .quiz-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .quiz-card__num { font-size: 0.8125rem; font-weight: 700; color: var(--text-muted); margin: 0 0 0.35rem; }
+    .quiz-card__prompt { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.75rem; }
+    .meaning-compact {
+      font-size: 0.9375rem;
+      padding: 0.55rem 0.65rem;
+      margin: 0.35rem 0;
+      background: #F3F6FA;
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+    }
+    .meaning-compact em {
+      display: block;
+      font-style: normal;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .choices { display: grid; gap: 0.45rem; margin-top: 0.75rem; }
+    .choice {
+      font: inherit;
+      font-weight: 500;
+      text-align: left;
+      width: 100%;
+      min-height: 48px;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .choice:active { background: var(--primary-light); }
+    .choice.is-correct { border: 2px solid var(--success); background: var(--success-bg); }
+    .choice.is-wrong { border: 2px dashed var(--warning); background: var(--warning-bg); }
+    .inline-result {
+      font-weight: 800;
+      font-size: 1.15rem;
+      margin: 0.75rem 0 0;
+      padding: 0.5rem 0;
+    }
+    .inline-result--ok { color: var(--success); }
+    /* Sticky bottom bar (DADS primary CTA) */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+    }
+    .sticky-bar__inner {
+      max-width: 640px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .sticky-bar__stats {
+      flex: 1;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+    .sticky-bar__btn {
+      flex-shrink: 0;
+      font: inherit;
+      font-weight: 700;
+      min-height: 48px;
+      min-width: 140px;
+      padding: 0 1.25rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .sticky-bar__btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+    .sticky-bar__btn:not(:disabled):hover { background: var(--primary-hover); }
+    .phone-frame {
+      max-width: 390px;
+      margin: 0 auto 2rem;
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--bg-page);
+    }
+    .phone-frame .mockup-banner { border-radius: 0; }
+  </style>
+</head>
+<body>
+  <div class="mockup-banner">案C: モバイル・ボトム固定型（390px想定） — <a href="index.html">一覧に戻る</a></div>
+
+  <div class="phone-frame">
+    <div class="compact-header">
+      <h1>語彙クイズ</h1>
+      <a href="#">設定</a>
+    </div>
+
+    <main>
+      <p class="state-label">— 出題中 —</p>
+
+      <div class="chip-row" aria-label="現在の設定">
+        <span class="chip chip--active">基本</span>
+        <span class="chip chip--active">日→英</span>
+        <span class="chip">12/48語</span>
+      </div>
+
+      <div class="progress-bar" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="48" aria-label="出題進捗">
+        <div class="progress-bar__fill"></div>
+      </div>
+      <p class="progress-text">問題 13 · 残り 36 語</p>
+
+      <section class="quiz-card">
+        <p class="quiz-card__num">Q13</p>
+        <p class="quiz-card__prompt">合う英単語は？</p>
+        <div class="meaning-compact"><em>日常</em>変更できる、後から書き換え可能な</div>
+        <div class="meaning-compact"><em>開発</em>作成後に値や内容を変更できる</div>
+        <div class="choices">
+          <button type="button" class="choice">A) immutable</button>
+          <button type="button" class="choice">B) mutable</button>
+          <button type="button" class="choice">C) constant</button>
+          <button type="button" class="choice">D) static</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="sticky-bar">
+      <div class="sticky-bar__inner">
+        <div class="sticky-bar__stats">タップして回答<br>正解後に「次へ」</div>
+        <button type="button" class="sticky-bar__btn" disabled>次の問題</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="phone-frame" style="margin-top: 2rem;">
+    <div class="compact-header">
+      <h1>語彙クイズ</h1>
+      <a href="#">設定</a>
+    </div>
+    <main>
+      <p class="state-label">— 回答後 —</p>
+      <div class="chip-row">
+        <span class="chip chip--active">基本</span>
+        <span class="chip">日→英</span>
+        <span class="chip">13/48語</span>
+      </div>
+      <section class="quiz-card">
+        <p class="inline-result inline-result--ok">【結果】正解！</p>
+        <div class="choices">
+          <button type="button" class="choice" disabled>A) immutable</button>
+          <button type="button" class="choice is-correct" disabled>B) mutable</button>
+          <button type="button" class="choice" disabled>C) constant</button>
+          <button type="button" class="choice" disabled>D) static</button>
+        </div>
+      </section>
+    </main>
+    <div class="sticky-bar">
+      <div class="sticky-bar__inner">
+        <div class="sticky-bar__stats"><strong>mutable</strong><br>リスト・辞書は mutable</div>
+        <button type="button" class="sticky-bar__btn">次の問題</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

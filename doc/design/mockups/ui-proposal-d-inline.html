@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>案D: インライン解説型 — DADSモックアップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0017C1;
+      --primary-light: #E8F1FE;
+      --bg-page: #F8F8FB;
+      --bg-surface: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #626264;
+      --border: #D8D8DB;
+      --success: #1D7A4E;
+      --success-bg: #EAF5EE;
+      --warning: #B45309;
+      --warning-bg: #FEF3E6;
+      --info: #5C6B7A;
+      --focus-yellow: #FFEE00;
+      --radius: 8px;
+      --font: "Noto Sans JP", sans-serif;
+      --mono: "Noto Sans Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); line-height: 1.7; color: var(--text); background: var(--bg-page); }
+    :focus-visible { outline: 2px solid var(--focus-yellow); outline-offset: 2px; box-shadow: 0 0 0 2px #000; }
+    .mockup-banner { background: var(--primary); color: #fff; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 700; }
+    .mockup-banner a { color: #fff; text-decoration: underline; }
+    main { max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+    h1 { font-size: 1.375rem; font-weight: 700; margin: 0; }
+    .sub { color: var(--text-muted); font-size: 0.875rem; margin: 0.25rem 0 1rem; }
+    .state-label {
+      font-size: 0.75rem; font-weight: 700; color: var(--primary);
+      margin: 1.5rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--primary);
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .toolbar button {
+      font: inherit;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      min-height: 36px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-surface);
+      cursor: pointer;
+    }
+    .toolbar button.is-on { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+    .panel__head { font-size: 0.875rem; font-weight: 700; color: var(--text-muted); margin: 0 0 0.5rem; }
+    .panel__prompt { font-size: 1.0625rem; font-weight: 700; margin: 0 0 0.75rem; }
+    .desc-list { margin: 0 0 1rem; }
+    .desc-list div {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9375rem;
+    }
+    .desc-list dt { font-weight: 700; color: var(--text-muted); margin: 0; }
+    .desc-list dd { margin: 0; }
+    .choices { display: grid; gap: 0.5rem; }
+    .choice {
+      font: inherit; font-weight: 500; text-align: left; width: 100%;
+      min-height: 44px; padding: 0.6rem 1rem;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-surface); cursor: pointer;
+    }
+    .choice:hover:not(:disabled) { background: var(--primary-light); }
+    .choice.is-correct { border: 2px solid var(--success); background: var(--success-bg); }
+    .choice.is-wrong { border: 2px dashed var(--warning); background: var(--warning-bg); }
+    /* DADS Notification Banner */
+    .dads-notification {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      padding: 0.85rem 1rem;
+      margin: 1rem 0 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--success);
+      background: var(--success-bg);
+    }
+    .dads-notification--error {
+      border-color: var(--warning);
+      background: var(--warning-bg);
+    }
+    .dads-notification__icon {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: var(--success);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dads-notification--error .dads-notification__icon { background: var(--warning); }
+    .dads-notification__body { flex: 1; }
+    .dads-notification__title { font-weight: 700; font-size: 1rem; margin: 0 0 0.15rem; }
+    .dads-notification__text { font-size: 0.875rem; margin: 0; color: var(--text); }
+    /* DADS Disclosure */
+    .dads-disclosure { margin-top: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); }
+    .dads-disclosure summary {
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .dads-disclosure summary::after { content: "＋"; font-size: 1.125rem; color: var(--primary); }
+    .dads-disclosure[open] summary::after { content: "－"; }
+    .dads-disclosure__body {
+      padding: 0 1rem 1rem;
+      font-size: 0.9375rem;
+      border-top: 1px solid var(--border);
+    }
+    .dads-disclosure__body code {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.8125rem;
+      background: #E8ECF2;
+      padding: 0.5rem;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+    .dads-disclosure__body dl { margin: 0.75rem 0 0; }
+    .dads-disclosure__body dt { font-weight: 700; font-size: 0.8125rem; margin-top: 0.5rem; }
+    .dads-disclosure__body dd { margin: 0.1rem 0 0; }
+    .actions { margin-top: 1rem; }
+    .btn-primary {
+      width: 100%;
+      font: inherit;
+      font-weight: 700;
+      min-height: 48px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .hint { font-size: 0.8125rem; color: var(--info); margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="mockup-banner">案D: インライン解説型 — <a href="index.html">一覧に戻る</a></div>
+  <main>
+    <h1>開発語彙 4択クイズ</h1>
+    <p class="sub">回答後も問題文を残し、解説をその下に展開</p>
+
+    <p class="state-label">状態1: 出題中（解説エリアは非表示）</p>
+
+    <div class="toolbar" role="group" aria-label="設定">
+      <button type="button" class="is-on">基本</button>
+      <button type="button">汎用名</button>
+      <button type="button">API</button>
+      <button type="button" class="is-on">日→英</button>
+      <button type="button">英→日</button>
+    </div>
+
+    <section class="panel">
+      <p class="panel__head">【問題 13】出題済み 12/48</p>
+      <p class="panel__prompt">次の説明に合う英単語はどれ？</p>
+      <dl class="desc-list">
+        <div><dt>日常の意味</dt><dd>変更できる、後から書き換え可能な</dd></div>
+        <div><dt>開発での意味</dt><dd>作成後に値や内容を変更できる</dd></div>
+      </dl>
+      <div class="choices">
+        <button type="button" class="choice">A) immutable</button>
+        <button type="button" class="choice">B) mutable</button>
+        <button type="button" class="choice">C) constant</button>
+        <button type="button" class="choice">D) static</button>
+      </div>
+      <p class="hint">選択すると、この下に結果と解説が表示されます（画面は切り替えません）</p>
+    </section>
+
+    <p class="state-label">状態2: 回答後（同一パネル内にフィードバック）</p>
+
+    <div class="toolbar">
+      <button type="button" class="is-on">基本</button>
+      <button type="button">汎用名</button>
+      <button type="button">API</button>
+      <button type="button" class="is-on">日→英</button>
+    </div>
+
+    <section class="panel">
+      <p class="panel__head">【問題 13】出題済み 13/48</p>
+      <p class="panel__prompt">次の説明に合う英単語はどれ？</p>
+      <dl class="desc-list">
+        <div><dt>日常の意味</dt><dd>変更できる、後から書き換え可能な</dd></div>
+        <div><dt>開発での意味</dt><dd>作成後に値や内容を変更できる</dd></div>
+      </dl>
+
+      <div class="choices">
+        <button type="button" class="choice" disabled>A) immutable</button>
+        <button type="button" class="choice is-correct" disabled>B) mutable</button>
+        <button type="button" class="choice" disabled>C) constant</button>
+        <button type="button" class="choice is-wrong" disabled>D) static</button>
+      </div>
+
+      <div class="dads-notification" role="status">
+        <span class="dads-notification__icon" aria-hidden="true">✓</span>
+        <div class="dads-notification__body">
+          <p class="dads-notification__title">【結果】正解！</p>
+          <p class="dads-notification__text">mutable は「変更可能」なデータ型を指します。immutable の対義語として覚えるとよいです。</p>
+        </div>
+      </div>
+
+      <details class="dads-disclosure" open>
+        <summary>くわしい解説を表示</summary>
+        <div class="dads-disclosure__body">
+          <dl>
+            <dt>単語</dt>
+            <dd><strong>mutable</strong></dd>
+            <dt>コードもしくはプログラミングでの使われ方</dt>
+            <dd>代入やメソッド呼び出しで内容を変えられるオブジェクト</dd>
+            <dt>コードでの例</dt>
+            <dd><code>nums = [1, 2, 3]
+nums[0] = 99  # list は mutable</code></dd>
+          </dl>
+        </div>
+      </details>
+
+      <div class="actions">
+        <button type="button" class="btn-primary">次の問題</button>
+      </div>
+    </section>
+
+    <p class="state-label" style="margin-top: 2rem;">参考: 不正解時の通知バナー</p>
+    <div class="dads-notification dads-notification--error" role="alert">
+      <span class="dads-notification__icon" aria-hidden="true">!</span>
+      <div class="dads-notification__body">
+        <p class="dads-notification__title">【結果】不正解（正解は B) mutable）</p>
+        <p class="dads-notification__text">immutable は「変更不可」の意味です。今回の説明には合いません。</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

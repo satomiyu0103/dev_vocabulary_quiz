@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>案B: ステップナビ型 — DADSモックアップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0017C1;
+      --primary-light: #E8F1FE;
+      --bg-page: #F8F8FB;
+      --bg-surface: #FFFFFF;
+      --text: #1A1A1A;
+      --text-muted: #626264;
+      --border: #D8D8DB;
+      --success: #1D7A4E;
+      --success-bg: #EAF5EE;
+      --warning: #B45309;
+      --warning-bg: #FEF3E6;
+      --focus-yellow: #FFEE00;
+      --radius: 8px;
+      --font: "Noto Sans JP", sans-serif;
+      --mono: "Noto Sans Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); line-height: 1.7; color: var(--text); background: var(--bg-page); }
+    :focus-visible { outline: 2px solid var(--focus-yellow); outline-offset: 2px; box-shadow: 0 0 0 2px #000; }
+    .mockup-banner { background: var(--primary); color: #fff; padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 700; }
+    .mockup-banner a { color: #fff; text-decoration: underline; }
+    main { max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+    h1 { font-size: 1.375rem; font-weight: 700; margin: 0 0 0.25rem; }
+    .sub { color: var(--text-muted); font-size: 0.875rem; margin: 0 0 1.25rem; }
+    .state-label {
+      font-size: 0.75rem; font-weight: 700; color: var(--primary);
+      margin: 1.5rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 2px solid var(--primary);
+    }
+    /* DADS Step Navigation */
+    .dads-steps {
+      display: flex;
+      list-style: none;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      gap: 0;
+    }
+    .dads-steps li {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 0.5rem 0.25rem 0.75rem;
+    }
+    .dads-steps li::before {
+      content: "";
+      display: block;
+      width: 1.75rem;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      margin: 0 auto 0.35rem;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background: var(--bg-surface);
+      font-weight: 700;
+    }
+    .dads-steps li::after {
+      content: "";
+      position: absolute;
+      top: 1.35rem;
+      left: calc(50% + 1rem);
+      width: calc(100% - 2rem);
+      height: 2px;
+      background: var(--border);
+      z-index: -1;
+    }
+    .dads-steps li:last-child::after { display: none; }
+    .dads-steps li.is-done { color: var(--primary); }
+    .dads-steps li.is-done::before {
+      content: "✓";
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.75rem;
+    }
+    .dads-steps li.is-current { color: var(--primary); font-weight: 700; }
+    .dads-steps li.is-current::before {
+      content: "2";
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+    .dads-steps li.is-todo::before { content: "3"; }
+    .dads-steps--feedback li:nth-child(1)::before { content: "✓"; }
+    .dads-steps--feedback li:nth-child(2)::before { content: "✓"; }
+    .dads-steps--feedback li:nth-child(3)::before { content: "3"; }
+    .dads-steps--feedback li:nth-child(1),
+    .dads-steps--feedback li:nth-child(2) { color: var(--primary); }
+    .dads-steps--feedback li:nth-child(1)::before,
+    .dads-steps--feedback li:nth-child(2)::before {
+      border-color: var(--primary); background: var(--primary-light); color: var(--primary);
+    }
+    .dads-steps--feedback li:nth-child(3) { color: var(--primary); font-weight: 700; }
+    .dads-steps--feedback li:nth-child(3)::before {
+      border-color: var(--primary); background: var(--primary); color: #fff;
+    }
+    .settings-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .settings-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.75rem;
+    }
+    .settings-box label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+    .settings-box select {
+      width: 100%;
+      font: inherit;
+      min-height: 44px;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-surface);
+    }
+    .panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .panel h2 { font-size: 1rem; font-weight: 700; margin: 0 0 0.75rem; }
+    .meaning-grid { display: grid; gap: 0.5rem; margin-bottom: 1rem; }
+    .meaning-item {
+      padding: 0.65rem 0.75rem;
+      background: var(--primary-light);
+      border-radius: var(--radius);
+      font-size: 0.9375rem;
+    }
+    .meaning-item span { display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); }
+    .choices { display: grid; gap: 0.5rem; }
+    .choice {
+      font: inherit; font-weight: 500; text-align: left; width: 100%;
+      min-height: 48px; padding: 0.65rem 1rem;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--bg-surface); cursor: pointer;
+    }
+    .choice:hover { background: var(--primary-light); border-color: var(--primary); }
+    .choice.is-correct { border: 2px solid var(--success); background: var(--success-bg); }
+    .choice.is-wrong { border: 2px dashed var(--warning); background: var(--warning-bg); }
+    .result-banner {
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    .result-banner--ok { background: var(--success-bg); border: 2px solid var(--success); color: var(--success); }
+    .actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+    .btn-primary {
+      flex: 1; font: inherit; font-weight: 700; min-height: 48px;
+      background: var(--primary); color: #fff; border: none; border-radius: var(--radius); cursor: pointer;
+    }
+    .btn-secondary {
+      font: inherit; font-weight: 500; min-height: 48px; padding: 0 1.25rem;
+      background: var(--bg-surface); color: var(--primary); border: 1px solid var(--primary);
+      border-radius: var(--radius); cursor: pointer;
+    }
+    .explain code {
+      display: block; font-family: var(--mono); font-size: 0.875rem;
+      background: #E8ECF2; padding: 0.5rem; border-radius: 6px; margin-top: 0.25rem;
+    }
+    .explain dt { font-weight: 700; font-size: 0.875rem; margin-top: 0.75rem; }
+    .explain dd { margin: 0.15rem 0 0; font-size: 0.9375rem; }
+  </style>
+</head>
+<body>
+  <div class="mockup-banner">案B: ステップナビ型 — <a href="index.html">一覧に戻る</a></div>
+  <main>
+    <h1>開発語彙 4択クイズ</h1>
+    <p class="sub">手続きの流れが分かるステップ型UI</p>
+
+    <p class="state-label">状態1: 出題中（ステップ2）</p>
+
+    <ol class="dads-steps" aria-label="クイズの進行">
+      <li class="is-done">設定</li>
+      <li class="is-current">問題</li>
+      <li class="is-todo">解説</li>
+    </ol>
+
+    <div class="settings-row">
+      <div class="settings-box">
+        <label for="mode-b">モード</label>
+        <select id="mode-b">
+          <option selected>基本の動詞・名詞</option>
+          <option>単体の汎用名</option>
+          <option>ライブラリ・API</option>
+        </select>
+      </div>
+      <div class="settings-box">
+        <label for="dir-b">出題方向</label>
+        <select id="dir-b">
+          <option selected>日→英</option>
+          <option>英→日</option>
+          <option>ミックス</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="panel">
+      <h2>問題 13 / 48 — 次の説明に合う英単語はどれ？</h2>
+      <div class="meaning-grid">
+        <div class="meaning-item"><span>日常の意味</span>変更できる、後から書き換え可能な</div>
+        <div class="meaning-item"><span>プログラミングでの意味</span>作成後に値や内容を変更できる</div>
+      </div>
+      <div class="choices">
+        <button type="button" class="choice">A) immutable</button>
+        <button type="button" class="choice">B) mutable</button>
+        <button type="button" class="choice">C) constant</button>
+        <button type="button" class="choice">D) static</button>
+      </div>
+    </section>
+
+    <p class="state-label">状態2: 解説（ステップ3）</p>
+
+    <ol class="dads-steps dads-steps--feedback" aria-label="クイズの進行">
+      <li>設定</li>
+      <li>問題</li>
+      <li class="is-current">解説</li>
+    </ol>
+
+    <section class="panel">
+      <div class="result-banner result-banner--ok">【結果】正解！</div>
+      <div class="choices" style="margin-bottom: 1rem;">
+        <button type="button" class="choice" disabled>A) immutable</button>
+        <button type="button" class="choice is-correct" disabled>B) mutable</button>
+        <button type="button" class="choice" disabled>C) constant</button>
+        <button type="button" class="choice" disabled>D) static</button>
+      </div>
+      <dl class="explain">
+        <dt>単語</dt>
+        <dd><strong>mutable</strong> — Pythonでは list, dict などが代表例</dd>
+        <dt>コードでの例</dt>
+        <dd><code>data = {"count": 0}
+data["count"] = 1  # mutable な辞書</code></dd>
+      </dl>
+      <div class="actions">
+        <button type="button" class="btn-secondary">トップに戻る</button>
+        <button type="button" class="btn-primary">次の問題へ</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

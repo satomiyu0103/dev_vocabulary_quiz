@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI案一覧 — 開発語彙 4択クイズ（DADS準拠）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dads-blue-900: #0017C1;
+      --dads-blue-100: #E8F1FE;
+      --dads-neutral-900: #1A1A1A;
+      --dads-neutral-700: #626264;
+      --dads-neutral-200: #D8D8DB;
+      --dads-neutral-50: #F8F8FB;
+      --dads-focus-yellow: #FFEE00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      background: var(--dads-neutral-50);
+      color: var(--dads-neutral-900);
+      line-height: 1.7;
+      padding: 1.5rem;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem; }
+    .lead { color: var(--dads-neutral-700); margin: 0 0 1.5rem; }
+    .cards { display: grid; gap: 1rem; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--dads-neutral-200);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .card h2 { font-size: 1.125rem; margin: 0 0 0.35rem; }
+    .card p { margin: 0 0 0.75rem; color: var(--dads-neutral-700); font-size: 0.95rem; }
+    .card a {
+      display: inline-block;
+      color: var(--dads-blue-900);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .card a:focus-visible {
+      outline: 2px solid var(--dads-focus-yellow);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px #000;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: var(--dads-blue-100);
+      color: var(--dads-blue-900);
+      margin-bottom: 0.5rem;
+    }
+    footer { margin-top: 2rem; font-size: 0.85rem; color: var(--dads-neutral-700); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>UI案一覧（DADS準拠モックアップ）</h1>
+    <p class="lead">デジタル庁デザインシステムβ版のパターンを、開発語彙4択クイズ向けに適用した画面案です。各HTMLをブラウザで開いて確認できます。</p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="tag">案A</span>
+        <h2>カード＋タブ型</h2>
+        <p>モード切替をタブ、意味表示を注釈ブロック、選択肢をアウトラインボタンで表現。行政サイトに近い標準レイアウト。</p>
+        <a href="ui-proposal-a-card.html">ui-proposal-a-card.html を開く</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">案B</span>
+        <h2>ステップナビ型</h2>
+        <p>出題→回答→解説の流れをステップナビで示す。手続き型UIで進捗が一目で分かる構成。</p>
+        <a href="ui-proposal-b-step.html">ui-proposal-b-step.html を開く</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">案C</span>
+        <h2>モバイル・ボトム固定型</h2>
+        <p>チップラベルで設定を表示し、主要操作を画面下部に固定。片手操作・移動中利用向け。</p>
+        <a href="ui-proposal-c-mobile-sticky.html">ui-proposal-c-mobile-sticky.html を開く</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">案D</span>
+        <h2>インライン解説型</h2>
+        <p>回答後も問題文を残し、通知バナー＋ディスクロージャーで解説を展開。画面遷移感を抑える。</p>
+        <a href="ui-proposal-d-inline.html">ui-proposal-d-inline.html を開く</a>
+      </article>
+    </div>
+
+    <footer>
+      参照: デジタル庁デザインシステムβ版 v2.17.1 · プロジェクト <code>doc/spec/デザイン書.md</code> の色弱・視覚過敏配慮を併用
+    </footer>
+  </main>
+</body>
+</html>
