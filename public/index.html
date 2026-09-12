@@ -6,189 +6,251 @@
   <title>開発語彙 4択クイズ</title>
   <style>
     :root {
-      --bg: #EDECEA;
-      --card: #FAFAF8;
+      --bg-page: #EDECEA;
+      --bg-surface: #FAFAF8;
       --text: #1A2332;
-      --muted: #4A5568;
-      --ok: #0D6E6E;
-      --ok-bg: #E6F4F1;
-      --bad: #B45309;
-      --bad-bg: #FEF3E6;
-      --accent: #2B6CB0;
-      --accent-tint: #E8F0FA;
+      --text-muted: #4A5568;
       --border: #C8CDD4;
+      --primary: #2B6CB0;
+      --primary-hover: #245A92;
+      --primary-light: #E8F0FA;
+      --success: #0D6E6E;
+      --success-bg: #E6F4F1;
+      --warning: #B45309;
+      --warning-bg: #FEF3E6;
+      --focus-yellow: #FFEE00;
+      --radius: 8px;
+      --font: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      --mono: ui-monospace, Consolas, monospace;
     }
     * { box-sizing: border-box; }
     body {
-      font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
       margin: 0;
-      padding: 1rem;
+      font-family: var(--font);
       font-size: 1.0625rem;
       line-height: 1.65;
+      color: var(--text);
+      background: var(--bg-page);
     }
-    main { max-width: 640px; margin: 0 auto; }
+    a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--focus-yellow);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px #000;
+    }
     .site-header {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 1rem;
-      margin-bottom: 0.75rem;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.25rem;
     }
-    h1 { font-size: 1.5rem; font-weight: 700; margin: 0; line-height: 1.3; }
-    .sub { color: var(--muted); font-size: 1rem; margin: 0.35rem 0 1rem; }
+    .site-header h1 { font-size: 1.25rem; font-weight: 700; margin: 0; }
+    .site-header .sub { margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--text-muted); }
     .top-link {
       flex-shrink: 0;
       font-size: 0.95rem;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--primary);
       text-decoration: none;
       padding: 0.35rem 0.5rem;
       border-radius: 6px;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
     }
-    .top-link:hover { background: var(--accent-tint); }
-    button:focus-visible,
-    .choice:focus-visible,
-    .top-link:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
+    .top-link:hover { background: var(--primary-light); }
     .top-link.hidden { display: none; }
-    .panel {
-      background: var(--card);
+    main { max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+    .panel, .dads-card {
+      background: var(--bg-surface);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
+      border-radius: var(--radius);
+      padding: 1.25rem;
       margin-bottom: 1rem;
     }
-    .mode-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
-    button, .choice {
+    .dads-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .dads-tab {
       font: inherit;
+      font-weight: 500;
+      padding: 0.65rem 0.85rem;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
       cursor: pointer;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      padding: 0.55rem 0.9rem;
-    }
-    button.mode:hover:not(.active) { background: var(--accent-tint); }
-    button.mode.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-    button.primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-      width: 100%;
-      margin-top: 0.75rem;
-      font-weight: 600;
-    }
-    button:disabled { opacity: 0.5; cursor: not-allowed; }
-    .choices { display: grid; gap: 0.5rem; margin: 1rem 0; }
-    .choice {
-      text-align: left;
-      width: 100%;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
       min-height: 44px;
+    }
+    .dads-tab[aria-selected="true"] {
+      color: var(--primary);
+      font-weight: 700;
+      border-bottom-color: var(--primary);
+      background: var(--primary-light);
+    }
+    .dads-segment {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .dads-btn {
+      font: inherit;
+      font-weight: 500;
+      min-height: 44px;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      cursor: pointer;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
-    .choice:hover:not(:disabled) { background: var(--accent-tint); }
-    .choice.correct {
-      border: 2px solid var(--ok);
-      background: var(--ok-bg);
+    .dads-btn--outline {
+      background: var(--bg-surface);
+      border: 1px solid var(--primary);
+      color: var(--primary);
     }
-    .choice.wrong {
-      border: 2px dashed var(--bad);
-      background: var(--bad-bg);
+    .dads-btn--outline.is-active {
+      background: var(--primary);
+      color: #fff;
     }
-    .result { font-weight: 800; font-size: 1.25rem; }
-    .result.ok { color: var(--ok); }
-    .result.ng { color: var(--bad); }
-    #q-label { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.5rem; }
-    #q-term {
-      font-size: 1.35rem;
+    .dads-btn--outline:hover:not(.is-active) { background: var(--primary-light); }
+    .dads-btn--filled {
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+      width: 100%;
       font-weight: 700;
-      margin: 0.5rem 0;
     }
-    .direction-bar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
-    button.direction.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-    button.direction:hover:not(.active) { background: var(--accent-tint); }
-    #question-panel strong { font-size: 1.1rem; }
-    #q-general, #q-prog {
-      font-size: 1.05rem;
-      margin: 0.5rem 0;
-      padding: 0.65rem 0.75rem;
-      background: #f3f6fa;
-      border-left: 4px solid var(--accent);
-      border-radius: 4px;
-    }
-    .choice { font-size: 1.05rem; font-weight: 500; }
-    .explain dt {
-      font-weight: 700;
-      margin-top: 0.75rem;
+    .dads-btn--filled:hover { background: var(--primary-hover); }
+    .dads-btn--choice {
+      width: 100%;
+      text-align: left;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
       color: var(--text);
-      font-size: 0.95rem;
-      text-transform: none;
+      padding: 0.75rem 1rem;
+      font-size: 1.05rem;
     }
-    .explain dd { margin: 0.2rem 0 0; font-size: 1.02rem; }
-    .examples { margin: 0.35rem 0 0; padding-left: 1.25rem; }
-    .examples li { margin: 0.35rem 0; }
-    code {
+    .dads-btn--choice:hover:not(:disabled) {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+    .dads-btn--choice.is-correct {
+      border: 2px solid var(--success);
+      background: var(--success-bg);
+    }
+    .dads-btn--choice.is-wrong {
+      border: 2px dashed var(--warning);
+      background: var(--warning-bg);
+    }
+    .dads-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+    .dads-card__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin: 0 0 0.5rem;
+    }
+    .dads-card__prompt {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+    .dads-notice {
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+      border-left: 4px solid var(--primary);
+      background: var(--primary-light);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.9375rem;
+    }
+    .dads-notice strong {
       display: block;
-      background: #e8ecf2;
-      color: #0f1419;
-      padding: 0.5rem 0.65rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
+    }
+    .choices { display: grid; gap: 0.5rem; margin-top: 1rem; }
+    .stats { font-size: 0.8125rem; color: var(--text-muted); margin: 0 0 1rem; }
+    .result-line { font-size: 1.25rem; font-weight: 700; margin: 0 0 1rem; }
+    .result-line--ok { color: var(--success); }
+    .result-line--ng { color: var(--warning); }
+    .explain dt { font-weight: 700; font-size: 0.875rem; margin-top: 0.75rem; }
+    .explain dd { margin: 0.15rem 0 0; }
+    .explain code {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.875rem;
+      background: var(--bg-page);
+      padding: 0.5rem 0.75rem;
       border-radius: 6px;
-      font-size: 0.95em;
+      margin-top: 0.25rem;
       white-space: pre-wrap;
       word-break: break-word;
     }
+    .examples { margin: 0.35rem 0 0; padding-left: 1.25rem; }
+    .examples li { margin: 0.35rem 0; }
     .hidden { display: none; }
-    #load-hint { font-size: 0.9rem; color: var(--muted); }
-    .stats { font-size: 0.85rem; color: var(--muted); }
+    #load-hint { font-size: 0.9rem; color: var(--text-muted); }
+    #q-term { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.75rem; }
+    #setup button { min-height: 44px; }
   </style>
 </head>
 <body>
-  <main>
-    <header class="site-header">
-      <div>
-        <h1>開発語彙 4択クイズ</h1>
-        <p class="sub">日常の意味とプログラミングでの意味をセットで学ぶ。</p>
-      </div>
-      <a href="#" id="top-link" class="top-link hidden" aria-label="トップページに戻る">トップに戻る</a>
-    </header>
+  <header class="site-header">
+    <div>
+      <h1>開発語彙 4択クイズ</h1>
+      <p class="sub">日常の意味とプログラミングでの意味をセットで学ぶ</p>
+    </div>
+    <a href="#" id="top-link" class="top-link hidden" aria-label="トップページに戻る">トップに戻る</a>
+  </header>
 
+  <main>
     <div id="setup" class="panel">
       <p id="load-hint">同じフォルダの <code>all_cards_v2.json</code> を読み込みます。</p>
       <input type="file" id="file-input" accept=".json" class="hidden">
-      <button type="button" id="pick-file">JSON を選ぶ</button>
-      <button type="button" id="retry-fetch" class="hidden">再読み込み</button>
+      <button type="button" class="dads-btn dads-btn--outline" id="pick-file">JSON を選ぶ</button>
+      <button type="button" class="dads-btn dads-btn--outline hidden" id="retry-fetch">再読み込み</button>
     </div>
 
     <div id="quiz" class="hidden">
-      <div class="mode-bar" id="modes">
-        <button type="button" class="mode active" data-mode="basic">基本の動詞・名詞</button>
-        <button type="button" class="mode" data-mode="anti">単体の汎用名</button>
-        <button type="button" class="mode" data-mode="lib">ライブラリ・API</button>
+      <nav class="dads-tabs" id="modes" role="tablist" aria-label="クイズモード">
+        <button type="button" class="dads-tab" role="tab" data-mode="basic" aria-selected="true">基本の動詞・名詞</button>
+        <button type="button" class="dads-tab" role="tab" data-mode="anti" aria-selected="false">単体の汎用名</button>
+        <button type="button" class="dads-tab" role="tab" data-mode="lib" aria-selected="false">ライブラリ・API</button>
+        <button type="button" class="dads-tab" role="tab" data-mode="p2" aria-selected="false">プロジェクト語彙（P2）</button>
+        <button type="button" class="dads-tab" role="tab" data-mode="pattern" aria-selected="false">命名パターン</button>
+        <button type="button" class="dads-tab" role="tab" data-mode="ds" aria-selected="false">データ分析（DS）</button>
+      </nav>
+
+      <div class="dads-segment" id="directions" role="group" aria-label="出題方向">
+        <button type="button" class="dads-btn dads-btn--outline is-active" data-direction="ja2en">日→英</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-direction="en2ja">英→日</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-direction="mixed">ミックス</button>
       </div>
-      <div class="direction-bar" id="directions">
-        <button type="button" class="direction active" data-direction="ja2en">日→英</button>
-        <button type="button" class="direction" data-direction="en2ja">英→日</button>
-        <button type="button" class="direction" data-direction="mixed">ミックス</button>
-      </div>
+
       <p class="stats" id="stats"></p>
 
-      <div id="question-panel" class="panel">
-        <p id="q-label"></p>
-        <p id="q-prompt"><strong>次の説明に合う英単語はどれ？</strong></p>
+      <section id="question-panel" class="dads-card" aria-labelledby="q-label">
+        <p class="dads-card__label" id="q-label"></p>
+        <p class="dads-card__prompt" id="q-prompt">次の説明に合う英単語はどれ？</p>
         <p id="q-term" class="hidden"></p>
-        <p id="q-general"></p>
-        <p id="q-prog"></p>
-        <div class="choices" id="choices"></div>
-      </div>
+        <div id="meaning-blocks"></div>
+        <div class="choices" id="choices" role="group" aria-label="選択肢"></div>
+      </section>
 
-      <div id="feedback-panel" class="panel hidden">
-        <p id="result-line" class="result"></p>
+      <section id="feedback-panel" class="dads-card hidden">
+        <p id="result-line" class="result-line"></p>
         <dl class="explain" id="explain"></dl>
-        <button type="button" class="primary" id="next-btn">次の問題</button>
-      </div>
+        <button type="button" class="dads-btn dads-btn--filled" id="next-btn">次の問題</button>
+      </section>
     </div>
   </main>
 
@@ -197,6 +259,9 @@
       basic: "基本の動詞・名詞",
       anti: "単体の汎用名",
       lib: "ライブラリ・API",
+      p2: "プロジェクト語彙（P2）",
+      pattern: "命名パターン",
+      ds: "データ分析（DS）",
     };
 
     const DIRECTION_LABELS = {
@@ -241,7 +306,19 @@
       if (mode === "anti") {
         return cards.filter((c) => c.type === "anti_pattern");
       }
-      return cards.filter((c) => c.type === "method" || c.type === "package" || c.type === "stdlib");
+      if (mode === "lib") {
+        return cards.filter((c) => c.type === "method" || c.type === "package" || c.type === "stdlib");
+      }
+      if (mode === "p2") {
+        return cards.filter((c) => c.type === "identifier" && c.tier === "P2");
+      }
+      if (mode === "pattern") {
+        return cards.filter((c) => c.type === "pattern");
+      }
+      if (mode === "ds") {
+        return cards.filter((c) => c.type === "identifier" && c.tier === "DS");
+      }
+      return [];
     }
 
     function pickDistractors(card, candidates) {
@@ -314,6 +391,16 @@
       }
     }
 
+    function setMeaningNotice(container, labelText, bodyText) {
+      const notice = document.createElement("div");
+      notice.className = "dads-notice";
+      const label = document.createElement("strong");
+      label.textContent = labelText;
+      notice.appendChild(label);
+      notice.appendChild(document.createTextNode(bodyText));
+      container.appendChild(notice);
+    }
+
     function nextQuestion() {
       answered = false;
       $("feedback-panel").classList.add("hidden");
@@ -330,27 +417,23 @@
 
       const qPrompt = $("q-prompt");
       const qTerm = $("q-term");
-      const qGeneral = $("q-general");
-      const qProg = $("q-prog");
+      const meaningBlocks = $("meaning-blocks");
+      meaningBlocks.replaceChildren();
 
       if (effectiveDirection === "ja2en") {
-        qPrompt.innerHTML = "<strong>次の説明に合う英単語はどれ？</strong>";
+        qPrompt.textContent = "次の説明に合う英単語はどれ？";
         qTerm.classList.add("hidden");
-        qGeneral.classList.remove("hidden");
-        qProg.classList.remove("hidden");
-        qGeneral.textContent = `■ 日常の意味: ${current.meaning_general_ja || "—"}`;
-        qProg.textContent = `■ プログラミングでの意味: ${current.meaning_programming_ja || "—"}`;
+        setMeaningNotice(meaningBlocks, "日常の意味", current.meaning_general_ja || "—");
+        setMeaningNotice(meaningBlocks, "プログラミングでの意味", current.meaning_programming_ja || "—");
         const distractors = pickDistractors(current, candidates);
         choices = shuffle([current.term, ...distractors]);
         correctIndex = choices.indexOf(current.term);
       } else {
         meaningKind = Math.random() < 0.5 ? "general" : "programming";
         const kindLabel = meaningKind === "general" ? "日常の意味" : "プログラミングでの意味";
-        qPrompt.innerHTML = `<strong>この単語の意味として正しいのはどれ？</strong>（${kindLabel}）`;
+        qPrompt.textContent = `この単語の意味として正しいのはどれ？（${kindLabel}）`;
         qTerm.textContent = current.term;
         qTerm.classList.remove("hidden");
-        qGeneral.classList.add("hidden");
-        qProg.classList.add("hidden");
         const correctText = getMeaningText(current, meaningKind);
         const distractors = pickDistractorsJa(current, candidates, meaningKind);
         choices = shuffle([correctText, ...distractors]);
@@ -364,11 +447,11 @@
       $("q-label").textContent = `【問題 ${questionNum}】${MODE_LABELS[mode]}${directionNote}`;
 
       const box = $("choices");
-      box.innerHTML = "";
+      box.replaceChildren();
       choices.forEach((choiceText, i) => {
         const btn = document.createElement("button");
         btn.type = "button";
-        btn.className = "choice";
+        btn.className = "dads-btn dads-btn--choice";
         btn.textContent = `${"ABCD"[i]}) ${choiceText}`;
         btn.addEventListener("click", () => answer(i, btn));
         box.appendChild(btn);
@@ -379,13 +462,13 @@
     function answer(index, btn) {
       if (answered) return;
       answered = true;
-      const buttons = $("choices").querySelectorAll(".choice");
+      const buttons = $("choices").querySelectorAll(".dads-btn--choice");
       buttons.forEach((b) => (b.disabled = true));
       const ok = index === correctIndex;
-      if (ok) btn.classList.add("correct");
+      if (ok) btn.classList.add("is-correct");
       else {
-        btn.classList.add("wrong");
-        buttons[correctIndex].classList.add("correct");
+        btn.classList.add("is-wrong");
+        buttons[correctIndex].classList.add("is-correct");
       }
       showFeedback(ok);
     }
@@ -423,11 +506,12 @@
       const line = $("result-line");
       if (ok) {
         line.textContent = "【結果】正解！";
+        line.className = "result-line result-line--ok";
       } else {
         const correctLabel = `${"ABCD"[correctIndex]}) ${choices[correctIndex]}`;
         line.textContent = `【結果】不正解（正解は ${correctLabel}）`;
+        line.className = "result-line result-line--ng";
       }
-      line.className = "result " + (ok ? "ok" : "ng");
 
       const exampleRows = (current.examples_general || []).slice(0, 2);
       const codeExample = (current.examples_code || [])[0];
@@ -465,7 +549,7 @@
     function updateStats() {
       const total = filterCards(allCards).length;
       $("stats").textContent =
-        `モード: ${MODE_LABELS[mode]} · 方向: ${DIRECTION_LABELS[questionDirection]} · 出題済み ${usedIds.size} / ${total} 語`;
+        `出題済み ${usedIds.size} / ${total} 語 · モード: ${MODE_LABELS[mode]} · 方向: ${DIRECTION_LABELS[questionDirection]}`;
     }
 
     function startQuiz(cards) {
@@ -476,6 +560,19 @@
       $("quiz").classList.remove("hidden");
       $("top-link").classList.remove("hidden");
       nextQuestion();
+    }
+
+    function setActiveTab(activeButton) {
+      document.querySelectorAll(".dads-tab").forEach((tabButton) => {
+        const isActive = tabButton === activeButton;
+        tabButton.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+    }
+
+    function setActiveDirection(activeButton) {
+      document.querySelectorAll("#directions .dads-btn--outline").forEach((dirButton) => {
+        dirButton.classList.toggle("is-active", dirButton === activeButton);
+      });
     }
 
     $("top-link").addEventListener("click", (event) => {
@@ -504,10 +601,9 @@
     });
     $("next-btn").addEventListener("click", nextQuestion);
     $("modes").addEventListener("click", (e) => {
-      const btn = e.target.closest(".mode");
+      const btn = e.target.closest(".dads-tab");
       if (!btn) return;
-      document.querySelectorAll(".mode").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+      setActiveTab(btn);
       mode = btn.dataset.mode;
       usedIds.clear();
       questionNum = 0;
@@ -515,10 +611,9 @@
     });
 
     $("directions").addEventListener("click", (e) => {
-      const btn = e.target.closest(".direction");
+      const btn = e.target.closest(".dads-btn--outline");
       if (!btn) return;
-      document.querySelectorAll(".direction").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+      setActiveDirection(btn);
       questionDirection = btn.dataset.direction;
       usedIds.clear();
       questionNum = 0;
@@ -528,7 +623,7 @@
     loadJson().then((ok) => {
       if (!ok) {
         $("load-hint").textContent =
-          "ファイルを直接開いた場合は下のボタンで all_cards_v2.json を選んでください。または export フォルダで python -m http.server 8080 を実行して http://localhost:8080/quiz.html を開く。";
+          "ファイルを直接開いた場合は下のボタンで all_cards_v2.json を選んでください。または public フォルダで python -m http.server 8080 を実行して http://localhost:8080/ を開く。";
       }
     });
   </script>
