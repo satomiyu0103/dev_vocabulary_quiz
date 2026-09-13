@@ -6077,7 +6077,20 @@
       "word_class": "method",
       "meaning_general_ja": "道、経路",
       "meaning_programming_ja": "ファイルパスをオブジェクトで扱う",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Follow the path through the park to the river.",
+          "ja": "公園を抜ける道をたどって川へ行く。"
+        },
+        {
+          "en": "The mountain path was muddy after the rain.",
+          "ja": "雨の後、山道はぬかるんでいた。"
+        },
+        {
+          "en": "Her career path shifted toward public service.",
+          "ja": "彼女の進路は公共サービスへ向きを変えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "Path(__file__).resolve().parent",
@@ -6124,7 +6137,20 @@
       "word_class": "method",
       "meaning_general_ja": "積み込む、読み込む",
       "meaning_programming_ja": "ファイルからJSONを読み込む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Load the trailer before the highway trip.",
+          "ja": "高速道路の旅の前にトレーラーに荷物を積む。"
+        },
+        {
+          "en": "Workers load grain into silos during harvest.",
+          "ja": "収穫期は作業員がサイロへ穀物を入れる。"
+        },
+        {
+          "en": "She asked him to load the dishwasher after dinner.",
+          "ja": "夕食後に食洗機を回してほしいと頼んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "json.load(fp)",
@@ -6180,7 +6206,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "dictをJSONファイルに書き出す",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "They dump leaves at the compost site each autumn.",
+          "ja": "毎秋、落ち葉を堆肥場に捨てる。"
+        },
+        {
+          "en": "Illegal dump sites were cleaned by volunteers.",
+          "ja": "不法投棄場はボランティアが清掃した。"
+        },
+        {
+          "en": "He dumped the old boxes in recycling.",
+          "ja": "古い箱をリサイクルに出した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "json.dump(data, fp, ensure_ascii=False)",
@@ -6227,7 +6266,20 @@
       "word_class": "method",
       "meaning_general_ja": "日付と時刻",
       "meaning_programming_ja": "日付と時刻を扱う",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Note the date and time on the receipt.",
+          "ja": "領収書に日付と時刻を記録する。"
+        },
+        {
+          "en": "What date-time works for your appointment?",
+          "ja": "予約はいつの日時が都合がよいですか？"
+        },
+        {
+          "en": "The datetime stamp showed when the photo was taken.",
+          "ja": "日時スタンプは写真が撮られた時刻を示していた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "datetime.now(tz)",
@@ -6274,7 +6326,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "タイムゾーン（例: Asia/Tokyo）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Check the time zone before you call overseas.",
+          "ja": "海外に電話する前にタイムゾーンを確認する。"
+        },
+        {
+          "en": "Flight info lists the arrival zone for each city.",
+          "ja": "フライト情報には各都市の到着ゾーンが載っている。"
+        },
+        {
+          "en": "Her watch switched zones automatically during travel.",
+          "ja": "旅行中、彼女の時計は自動でゾーンを切り替えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "ZoneInfo('Asia/Tokyo')",
@@ -6321,7 +6386,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "コマンドライン引数を定義する",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "They argued over the best route to the airport.",
+          "ja": "空港への最良ルートについて議論した。"
+        },
+        {
+          "en": "It is not worth arguing about small details.",
+          "ja": "細かい点で口論する価値はない。"
+        },
+        {
+          "en": "The siblings rarely argue when cooking together.",
+          "ja": "兄弟は一緒に料理するとめったに言い争わない。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "ArgumentParser()",
@@ -6368,7 +6446,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "外部コマンドを実行する",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The subcommittee met to review safety rules.",
+          "ja": "小委員会は安全規則を見直すために集まった。"
+        },
+        {
+          "en": "A subprocess in manufacturing checks each batch.",
+          "ja": "製造の下工程で各ロットを検査する。"
+        },
+        {
+          "en": "She led a subprocess focused on customer calls.",
+          "ja": "彼女は顧客電話に特化した下工程を担当した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "subprocess.run([...], check=True)",
@@ -6415,7 +6506,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "文字列から正規表現で検索",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Search the attic again for the missing photo album.",
+          "ja": "失くした写真アルバムをもう一度屋根裏を探す。"
+        },
+        {
+          "en": "Police searched the park after the festival.",
+          "ja": "祭りの後、警察は公園を捜索した。"
+        },
+        {
+          "en": "She searched online for repair shops nearby.",
+          "ja": "彼女は近くの修理店をオンラインで探した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "re.search(pattern, text)",
@@ -6462,7 +6566,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "データクラスを簡潔に定義",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The data class met every Tuesday for statistics.",
+          "ja": "データの授業は毎週火曜にあった。"
+        },
+        {
+          "en": "She grouped related fields into one data class.",
+          "ja": "関連フィールドを1つのデータクラスにまとめた。"
+        },
+        {
+          "en": "A data class keeps names and types together.",
+          "ja": "データクラスは名前と型を一緒に保つ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "@dataclass",
@@ -6509,7 +6626,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "文字列の選択肢を列挙",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Enumerate the steps before you start cooking.",
+          "ja": "料理を始める前に手順を数え上げる。"
+        },
+        {
+          "en": "The guide enumerated three safety rules at the gate.",
+          "ja": "ガイドはゲートで3つの安全規則を列挙した。"
+        },
+        {
+          "en": "Let us enumerate the options on the whiteboard.",
+          "ja": "ホワイトボードで選択肢を列挙しましょう。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "class RecordStatus(StrEnum)",
@@ -6556,7 +6686,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "型チェックを緩めるプレースホルダ型",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Any student may join the beginner workshop.",
+          "ja": "初心者向けワークショップはどの生徒でも参加できる。"
+        },
+        {
+          "en": "Take any seat that is open near the front.",
+          "ja": "前の方の空いている席ならどこでも座ってよい。"
+        },
+        {
+          "en": "Any help with moving boxes would be appreciated.",
+          "ja": "箱の運びを手伝ってくれると助かる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "dict[str, Any]",
@@ -6603,7 +6746,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "テストで偽オブジェクトを作る",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The stage mock-up showed the new set design.",
+          "ja": "舞台のモックアップが新しいセットデザインを示した。"
+        },
+        {
+          "en": "Students used a mock exam to practice timing.",
+          "ja": "生徒は模擬試験で時間配分を練習した。"
+        },
+        {
+          "en": "A mock trial prepared the debate team for finals.",
+          "ja": "模擬裁判がディベート部を本番に備えさせた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "MagicMock()",
@@ -6650,7 +6806,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "テスト中だけ関数を差し替える",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She patched the hole in her jacket sleeve.",
+          "ja": "彼女はジャケットの袖の穴を繕った。"
+        },
+        {
+          "en": "The crew patched the road after the storm.",
+          "ja": "作業員は嵐の後に道路を補修した。"
+        },
+        {
+          "en": "A software patch fixed the login bug overnight.",
+          "ja": "ソフトウェアのパッチが夜間にログイン不具合を直した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "@patch('module.func')",
@@ -6697,7 +6866,20 @@
       "word_class": "package",
       "meaning_general_ja": "（ライブラリ名）",
       "meaning_programming_ja": "GoogleスプレッドシートをPythonから操作するライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She spread the map across the table.",
+          "ja": "彼女はテーブルいっぱいに地図を広げた。"
+        },
+        {
+          "en": "Butter spread easily on the warm bread.",
+          "ja": "温かいパンにバターがよく伸びた。"
+        },
+        {
+          "en": "News of the festival spread through the town.",
+          "ja": "祭りの知らせが町中に広まった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use gspread after import — see usage_note_ja",
@@ -6744,7 +6926,20 @@
       "word_class": "method",
       "meaning_general_ja": "末尾に付け足す",
       "meaning_programming_ja": "シートの最終行の下に1行追加",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Append your signature at the bottom of the form.",
+          "ja": "フォームの下部に署名を追記してください。"
+        },
+        {
+          "en": "She appended a short note to the end of the email.",
+          "ja": "彼女はメールの末尾に短いメモを追記した。"
+        },
+        {
+          "en": "Add one more row to the guest list for late arrivals.",
+          "ja": "遅れて来る人用に来客リストに1行足す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "worksheet.append_row(row_values)",
@@ -6793,7 +6988,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "指定範囲のセルをまとめて更新",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Please update your address after you move.",
+          "ja": "引っ越したら住所を更新してください。"
+        },
+        {
+          "en": "The app will update overnight if Wi-Fi is on.",
+          "ja": "Wi-Fiがオンならアプリは夜間に更新される。"
+        },
+        {
+          "en": "She updated the team on progress during lunch.",
+          "ja": "昼食時に進捗をチームへ伝えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "worksheet.update(range_name, values)",
@@ -6837,7 +7045,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "サービスアカウントでスプレッドシートに接続",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Open the storage unit by key before sunrise.",
+          "ja": "日の出前に鍵で保管庫を開ける。"
+        },
+        {
+          "en": "He opened the filing cabinet by key number twelve.",
+          "ja": "12番の鍵で書類棚を開けた。"
+        },
+        {
+          "en": "Guests open the gate by key card at night.",
+          "ja": "夜はゲストがキーカードでゲートを開ける。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gspread.service_account(filename=creds_path)",
@@ -6881,7 +7102,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Google API用の認証情報",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The journalist checked the source's credentials carefully.",
+          "ja": "記者は情報源の資格・経歴を慎重に確認した。"
+        },
+        {
+          "en": "Bring your credentials to the security desk.",
+          "ja": "警備デスクに身分証明を持参してください。"
+        },
+        {
+          "en": "Her teaching credentials impressed the hiring panel.",
+          "ja": "教員資格が採用委員会に好印象を与えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "Credentials.from_service_account_file",
@@ -6925,7 +7159,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "GASでスプレッドシートをIDで開く",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Open the shared spreadsheet before the budget meeting.",
+          "ja": "予算会議の前に共有スプレッドシートを開く。"
+        },
+        {
+          "en": "He opened the roster spreadsheet on his phone.",
+          "ja": "彼は携帯で名簿のスプレッドシートを開いた。"
+        },
+        {
+          "en": "The coach opened the practice schedule sheet for edits.",
+          "ja": "コーチは練習日程シートを開いて編集した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "SpreadsheetApp.openById(spreadsheetId)",
@@ -6969,7 +7216,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "GASでセル範囲に値を書き込む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Get the price range before you visit the dealer.",
+          "ja": "販売店に行く前に価格帯を調べる。"
+        },
+        {
+          "en": "The hike covers a wide range of elevations.",
+          "ja": "そのハイキングは広い高度幅をカバーする。"
+        },
+        {
+          "en": "Choose a date range that includes both holidays.",
+          "ja": "両方の祝日を含む日付範囲を選ぶ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "sheet.getRange(1,1,1,n).setValues([headers])",
@@ -7013,7 +7273,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "GASでDriveファイルを取得",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Get your drive checked if the car vibrates.",
+          "ja": "車が振動するならドライブを点検してもらう。"
+        },
+        {
+          "en": "They went for a scenic drive along the coast.",
+          "ja": "海岸沿いの景色の良いドライブに出かけた。"
+        },
+        {
+          "en": "She got her files from the shared drive after lunch.",
+          "ja": "昼食後に共有ドライブからファイルを取得した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "DriveApp.getFileById(fileId)",
@@ -7057,7 +7330,20 @@
       "word_class": "package",
       "meaning_general_ja": "（ライブラリ名）",
       "meaning_programming_ja": "表データを DataFrame で扱うライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Giant pandas spend most of the day eating bamboo.",
+          "ja": "ジャイアントパンダは1日の大半を竹を食べて過ごす。"
+        },
+        {
+          "en": "The zoo welcomed a new panda cub last spring.",
+          "ja": "動物園は昨春、新しいパンダの赤ちゃんを迎えた。"
+        },
+        {
+          "en": "Panda conservation programs protect mountain habitats.",
+          "ja": "パンダ保護プログラムは山地の生息地を守っている。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use pandas after import — see usage_note_ja",
@@ -7103,7 +7389,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "CSV を DataFrame として読む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Analysts read CSV exports into a table for review.",
+          "ja": "アナリストはCSVの出力を表に読み込んで確認する。"
+        },
+        {
+          "en": "She read the comma-separated list line by line.",
+          "ja": "彼女はカンマ区切りの一覧を1行ずつ読んだ。"
+        },
+        {
+          "en": "The intern opened the CSV in a spreadsheet to sort names.",
+          "ja": "インターンはスプレッドシートでCSVを開き、名前を並べ替えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "pd.read_csv(path)",
@@ -7149,7 +7448,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Excel を DataFrame として読む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "He read the Excel budget sheet before the meeting.",
+          "ja": "会議前にExcelの予算シートを読んだ。"
+        },
+        {
+          "en": "The accountant read sales figures from the workbook.",
+          "ja": "経理担当はワークブックから売上数字を読み取った。"
+        },
+        {
+          "en": "She read the roster from an Excel file on the share drive.",
+          "ja": "共有ドライブのExcelファイルから名簿を読み込んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "pd.read_excel(path)",
@@ -7195,7 +7507,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "DataFrame を CSV に保存",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Export the table to CSV so others can open it anywhere.",
+          "ja": "誰でも開けるように表をCSVに書き出す。"
+        },
+        {
+          "en": "He saved the cleaned list to a CSV for the mailing team.",
+          "ja": "整形した一覧をメール担当向けにCSVへ保存した。"
+        },
+        {
+          "en": "The survey results were written to CSV overnight.",
+          "ja": "アンケート結果は夜間にCSVへ書き出された。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "df.to_csv(path, index=False)",
@@ -7241,7 +7566,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "DataFrame を Excel に保存",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She saved the monthly totals to an Excel workbook.",
+          "ja": "月次合計をExcelのワークブックに保存した。"
+        },
+        {
+          "en": "The report was exported to Excel for the finance team.",
+          "ja": "レポートは経理向けにExcelへ出力された。"
+        },
+        {
+          "en": "He wrote the pivot summary to Excel before emailing it.",
+          "ja": "ピボット集計をメールする前にExcelへ書き出した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "df.to_excel(writer, sheet_name=name)",
@@ -7287,7 +7625,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "列の値でグループ分けして集計",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The teacher grouped students by reading level.",
+          "ja": "先生は読解レベルで生徒をグループ分けした。"
+        },
+        {
+          "en": "Sales were grouped by region in the annual review.",
+          "ja": "年次レビューでは地域ごとに売上をグループ化した。"
+        },
+        {
+          "en": "Group the receipts by month to spot seasonal trends.",
+          "ja": "季節の傾向を見るには領収書を月ごとにまとめる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "df.groupby('col').sum()",
@@ -7333,7 +7684,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "pandas の表データ型",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Her notes formed a neat frame of ideas on one page.",
+          "ja": "彼女のメモは1ページに整った枠組みのアイデアになっていた。"
+        },
+        {
+          "en": "The photo frame on the desk held a picture of their team.",
+          "ja": "机のフォトフレームにはチームの写真が入っていた。"
+        },
+        {
+          "en": "Each row in the table represents one customer visit.",
+          "ja": "表の各行は1回の来客を表している。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "df = pd.DataFrame(rows)",
@@ -7379,7 +7743,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Excel (.xlsx) を Python で読み書き",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She opened the workbook and checked the first sheet.",
+          "ja": "ワークブックを開き、最初のシートを確認した。"
+        },
+        {
+          "en": "The Excel file opened slowly because it had many charts.",
+          "ja": "チャートが多く、Excelファイルの開きが遅かった。"
+        },
+        {
+          "en": "He opened the spreadsheet to update the travel costs.",
+          "ja": "旅費を更新するためにスプレッドシートを開いた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "wb = load_workbook(\"report.xlsx\")",
@@ -7425,7 +7802,20 @@
       "word_class": "method",
       "meaning_general_ja": "積み込む、読み込む",
       "meaning_programming_ja": "Excel ファイルを開く",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Load the workbook before you edit any cells.",
+          "ja": "セルを編集する前にワークブックを読み込む。"
+        },
+        {
+          "en": "She loaded last year's budget file from the archive.",
+          "ja": "彼女はアーカイブから昨年の予算ファイルを読み込んだ。"
+        },
+        {
+          "en": "The script loads the workbook at startup.",
+          "ja": "起動時にワークブックを読み込む。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "wb = load_workbook(path)",
@@ -7480,7 +7870,20 @@
       "word_class": "package",
       "meaning_general_ja": "（元素名・ライブラリ名）",
       "meaning_programming_ja": "ブラウザを自動操作するライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Selenium is also a trace mineral found in nuts and grains.",
+          "ja": "セレンはナッツや穀物にも含まれる微量ミネラルだ。"
+        },
+        {
+          "en": "The lab tests soil samples for selenium levels.",
+          "ja": "研究室は土壌サンプルのセレン含有量を検査する。"
+        },
+        {
+          "en": "Some vitamins include selenium for immune support.",
+          "ja": "免疫サポートのためにセレンを含むビタミンもある。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "driver = webdriver.Chrome()",
@@ -7526,7 +7929,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Chrome ブラウザを起動",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She drives her chrome-trimmed car to work every day.",
+          "ja": "彼女はクロム装飾の車で毎日通勤している。"
+        },
+        {
+          "en": "The chrome faucet gleamed after she polished it.",
+          "ja": "磨いた後、クロムの蛇口が光っていた。"
+        },
+        {
+          "en": "He opened Chrome to check the train schedule.",
+          "ja": "Chromeを開いて電車の時刻表を確認した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "driver = webdriver.Chrome()",
@@ -7572,7 +7988,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "HTML要素を id 属性で指定",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The clerk looked up the parcel by ID number.",
+          "ja": "店員はID番号で荷物を照会した。"
+        },
+        {
+          "en": "Students enter the building by ID card at the gate.",
+          "ja": "生徒はゲートでIDカードを使って入館する。"
+        },
+        {
+          "en": "Match each ticket by ID before seating guests.",
+          "ja": "着席前に各チケットをIDで照合する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "By.ID, 'login_id'",
@@ -7618,7 +8047,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "要素をクリックする",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Click the lock icon once to secure the window.",
+          "ja": "窓を固定するには鍵アイコンを一度クリックする。"
+        },
+        {
+          "en": "One loud click echoed in the quiet hallway.",
+          "ja": "静かな廊下に大きなクリック音が響いた。"
+        },
+        {
+          "en": "She heard the camera click during the group photo.",
+          "ja": "集合写真のときカメラのシャッター音が聞こえた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "element.click()",
@@ -7664,7 +8106,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "要素が出現するまで待つ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Please wait by the door until your name is called.",
+          "ja": "名前が呼ばれるまでドアのそばでお待ちください。"
+        },
+        {
+          "en": "The driver waited at the light for thirty seconds.",
+          "ja": "運転手は信号で30秒待った。"
+        },
+        {
+          "en": "We had a short wait before the show began.",
+          "ja": "公演が始まる前に少し待った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "WebDriverWait(driver, 10)",
@@ -7710,7 +8165,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "クリック可能になるまで待つ条件",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The submit button becomes clickable after you agree.",
+          "ja": "同意すると送信ボタンが押せるようになる。"
+        },
+        {
+          "en": "Only clickable links are shown in blue on this page.",
+          "ja": "このページではクリックできるリンクだけ青で表示される。"
+        },
+        {
+          "en": "Wait until the menu item is clickable on mobile.",
+          "ja": "モバイルではメニュー項目が押せるようになるまで待つ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "EC.element_to_be_clickable((By.ID, 'btn'))",
@@ -7756,7 +8224,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "マウス・キーボード操作を自動化",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The auto door opened when she waved her hand.",
+          "ja": "彼女が手を振ると自動ドアが開いた。"
+        },
+        {
+          "en": "He switched the camera to auto focus for the portrait.",
+          "ja": "ポートレート用にカメラを自動フォーカスに切り替えた。"
+        },
+        {
+          "en": "The hotel uses an auto checkout kiosk in the lobby.",
+          "ja": "ホテルのロビーには自動チェックアウト機がある。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use pyautogui after import — see usage_note_ja",
@@ -7802,7 +8283,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "画面キャプチャ（スクリーンショット）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She grabbed a quick screenshot before the page changed.",
+          "ja": "ページが変わる前に素早くスクリーンショットを撮った。"
+        },
+        {
+          "en": "The coach paused the video to capture one frame.",
+          "ja": "コーチは1フレームを取るために動画を一時停止した。"
+        },
+        {
+          "en": "I saved a screen grab of the error message.",
+          "ja": "エラーメッセージの画面キャプチャを保存した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "with mss.mss() as sct: sct.grab(monitor)",
@@ -7848,7 +8342,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "キーボード・マウスの入力監視",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The teacher watched each student's keyboard during the typing test.",
+          "ja": "タイピングテスト中、先生は生徒一人ひとりのキーボードを見ていた。"
+        },
+        {
+          "en": "He rested his hand on the mouse while reading the report.",
+          "ja": "レポートを読みながらマウスに手を置いていた。"
+        },
+        {
+          "en": "Input from the remote control arrived a second late.",
+          "ja": "リモコンの入力が1秒遅れて届いた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "listener = keyboard.Listener(on_press=on_key_press)",
@@ -7894,7 +8401,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "PDF の読み書き・比較",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The PDF opened cleanly on her tablet.",
+          "ja": "PDFはタブレットで問題なく開いた。"
+        },
+        {
+          "en": "He printed the scanned pages as a single PDF file.",
+          "ja": "スキャンしたページを1つのPDFファイルとして印刷した。"
+        },
+        {
+          "en": "The form arrived as a fillable PDF attachment.",
+          "ja": "フォームは入力可能なPDFの添付ファイルとして届いた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use pymupdf (fitz) after import — see usage_note_ja",
@@ -7940,7 +8460,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "画像を PDF にまとめる",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She turned her vacation photos into one PDF album.",
+          "ja": "休暇の写真を1冊のPDFアルバムにまとめた。"
+        },
+        {
+          "en": "The scanner saved each page as an image first.",
+          "ja": "スキャナーは各ページをまず画像として保存した。"
+        },
+        {
+          "en": "He emailed the signed pages as a merged PDF.",
+          "ja": "署名済みのページを結合したPDFとしてメールした。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "img2pdf.convert(image_paths)",
@@ -7986,7 +8519,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "GASで日付を文字列に整形",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The camp utilities include water and shared showers.",
+          "ja": "キャンプ場の設備には水と共同シャワーがある。"
+        },
+        {
+          "en": "City utilities bills rose after the cold winter.",
+          "ja": "寒い冬の後、都市の公共料金の請求が上がった。"
+        },
+        {
+          "en": "He called utilities to report a gas smell.",
+          "ja": "ガスの臭いを公共事業会社に報告した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd')",
@@ -8032,7 +8578,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Google の生成AIでPDF等から構造化抽出",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Gemini is a constellation best seen in winter skies.",
+          "ja": "ふたご座は冬の空でよく見える星座だ。"
+        },
+        {
+          "en": "The twins in Gemini represent two bright stars.",
+          "ja": "ふたご座の双子は2つの明るい星を表す。"
+        },
+        {
+          "en": "She was born under Gemini and loves lively debate.",
+          "ja": "彼女はふたご座生まれで活発な議論が好きだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "Gemini で JSON 抽出",
@@ -8079,7 +8638,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "スプレッドシートを開いたときにメニューを追加",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "On open day, families toured the new school.",
+          "ja": "オープンデーでは家族が新しい学校を見学した。"
+        },
+        {
+          "en": "The store offers samples on open house weekend.",
+          "ja": "オープンハウスの週末は試食がある。"
+        },
+        {
+          "en": "Staff greet visitors on open mornings at the clinic.",
+          "ja": "クリニックのオープン朝にはスタッフが来客を迎える。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "function onOpen() { ... }",
@@ -8125,7 +8697,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "GAS をローカルで開発・デプロイするCLI",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She fixed the necklace with a tiny gold clasp.",
+          "ja": "小さな金の留め金でネックレスを止めた。"
+        },
+        {
+          "en": "The clasp on his backpack broke during the hike.",
+          "ja": "ハイキング中にリュックの留め具が壊れた。"
+        },
+        {
+          "en": "He clasped his hands before starting the speech.",
+          "ja": "スピーチを始める前に手を組んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "clasp push",
@@ -8171,7 +8756,20 @@
       "word_class": "package",
       "meaning_general_ja": "（ライブラリ名）",
       "meaning_programming_ja": "モダンな HTTP クライアント（async 可）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "HTTP is the protocol browsers use to fetch web pages.",
+          "ja": "HTTPはブラウザがWebページを取得する際の通信規約だ。"
+        },
+        {
+          "en": "The link uses HTTPS for a secure connection.",
+          "ja": "そのリンクは安全な接続のためにHTTPSを使う。"
+        },
+        {
+          "en": "He learned how HTTP requests travel across the internet.",
+          "ja": "HTTPリクエストがインターネットをどう通るか学んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use httpx after import — see usage_note_ja",
@@ -8217,7 +8815,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "HTTP GET リクエスト",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Get the tickets early before they sell out.",
+          "ja": "売り切れる前に早めにチケットを入手する。"
+        },
+        {
+          "en": "She got a reply from the landlord within an hour.",
+          "ja": "彼女は1時間以内に大家から返事を得た。"
+        },
+        {
+          "en": "I will get the brochure from the front desk.",
+          "ja": "フロントからパンフレットを受け取る。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "response = client.get(url, timeout=30)",
@@ -8268,7 +8879,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "シンプルな HTTP クライアント",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The council received many requests for extra buses.",
+          "ja": "議会は追加バスの要望を多数受けた。"
+        },
+        {
+          "en": "Her request for leave was approved the same day.",
+          "ja": "休暇の申請は当日に承認された。"
+        },
+        {
+          "en": "Submit requests in writing when possible.",
+          "ja": "可能なら要望は書面で提出する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use requests after import — see usage_note_ja",
@@ -8314,7 +8938,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "HTTP POST（Slack Webhook 等）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She posted the announcement on the community board.",
+          "ja": "彼女は掲示板に告知を貼った。"
+        },
+        {
+          "en": "The winner will be announced by post tomorrow.",
+          "ja": "勝者は明日郵送で通知される。"
+        },
+        {
+          "en": "He posted a thank-you note after the event.",
+          "ja": "イベント後に感謝のメモを投稿した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "requests.post(webhook_url, json=payload)",
@@ -8361,7 +8998,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": ".env ファイルから環境変数を読む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A dot on the map marked their meeting place.",
+          "ja": "地図の点が待ち合わせ場所を示していた。"
+        },
+        {
+          "en": "She placed a dot next to each finished task.",
+          "ja": "終えたタスクの横に点を付けた。"
+        },
+        {
+          "en": "The envelope had a red dot for urgent mail.",
+          "ja": "封筒には急ぎの郵便用に赤い点があった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "load_dotenv()",
@@ -8407,7 +9057,20 @@
       "word_class": "method",
       "meaning_general_ja": "積み込む、読み込む",
       "meaning_programming_ja": ".env を process の環境変数に載せる",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Load the van before the road trip.",
+          "ja": "ロードトリップの前にバンに荷物を積む。"
+        },
+        {
+          "en": "Workers load crates onto the truck at dawn.",
+          "ja": "作業員は夜明けにトラックへ箱を積み込む。"
+        },
+        {
+          "en": "She loaded film into the camera carefully.",
+          "ja": "彼女は慎重にカメラへフィルムを装填した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "load_dotenv(env_file)",
@@ -8462,7 +9125,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "URL だけで Slack に投稿する方式",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "He felt slack in the rope and tightened the knot.",
+          "ja": "ロープのたるみを感じ、結び目を締めた。"
+        },
+        {
+          "en": "There is some slack in the schedule after lunch.",
+          "ja": "昼食後は予定に少し余裕がある。"
+        },
+        {
+          "en": "The team posted updates in the Slack channel.",
+          "ja": "チームはSlackのチャンネルに更新を投稿した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "SLACK_WEBHOOK_URL",
@@ -8508,7 +9184,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "YouTube 等の動画・字幕を取得",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The clip went viral on video sites last week.",
+          "ja": "そのクリップは先週動画サイトで話題になった。"
+        },
+        {
+          "en": "She downloaded a lecture recording for offline study.",
+          "ja": "彼女はオフライン学習用に講義録画をダウンロードした。"
+        },
+        {
+          "en": "The playlist link was shared in the group chat.",
+          "ja": "プレイリストのリンクがグループチャットで共有された。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use yt-dlp after import — see usage_note_ja",
@@ -8554,7 +9243,20 @@
       "word_class": "method",
       "meaning_general_ja": "抜き出す",
       "meaning_programming_ja": "動画メタデータを取得（DLしなくても可）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The dentist extracted a wisdom tooth yesterday.",
+          "ja": "歯医者は昨日親知らずを抜いた。"
+        },
+        {
+          "en": "Vanilla extract gives the cookies a rich aroma.",
+          "ja": "バニラエキスがクッキーに豊かな香りを与える。"
+        },
+        {
+          "en": "They extracted quotes from the interview transcript.",
+          "ja": "インタビューの書き起こしから引用を抜き出した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "ydl.extract_info(url, download=False)",
@@ -8600,7 +9302,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "音声の文字起こし（ローカル）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She whispered the answer so others would not hear.",
+          "ja": "他の人に聞こえないよう、彼女はささやいて答えた。"
+        },
+        {
+          "en": "A whisper of wind moved the curtain.",
+          "ja": "そよ風がカーテンを揺らした。"
+        },
+        {
+          "en": "He spoke in a whisper during the late movie.",
+          "ja": "夜の映画の間、彼は小声で話した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "WhisperModel(model_size)",
@@ -8646,7 +9361,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "高速な DataFrame ライブラリ（pandas 代替）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Polar explorers trained for months in freezing winds.",
+          "ja": "北極探検家は何ヶ月も凍える風の中で訓練した。"
+        },
+        {
+          "en": "Polar bears hunt along the ice edge in winter.",
+          "ja": "ホッキョクグマは冬に氷の縁沿いで狩りをする。"
+        },
+        {
+          "en": "The documentary followed a polar research team.",
+          "ja": "ドキュメンタリーは北極の研究チームを追った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use polars after import — see usage_note_ja",
@@ -8692,7 +9420,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "機械学習の基本ライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Apprentices learn craft skills from experienced mentors.",
+          "ja": "見習いは熟練の指導者から技を学ぶ。"
+        },
+        {
+          "en": "Children learn faster when lessons feel like play.",
+          "ja": "遊びのように感じられると子どもは早く学ぶ。"
+        },
+        {
+          "en": "She learned to knit by watching her grandmother.",
+          "ja": "祖母を見て編み物を学んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)",
@@ -8739,7 +9480,20 @@
       "word_class": "method",
       "meaning_general_ja": "電車、訓練する",
       "meaning_programming_ja": "データを学習用とテスト用に分ける",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The coach split the squad into training and test groups.",
+          "ja": "コーチはチームを練習組とテスト組に分けた。"
+        },
+        {
+          "en": "Half the class took the practice quiz before the real test.",
+          "ja": "クラスの半分は本番前に練習テストを受けた。"
+        },
+        {
+          "en": "They split the sample: some for training, some for checking.",
+          "ja": "サンプルを分け、一部は練習用、一部は確認用にした。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "X_train, X_test, y_train, y_test = train_test_split(X, y)",
@@ -8785,7 +9539,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "モデルに学習データを渡して学習させる",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "These shoes fit me perfectly after one wear.",
+          "ja": "この靴は一度履いたらぴったり合った。"
+        },
+        {
+          "en": "The tailor made the jacket fit across the shoulders.",
+          "ja": "仕立て屋は肩幅に合うようにジャケットを直した。"
+        },
+        {
+          "en": "Regular exercise helps clothes fit more comfortably.",
+          "ja": "定期的な運動は服がより楽に着られるようになる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "model.fit(X_train, y_train)",
@@ -8831,7 +9598,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "学習済みモデルで予測する",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Meteorologists predict rain for the weekend.",
+          "ja": "気象予報士は週末の雨を予測している。"
+        },
+        {
+          "en": "It is hard to predict how the crowd will react.",
+          "ja": "観客がどう反応するか予測するのは難しい。"
+        },
+        {
+          "en": "She predicted the winner before the final round.",
+          "ja": "彼女は最終ラウンドの前に勝者を予想した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "y_pred = model.predict(X_test)",
@@ -8877,7 +9657,20 @@
       "word_class": "method",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "正解率を計算する",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The archer praised the accuracy of her last shot.",
+          "ja": "弓射手は最後の一射の精度を褒めた。"
+        },
+        {
+          "en": "Spell-check improved the accuracy of his essay.",
+          "ja": "スペルチェックで作文の正確さが上がった。"
+        },
+        {
+          "en": "They measured the scale's accuracy with known weights.",
+          "ja": "既知の重さで秤の精度を測った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "accuracy_score(y_test, y_pred)",
@@ -8924,7 +9717,20 @@
       "word_class": "noun",
       "meaning_general_ja": "探索的データ分析（略）",
       "meaning_programming_ja": "探索的データ分析（まずデータを観察する工程）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Exploratory talks began before the formal contract.",
+          "ja": "正式契約の前に探索的な話し合いが始まった。"
+        },
+        {
+          "en": "The hikers did exploratory mapping of the new trail.",
+          "ja": "ハイカーは新しい道の探索的な地図作成をした。"
+        },
+        {
+          "en": "Early analysis revealed patterns no one had noticed.",
+          "ja": "初期の分析で誰も気づかなかったパターンが見つかった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "EDA = load_from_config(settings)",
@@ -8958,7 +9764,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_EDA_action()` のように関数・変数名に付く。Python標準の `EDA()` メソッドではない。"
     },
     {
@@ -8970,7 +9776,20 @@
       "word_class": "noun",
       "meaning_general_ja": "特徴、機能",
       "meaning_programming_ja": "モデルへの入力となる列・変数",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The lake was the main feature of the postcard.",
+          "ja": "湖がポストカードの主な見どころだった。"
+        },
+        {
+          "en": "This phone's best feature is the long battery life.",
+          "ja": "この電話の一番の特長はバッテリー持ちだ。"
+        },
+        {
+          "en": "The article featured interviews with local farmers.",
+          "ja": "記事は地元農家へのインタビューを特集した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "feature = load_from_config(settings)",
@@ -9007,7 +9826,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_feature_action()` のように関数・変数名に付く。Python標準の `feature()` メソッドではない。"
     },
     {
@@ -9019,7 +9838,20 @@
       "word_class": "noun",
       "meaning_general_ja": "目標、的",
       "meaning_programming_ja": "予測したい目的変数（ラベル）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The archer aimed at the center of the target.",
+          "ja": "弓射手は的の中心を狙った。"
+        },
+        {
+          "en": "Our target is to finish repairs by Friday.",
+          "ja": "金曜までに修理を終えるのが目標だ。"
+        },
+        {
+          "en": "The campaign targeted young voters in the city.",
+          "ja": "キャンペーンは市内の若い有権者を狙った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "target = load_from_config(settings)",
@@ -9056,7 +9888,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_target_action()` のように関数・変数名に付く。Python標準の `target()` メソッドではない。"
     },
     {
@@ -9068,7 +9900,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Python で分析 Web アプリを素早く作る",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A narrow stream lit up with sunlight after the storm.",
+          "ja": "嵐の後、細い小川が日光で照らされた。"
+        },
+        {
+          "en": "They sat by the stream, listening to the water.",
+          "ja": "小川のそばに座り、水の音を聞いた。"
+        },
+        {
+          "en": "The stream lit the valley floor each morning.",
+          "ja": "毎朝、その小川が谷の底を明るくしていた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use streamlit after import — see usage_note_ja",
@@ -9115,7 +9960,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "ノートブックで段階的に分析する環境",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Jupiter is the largest planet in our solar system.",
+          "ja": "木星は太陽系で最大の惑星だ。"
+        },
+        {
+          "en": "The notebook listed observations from each night sky watch.",
+          "ja": "ノートには毎夜の天体観測の記録が並んでいた。"
+        },
+        {
+          "en": "She kept a lab notebook with dated experiment notes.",
+          "ja": "彼女は日付入りの実験メモを研究室ノートに残した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use jupyter after import — see usage_note_ja",
@@ -9161,7 +10019,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のcross_validation）",
       "meaning_programming_ja": "データを分けて何度も学習・評価する手法",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The recipe needed cross validation from two chefs.",
+          "ja": "そのレシピは2人のシェフによる相互確認が必要だった。"
+        },
+        {
+          "en": "Peer review provides cross validation of research claims.",
+          "ja": "査読は研究の主張を相互に検証する。"
+        },
+        {
+          "en": "They checked results across folds of the same survey.",
+          "ja": "同じ調査の分割ごとに結果を照合した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "cross_validation = load_from_config(settings)",
@@ -9197,7 +10068,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_cross_action()` のように関数・変数名に付く。Python標準の `cross_validation()` メソッドではない。"
     },
     {
@@ -9209,7 +10080,20 @@
       "word_class": "noun",
       "meaning_general_ja": "ハイパーパラメータ（学習前の設定値）",
       "meaning_programming_ja": "学習前に人が決めるモデルの設定値",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Turning one dial too high made the bread over-rise.",
+          "ja": "つまみを1つ強く回しすぎてパンが膨らみ過ぎた。"
+        },
+        {
+          "en": "Fine-tuning the oven temperature changed the crust.",
+          "ja": "オーブン温度の微調整で皮の焼け具合が変わった。"
+        },
+        {
+          "en": "Small setting changes had a big effect on sound quality.",
+          "ja": "設定の小さな変更が音質に大きく効いた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "hyperparameter = load_from_config(settings)",
@@ -9246,7 +10130,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_hyperparameter_action()` のように関数・変数名に付く。Python標準の `hyperparameter()` メソッドではない。"
     },
     {
@@ -9258,7 +10142,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Python の高速リンター・フォーマッタ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The dog's ruff of fur shook when he ran.",
+          "ja": "走るとき犬の首まわりの長い毛が揺れた。"
+        },
+        {
+          "en": "Her ruff collar matched the velvet dress.",
+          "ja": "彼女のラフ襟はベルベットのドレスに合っていた。"
+        },
+        {
+          "en": "A ruff of white feathers ringed the bird's neck.",
+          "ja": "白い羽のラフが鳥の首を囲んでいた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use ruff after import — see usage_note_ja",
@@ -9304,7 +10201,20 @@
       "word_class": "package",
       "meaning_general_ja": "（専門用語・コード文脈で使う）",
       "meaning_programming_ja": "Python の型チェックツール",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "My pie cooled on the windowsill after baking.",
+          "ja": "焼いた後、私のパイは窓辺で冷めていた。"
+        },
+        {
+          "en": "He said, \"That is my pie,\" and laughed.",
+          "ja": "彼は「それは私のパイだ」と言って笑った。"
+        },
+        {
+          "en": "She wrapped my pie in foil for the trip.",
+          "ja": "彼女は旅用に私のパイをホイルで包んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "# use mypy after import — see usage_note_ja",
@@ -9350,7 +10260,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のoccupant_count）",
       "meaning_programming_ja": "室内の人数",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The occupant count in the elevator reached fifteen.",
+          "ja": "エレベーターの乗員数は15人に達した。"
+        },
+        {
+          "en": "Fire codes limit the occupant count in each room.",
+          "ja": "消防規則は各室の収容人数に上限を定める。"
+        },
+        {
+          "en": "Staff posted the occupant count near the pool entrance.",
+          "ja": "プール入口に収容人数を掲示した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "occupant_count = load_from_config(settings)",
@@ -9385,7 +10308,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_occupant_action()` のように関数・変数名に付く。Python標準の `occupant_count()` メソッドではない。"
     },
     {
@@ -9397,7 +10320,20 @@
       "word_class": "noun",
       "meaning_general_ja": "混雑",
       "meaning_programming_ja": "人数から混雛レベル（空き/普通/混雑）を判定",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The crowding level on the train was uncomfortable.",
+          "ja": "電車の混雑度は不快だった。"
+        },
+        {
+          "en": "Signs show crowding level with green, yellow, and red.",
+          "ja": "看板は混雑度を緑・黄・赤で示す。"
+        },
+        {
+          "en": "We avoided peak crowding level by leaving early.",
+          "ja": "早めに出発してピークの混雑を避けた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "crowding_level = load_from_config(settings)",
@@ -9432,7 +10368,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_crowding_action()` のように関数・変数名に付く。Python標準の `crowding_level()` メソッドではない。"
     },
     {
@@ -9444,7 +10380,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のdedup_state）",
       "meaning_programming_ja": "Slack通知の重複抑制状態",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Her dedup routine removed repeated tasks from the list.",
+          "ja": "彼女の重複除去の手順でリストから重複タスクが消えた。"
+        },
+        {
+          "en": "Keep dedup state consistent across both apps.",
+          "ja": "2つのアプリで重複除去の状態を揃えておく。"
+        },
+        {
+          "en": "The dedup state reset after the nightly sync.",
+          "ja": "夜間同期の後に重複除去の状態がリセットされた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "dedup_state = load_from_config(settings)",
@@ -9479,7 +10428,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_dedup_action()` のように関数・変数名に付く。Python標準の `dedup_state()` メソッドではない。"
     },
     {
@@ -9491,7 +10440,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のpcounter）",
       "meaning_programming_ja": "ピープルカウンター（人数センサー）の略",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The pedometer counter reset at midnight.",
+          "ja": "歩数計のカウンターは深夜にリセットされた。"
+        },
+        {
+          "en": "A people counter at the gate tracks entries.",
+          "ja": "ゲートの人数カウンターが入場を記録する。"
+        },
+        {
+          "en": "The PC counter ticked up with each checkout.",
+          "ja": "PCカウンターは会計ごとに増えた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "pcounter = load_from_config(settings)",
@@ -9526,7 +10488,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_pcounter_action()` のように関数・変数名に付く。Python標準の `pcounter()` メソッドではない。"
     },
     {
@@ -9538,7 +10500,20 @@
       "word_class": "noun",
       "meaning_general_ja": "電車、訓練する",
       "meaning_programming_ja": "トレーニング室の人数",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The train count on this line doubled after the festival.",
+          "ja": "祭りの後、この路線の列車本数が倍になった。"
+        },
+        {
+          "en": "Morning train count is higher than at noon.",
+          "ja": "朝の列車本数は昼より多い。"
+        },
+        {
+          "en": "They compared train count data across three stations.",
+          "ja": "3駅の列車本数データを比べた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "train_count = load_from_config(settings)",
@@ -9573,7 +10548,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_train_action()` のように関数・変数名に付く。Python標準の `train_count()` メソッドではない。"
     },
     {
@@ -9585,7 +10560,20 @@
       "word_class": "noun",
       "meaning_general_ja": "体育館、ジム",
       "meaning_programming_ja": "体育館エリアの人数",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Today's gym count was lower than last Monday.",
+          "ja": "今日のジム利用数は先週の月曜より少なかった。"
+        },
+        {
+          "en": "The front desk posts the live gym count on a screen.",
+          "ja": "フロントは画面にリアルタイムのジム人数を出す。"
+        },
+        {
+          "en": "Rain lowered the gym count in the afternoon.",
+          "ja": "雨で午後のジム利用数が下がった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gym_count = load_from_config(settings)",
@@ -9620,7 +10608,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_gym_action()` のように関数・変数名に付く。Python標準の `gym_count()` メソッドではない。"
     },
     {
@@ -9632,7 +10620,20 @@
       "word_class": "verb",
       "meaning_general_ja": "天気",
       "meaning_programming_ja": "天気HTMLの取得失敗フラグ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The weather fetch failed, so we used yesterday's forecast.",
+          "ja": "天気取得が失敗したので昨日の予報を使った。"
+        },
+        {
+          "en": "A weather fetch failed alert appeared on the dashboard.",
+          "ja": "天気取得失敗の警告がダッシュボードに出た。"
+        },
+        {
+          "en": "When weather fetch failed, staff checked the TV report.",
+          "ja": "天気取得が失敗したとき、スタッフはテレビ予報を確認した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "weather_fetch_failed = load_from_config(settings)",
@@ -9667,7 +10668,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_weather_action()` のように関数・変数名に付く。Python標準の `weather_fetch_failed()` メソッドではない。"
     },
     {
@@ -9679,7 +10680,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のresolved_weather）",
       "meaning_programming_ja": "天気未取得時に空欄で埋めるための確定値",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Resolved weather data finally matched the outdoor sensors.",
+          "ja": "解決済みの天気データが屋外センサーと一致した。"
+        },
+        {
+          "en": "Use resolved weather when sending the morning summary.",
+          "ja": "朝のサマリー送信には解決済み天気を使う。"
+        },
+        {
+          "en": "The chart plots resolved weather beside crowd levels.",
+          "ja": "グラフは混雑度と並べて解決済み天気を描く。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "resolved_weather = load_from_config(settings)",
@@ -9714,7 +10728,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_resolved_action()` のように関数・変数名に付く。Python標準の `resolved_weather()` メソッドではない。"
     },
     {
@@ -9726,7 +10740,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のrecorded_at）",
       "meaning_programming_ja": "計測した日時",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Each visit was recorded at the front desk.",
+          "ja": "各来館はフロントで記録された。"
+        },
+        {
+          "en": "The photo was recorded at sunset on the beach.",
+          "ja": "写真は浜辺の日没時に撮影記録された。"
+        },
+        {
+          "en": "Recorded at timestamps help replay the day's events.",
+          "ja": "記録時刻がその日の出来事の再生を助ける。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "recorded_at = load_from_config(settings)",
@@ -9761,7 +10788,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_recorded_action()` のように関数・変数名に付く。Python標準の `recorded_at()` メソッドではない。"
     },
     {
@@ -9773,7 +10800,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のsource_time）",
       "meaning_programming_ja": "サイト側の計測時刻文字列",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Source time shows when the sensor last reported.",
+          "ja": "ソース時刻はセンサーが最後に報告した時刻を示す。"
+        },
+        {
+          "en": "Compare source time with the display clock.",
+          "ja": "ソース時刻と表示時計を比べる。"
+        },
+        {
+          "en": "Old source time means the feed may be stale.",
+          "ja": "古いソース時刻はフィードが古い可能性を示す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "source_time = load_from_config(settings)",
@@ -9808,7 +10848,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_source_action()` のように関数・変数名に付く。Python標準の `source_time()` メソッドではない。"
     },
     {
@@ -9820,7 +10860,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のjpholiday）",
       "meaning_programming_ja": "日本の祝日判定ライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The JP holiday calendar lists Golden Week dates.",
+          "ja": "日本の祝日カレンダーにはゴールデンウィークの日付がある。"
+        },
+        {
+          "en": "Crowd models adjust for JP holiday traffic.",
+          "ja": "混雑モデルは日本の祝日交通を考慮する。"
+        },
+        {
+          "en": "Check jpholiday before scheduling gym maintenance.",
+          "ja": "ジムの保守予定前に日本祝日を確認する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "jpholiday = load_from_config(settings)",
@@ -9855,7 +10908,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_jpholiday_action()` のように関数・変数名に付く。Python標準の `jpholiday()` メソッドではない。"
     },
     {
@@ -9867,7 +10920,20 @@
       "word_class": "verb",
       "meaning_general_ja": "知らせる",
       "meaning_programming_ja": "Slack通知の設定一式",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Notify settings control which alerts reach your phone.",
+          "ja": "通知設定はどの警告が携帯に届くかを決める。"
+        },
+        {
+          "en": "She changed notify settings to quiet hours only.",
+          "ja": "彼女は通知設定を静かな時間帯だけに変えた。"
+        },
+        {
+          "en": "Review notify settings after updating the app.",
+          "ja": "アプリ更新後に通知設定を見直す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "notify_settings = load_from_config(settings)",
@@ -9902,7 +10968,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_notify_action()` のように関数・変数名に付く。Python標準の `notify_settings()` メソッドではない。"
     },
     {
@@ -9914,7 +10980,20 @@
       "word_class": "noun",
       "meaning_general_ja": "状態、地位",
       "meaning_programming_ja": "CLIに出す1行サマリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The status summary line fits on one phone screen.",
+          "ja": "状態サマリー行は携帯1画面に収まる。"
+        },
+        {
+          "en": "Each morning Slack shows a status summary line.",
+          "ja": "毎朝Slackに状態サマリー行が表示される。"
+        },
+        {
+          "en": "Edit the status summary line before sending.",
+          "ja": "送信前に状態サマリー行を編集する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "status_summary_line = load_from_config(settings)",
@@ -9954,7 +11033,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_status_action()` のように関数・変数名に付く。Python標準の `status_summary_line()` メソッドではない。"
     },
     {
@@ -9966,7 +11045,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のparsed_json）",
       "meaning_programming_ja": "JSONレスポンスをパースしたdict",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Parsed JSON from the API filled the dashboard cards.",
+          "ja": "APIから解析したJSONがダッシュボードカードを埋めた。"
+        },
+        {
+          "en": "Store parsed JSON separately from the raw response.",
+          "ja": "生の応答とは別に解析済みJSONを保存する。"
+        },
+        {
+          "en": "Parsed JSON makes the weather fields easy to read.",
+          "ja": "解析済みJSONで天気フィールドが読みやすくなる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "parsed_json = load_from_config(settings)",
@@ -10001,7 +11093,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_parsed_action()` のように関数・変数名に付く。Python標準の `parsed_json()` メソッドではない。"
     },
     {
@@ -10013,7 +11105,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のapi_section_json）",
       "meaning_programming_ja": "JSON内の特定セクション",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The API section JSON holds only the crowd block.",
+          "ja": "APIセクションJSONには混雑ブロックだけが入る。"
+        },
+        {
+          "en": "Split api section JSON when one endpoint returns many parts.",
+          "ja": "1エンドポイントが複数部を返すときAPIセクションJSONを分ける。"
+        },
+        {
+          "en": "Validate api section JSON before plotting graphs.",
+          "ja": "グラフ化前にAPIセクションJSONを検証する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "api_section_json = load_from_config(settings)",
@@ -10048,7 +11153,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_api_action()` のように関数・変数名に付く。Python標準の `api_section_json()` メソッドではない。"
     },
     {
@@ -10060,7 +11165,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（サービス名）Notion",
       "meaning_programming_ja": "Notionページの一意ID",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Each Notion page has a unique notion id.",
+          "ja": "各Notionページには固有のnotion idがある。"
+        },
+        {
+          "en": "Copy the notion id when linking calendar events.",
+          "ja": "カレンダーイベントをリンクするときnotion idをコピーする。"
+        },
+        {
+          "en": "The notion id appeared in the share URL.",
+          "ja": "notion idは共有URLに含まれていた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "notion_id = load_from_config(settings)",
@@ -10095,7 +11213,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_notion_action()` のように関数・変数名に付く。Python標準の `notion_id()` メソッドではない。"
     },
     {
@@ -10107,7 +11225,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のgcal_id）",
       "meaning_programming_ja": "GoogleカレンダーイベントID",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Paste the gcal id into the mapping sheet.",
+          "ja": "gcal idをマッピングシートに貼る。"
+        },
+        {
+          "en": "Each class calendar has its own gcal id.",
+          "ja": "各クラスのカレンダーには固有のgcal idがある。"
+        },
+        {
+          "en": "Verify the gcal id before the first sync run.",
+          "ja": "初回同期前にgcal idを確認する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gcal_id = load_from_config(settings)",
@@ -10142,7 +11273,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_gcal_action()` のように関数・変数名に付く。Python標準の `gcal_id()` メソッドではない。"
     },
     {
@@ -10154,7 +11285,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のmapped_ids）",
       "meaning_programming_ja": "NotionとGCalの対応表",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Mapped ids connect Notion tasks to calendar rows.",
+          "ja": "マッピング済みIDがNotionタスクとカレンダー行を結ぶ。"
+        },
+        {
+          "en": "Keep mapped ids stable when you rename pages.",
+          "ja": "ページ名を変えてもマッピング済みIDは安定させる。"
+        },
+        {
+          "en": "The log lists mapped ids updated today.",
+          "ja": "ログに今日更新されたマッピング済みIDが載っている。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "mapped_ids = load_from_config(settings)",
@@ -10189,7 +11333,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_mapped_action()` のように関数・変数名に付く。Python標準の `mapped_ids()` メソッドではない。"
     },
     {
@@ -10201,7 +11345,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のtombstone）",
       "meaning_programming_ja": "削除済みだが痕跡を残すマーカー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A tombstone marks where the old chapel stood.",
+          "ja": "古い礼拝堂があった場所に墓碑が立っている。"
+        },
+        {
+          "en": "Deleted events leave a tombstone row for audit.",
+          "ja": "削除イベントは監査用の墓碑行を残す。"
+        },
+        {
+          "en": "The sync keeps a tombstone instead of erasing history.",
+          "ja": "同期は履歴を消さず墓碑として残す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "tombstone = load_from_config(settings)",
@@ -10236,7 +11393,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_tombstone_action()` のように関数・変数名に付く。Python標準の `tombstone()` メソッドではない。"
     },
     {
@@ -10248,7 +11405,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のtimezone）",
       "meaning_programming_ja": "予定のタイムゾーン",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Pick the correct timezone before booking flights.",
+          "ja": "航空券予約前に正しいタイムゾーンを選ぶ。"
+        },
+        {
+          "en": "Class timezone settings prevent early reminders.",
+          "ja": "クラスのタイムゾーン設定が早いリマインドを防ぐ。"
+        },
+        {
+          "en": "Timezone mismatches caused yesterday's alert to slip.",
+          "ja": "タイムゾーン不一致で昨日の通知がずれた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "timezone = load_from_config(settings)",
@@ -10283,7 +11453,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_timezone_action()` のように関数・変数名に付く。Python標準の `timezone()` メソッドではない。"
     },
     {
@@ -10295,7 +11465,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のattend）",
       "meaning_programming_ja": "出席・参加の属性",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Please attend the briefing at nine.",
+          "ja": "9時の説明会に出席してください。"
+        },
+        {
+          "en": "Students who attend regularly improve faster.",
+          "ja": "定期的に出席する生徒は上達が早い。"
+        },
+        {
+          "en": "Will you attend online or in person?",
+          "ja": "オンラインと対面、どちらで出席しますか？"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "attend = load_from_config(settings)",
@@ -10330,7 +11513,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_attend_action()` のように関数・変数名に付く。Python標準の `attend()` メソッドではない。"
     },
     {
@@ -10342,7 +11525,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のcourse_excel）",
       "meaning_programming_ja": "講座スケジュールExcel連携",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The course Excel sheet lists every lesson date.",
+          "ja": "コースのExcelシートに全授業日が載っている。"
+        },
+        {
+          "en": "She exported course Excel for the substitute teacher.",
+          "ja": "彼女は代講向けにコースExcelを出力した。"
+        },
+        {
+          "en": "Course Excel drives the calendar import each term.",
+          "ja": "コースExcelが学期ごとのカレンダー取込を動かす。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "course_excel = load_from_config(settings)",
@@ -10377,7 +11573,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_course_action()` のように関数・変数名に付く。Python標準の `course_excel()` メソッドではない。"
     },
     {
@@ -10389,7 +11585,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のdiffer）",
       "meaning_programming_ja": "NotionとGCalの差分検出",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Our schedules differ by one hour this week.",
+          "ja": "今週は予定が1時間ずれている。"
+        },
+        {
+          "en": "The two lists differ only in spelling.",
+          "ja": "2つの一覧は表記だけが違う。"
+        },
+        {
+          "en": "Opinions differ on whether to sync both ways.",
+          "ja": "双方向同期すべきか意見が分かれる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "differ = load_from_config(settings)",
@@ -10424,7 +11633,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_differ_action()` のように関数・変数名に付く。Python標準の `differ()` メソッドではない。"
     },
     {
@@ -10436,7 +11645,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のone_way_sync）",
       "meaning_programming_ja": "一方向同期（Notion優先）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "One-way sync copies Notion changes into Google Calendar.",
+          "ja": "一方通行同期はNotionの変更をGoogleカレンダーへ写す。"
+        },
+        {
+          "en": "They chose one-way sync to avoid edit conflicts.",
+          "ja": "編集の衝突を避けるため一方通行同期を選んだ。"
+        },
+        {
+          "en": "One-way sync is simpler for read-only calendars.",
+          "ja": "読み取り専用カレンダーなら一方通行同期が簡単だ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "one_way_sync = load_from_config(settings)",
@@ -10471,7 +11693,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_one_action()` のように関数・変数名に付く。Python標準の `one_way_sync()` メソッドではない。"
     },
     {
@@ -10483,7 +11705,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（サービス名）Notion",
       "meaning_programming_ja": "Notion APIクライアント",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The notion client library talks to Notion's API.",
+          "ja": "notion clientライブラリがNotion APIと通信する。"
+        },
+        {
+          "en": "Update the notion client when the API version changes.",
+          "ja": "APIバージョン変更時はnotion clientを更新する。"
+        },
+        {
+          "en": "The notion client retries failed page reads.",
+          "ja": "notion clientは失敗したページ読み取りを再試行する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "notion_client = load_from_config(settings)",
@@ -10518,7 +11753,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_notion_action()` のように関数・変数名に付く。Python標準の `notion_client()` メソッドではない。"
     },
     {
@@ -10530,7 +11765,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のgcal_client）",
       "meaning_programming_ja": "Google Calendar APIクライアント",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The gcal client fetches events for the week.",
+          "ja": "gcal clientは1週間のイベントを取得する。"
+        },
+        {
+          "en": "Authenticate the gcal client before the first run.",
+          "ja": "初回実行前にgcal clientを認証する。"
+        },
+        {
+          "en": "The gcal client respects rate limits automatically.",
+          "ja": "gcal clientはレート制限を自動で守る。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gcal_client = load_from_config(settings)",
@@ -10565,7 +11813,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_gcal_action()` のように関数・変数名に付く。Python標準の `gcal_client()` メソッドではない。"
     },
     {
@@ -10577,7 +11825,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のpages_create）",
       "meaning_programming_ja": "Notion APIでページ作成",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Pages create a paper trail for each decision.",
+          "ja": "ページは各決定の記録を残す。"
+        },
+        {
+          "en": "The script pages create new Notion entries from Excel.",
+          "ja": "スクリプトのpages createがExcelから新しいNotion項目を作る。"
+        },
+        {
+          "en": "Batch pages create saves time at term start.",
+          "ja": "学期初めはバッチのpages createが時間を省く。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "pages_create = load_from_config(settings)",
@@ -10612,7 +11873,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_pages_action()` のように関数・変数名に付く。Python標準の `pages_create()` メソッドではない。"
     },
     {
@@ -10624,7 +11885,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のevents_list）",
       "meaning_programming_ja": "GCal APIで予定一覧取得",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The events list for May is already full.",
+          "ja": "5月のイベント一覧はすでに埋まっている。"
+        },
+        {
+          "en": "Export the events list before editing rooms.",
+          "ja": "教室を編集する前にイベント一覧を出力する。"
+        },
+        {
+          "en": "An events list helps spot double bookings.",
+          "ja": "イベント一覧で二重予約を見つけやすい。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "events_list = load_from_config(settings)",
@@ -10659,7 +11933,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_events_action()` のように関数・変数名に付く。Python標準の `events_list()` メソッドではない。"
     },
     {
@@ -10671,7 +11945,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のmapped_event）",
       "meaning_programming_ja": "対応付け済みの予定",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Each mapped event ties a Notion row to a calendar slot.",
+          "ja": "各マッピング済みイベントがNotion行とカレンダー枠を結ぶ。"
+        },
+        {
+          "en": "Delete the mapped event if the class is canceled.",
+          "ja": "授業が中止ならマッピング済みイベントを削除する。"
+        },
+        {
+          "en": "Mapped event titles mirror the course name.",
+          "ja": "マッピング済みイベントのタイトルはコース名と一致する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "mapped_event = load_from_config(settings)",
@@ -10706,7 +11993,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_mapped_action()` のように関数・変数名に付く。Python標準の `mapped_event()` メソッドではない。"
     },
     {
@@ -10718,7 +12005,20 @@
       "word_class": "verb",
       "meaning_general_ja": "同期させる、揃える",
       "meaning_programming_ja": "同期処理の1回の実行",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The nightly sync run finished without errors.",
+          "ja": "夜間の同期実行はエラーなく終わった。"
+        },
+        {
+          "en": "Schedule the sync run after teachers update Notion.",
+          "ja": "先生がNotionを更新した後に同期実行を予約する。"
+        },
+        {
+          "en": "Logs from each sync run are stored for a month.",
+          "ja": "各同期実行のログは1か月保存される。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "sync_run = load_from_config(settings)",
@@ -10758,7 +12058,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_sync_action()` のように関数・変数名に付く。Python標準の `sync_run()` メソッドではない。"
     },
     {
@@ -10770,7 +12070,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のdry_run_preview）",
       "meaning_programming_ja": "書き込みなしの同期プレビュー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A dry run preview showed three new events.",
+          "ja": "ドライランのプレビューで3件の新規イベントが見えた。"
+        },
+        {
+          "en": "Use dry run preview before changing production calendars.",
+          "ja": "本番カレンダーを変える前にドライランプレビューを使う。"
+        },
+        {
+          "en": "The dry run preview listed no deletions today.",
+          "ja": "ドライランプレビューでは今日の削除はなかった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "dry_run_preview = load_from_config(settings)",
@@ -10805,7 +12118,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_dry_action()` のように関数・変数名に付く。Python標準の `dry_run_preview()` メソッドではない。"
     },
     {
@@ -10817,7 +12130,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のlacicra）",
       "meaning_programming_ja": "勤怠・日報システムのサービス名",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The Lacicra portal opens after morning login.",
+          "ja": "Lacicraポータルは朝のログイン後に開く。"
+        },
+        {
+          "en": "She bookmarked Lacicra for daily attendance.",
+          "ja": "彼女は日次勤怠用にLacicraをブックマークした。"
+        },
+        {
+          "en": "Training covered how to navigate Lacicra menus.",
+          "ja": "研修でLacicraのメニュー操作を学んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "lacicra = load_from_config(settings)",
@@ -10852,7 +12178,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_lacicra_action()` のように関数・変数名に付く。Python標準の `lacicra()` メソッドではない。"
     },
     {
@@ -10864,7 +12190,20 @@
       "word_class": "noun",
       "meaning_general_ja": "出席、勤怠",
       "meaning_programming_ja": "勤怠（出退勤）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Attendance dropped on the rainy workshop day.",
+          "ja": "雨のワークショップ日は出席が減った。"
+        },
+        {
+          "en": "Teachers record attendance in the school system.",
+          "ja": "先生は校内システムに出席を記録する。"
+        },
+        {
+          "en": "Perfect attendance earned her a certificate.",
+          "ja": "皆勤で彼女は表彰状をもらった。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "attendance = load_from_config(settings)",
@@ -10899,7 +12238,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_attendance_action()` のように関数・変数名に付く。Python標準の `attendance()` メソッドではない。"
     },
     {
@@ -10911,7 +12250,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のwebdriver_manager）",
       "meaning_programming_ja": "ChromeDriverを自動取得",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The web driver manager updated Chrome before the test.",
+          "ja": "WebDriverマネージャーがテスト前にChromeを更新した。"
+        },
+        {
+          "en": "A web driver manager keeps browser versions aligned.",
+          "ja": "WebDriverマネージャーはブラウザ版を揃える。"
+        },
+        {
+          "en": "Install the web driver manager to avoid manual downloads.",
+          "ja": "手動ダウンロードを避けるにはWebDriverマネージャーを入れる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "webdriver_manager = load_from_config(settings)",
@@ -10946,7 +12298,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_webdriver_action()` のように関数・変数名に付く。Python標準の `webdriver_manager()` メソッドではない。"
     },
     {
@@ -10958,7 +12310,20 @@
       "word_class": "noun",
       "meaning_general_ja": "データ、資料",
       "meaning_programming_ja": "スプレッドシートからデータ読込",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The data loader pulled rows from yesterday's export.",
+          "ja": "データローダーが昨日の出力から行を読み込んだ。"
+        },
+        {
+          "en": "A slow data loader delayed the morning report.",
+          "ja": "遅いデータローダーが朝のレポートを遅らせた。"
+        },
+        {
+          "en": "The data loader skips empty sheets automatically.",
+          "ja": "データローダーは空シートを自動で飛ばす。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "data_loader = load_from_config(settings)",
@@ -10998,7 +12363,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_data_action()` のように関数・変数名に付く。Python標準の `data_loader()` メソッドではない。"
     },
     {
@@ -11010,7 +12375,20 @@
       "word_class": "noun",
       "meaning_general_ja": "データ、資料",
       "meaning_programming_ja": "読み込みデータを送信形式に変換",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The data converter turned minutes into hour decimals.",
+          "ja": "データコンバーターが分を時間の小数に変えた。"
+        },
+        {
+          "en": "Use a data converter for legacy CSV formats.",
+          "ja": "旧形式CSVにはデータコンバーターを使う。"
+        },
+        {
+          "en": "The data converter flagged rows with missing IDs.",
+          "ja": "データコンバーターがID欠落行を指摘した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "data_converter = load_from_config(settings)",
@@ -11050,7 +12428,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_data_action()` のように関数・変数名に付く。Python標準の `data_converter()` メソッドではない。"
     },
     {
@@ -11062,7 +12440,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のslack_service）",
       "meaning_programming_ja": "Slack通知を送るサービス層",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The Slack service posted the daily summary at eight.",
+          "ja": "Slackサービスが8時に日次サマリーを投稿した。"
+        },
+        {
+          "en": "Route alerts through the slack service channel.",
+          "ja": "警告はslack serviceチャンネル経由にする。"
+        },
+        {
+          "en": "The slack service retries when the webhook fails.",
+          "ja": "Webhook失敗時はslack serviceが再試行する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "slack_service = load_from_config(settings)",
@@ -11097,7 +12488,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_slack_action()` のように関数・変数名に付く。Python標準の `slack_service()` メソッドではない。"
     },
     {
@@ -11109,7 +12500,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のelement_to_be_clickable）",
       "meaning_programming_ja": "Selenium:クリック可能まで待つ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Wait until the save button is clickable.",
+          "ja": "保存ボタンが押せるようになるまで待つ。"
+        },
+        {
+          "en": "The link stays gray until it becomes clickable.",
+          "ja": "リンクは押せるようになるまで灰色のままだ。"
+        },
+        {
+          "en": "On slow networks, menus take longer to become clickable.",
+          "ja": "遅い回線ではメニューが押せる状態になるのに時間がかかる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "element_to_be_clickable = load_from_config(settings)",
@@ -11144,7 +12548,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_element_action()` のように関数・変数名に付く。Python標準の `element_to_be_clickable()` メソッドではない。"
     },
     {
@@ -11156,7 +12560,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のpresence_of_element）",
       "meaning_programming_ja": "Selenium:要素の出現を待つ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Her calm presence in the room eased the meeting.",
+          "ja": "部屋にいる彼女の落ち着いた存在感が会議を和らげた。"
+        },
+        {
+          "en": "Each decorative element on the shelf has a story.",
+          "ja": "棚の装飾の一つひとつに物語がある。"
+        },
+        {
+          "en": "Confirm the element is on the page before you continue.",
+          "ja": "続ける前にその要素がページにあることを確認する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "presence_of_element = load_from_config(settings)",
@@ -11191,7 +12608,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_presence_action()` のように関数・変数名に付く。Python標準の `presence_of_element()` メソッドではない。"
     },
     {
@@ -11203,7 +12620,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のdelivery）",
       "meaning_programming_ja": "日報の提出・配信",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Package delivery arrived before the meeting started.",
+          "ja": "会議が始まる前に宅配が届いた。"
+        },
+        {
+          "en": "Same-day delivery costs extra in rural areas.",
+          "ja": "地方では当日配送は追加料金がかかる。"
+        },
+        {
+          "en": "The report delivery to Slack succeeded on retry.",
+          "ja": "Slackへのレポート配信は再試行で成功した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "delivery = load_from_config(settings)",
@@ -11238,7 +12668,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_delivery_action()` のように関数・変数名に付く。Python標準の `delivery()` メソッドではない。"
     },
     {
@@ -11250,7 +12680,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のlogin_id）",
       "meaning_programming_ja": "ログインフォームのID欄",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Use your login id from the welcome email.",
+          "ja": "ウェルカムメールのログインIDを使う。"
+        },
+        {
+          "en": "Never share your login id in chat logs.",
+          "ja": "チャットログでログインIDを共有しない。"
+        },
+        {
+          "en": "The login id field is case sensitive.",
+          "ja": "ログインID欄は大文字小文字を区別する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "login_id = load_from_config(settings)",
@@ -11285,7 +12728,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_login_action()` のように関数・変数名に付く。Python標準の `login_id()` メソッドではない。"
     },
     {
@@ -11297,7 +12740,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のndf_report）",
       "meaning_programming_ja": "NDF日報の処理単位",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She filed the NDF report before leaving the office.",
+          "ja": "彼女は退社前にNDF日報を提出した。"
+        },
+        {
+          "en": "The NDF report lists commute and work hours.",
+          "ja": "NDF日報には通勤と勤務時間が載る。"
+        },
+        {
+          "en": "A missing NDF report triggers a reminder in Slack.",
+          "ja": "NDF日報が無いとSlackでリマインドが出る。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "ndf_report = load_from_config(settings)",
@@ -11332,7 +12788,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_ndf_action()` のように関数・変数名に付く。Python標準の `ndf_report()` メソッドではない。"
     },
     {
@@ -11344,7 +12800,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（技術用語）Webhook",
       "meaning_programming_ja": "Slack WebhookのURL",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Store the webhook URL in a secure notes app.",
+          "ja": "Webhook URLは安全なメモアプリに保存する。"
+        },
+        {
+          "en": "Rotate the webhook URL if the channel was public.",
+          "ja": "チャンネルが公開されていたらWebhook URLをローテーションする。"
+        },
+        {
+          "en": "Paste the webhook URL only into trusted tools.",
+          "ja": "Webhook URLは信頼できるツールにだけ貼る。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "webhook_url = load_from_config(settings)",
@@ -11379,7 +12848,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_webhook_action()` のように関数・変数名に付く。Python標準の `webhook_url()` メソッドではない。"
     },
     {
@@ -11391,7 +12860,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のopenpyxl_read）",
       "meaning_programming_ja": "Excelから日報セルを読む",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Openpyxl read loaded the shift sheet without Excel.",
+          "ja": "openpyxl readがExcelなしでシフト表を読み込んだ。"
+        },
+        {
+          "en": "Use openpyxl read for lightweight xlsx parsing.",
+          "ja": "軽量なxlsx解析にはopenpyxl readを使う。"
+        },
+        {
+          "en": "Openpyxl read skipped hidden rows as expected.",
+          "ja": "openpyxl readは想定どおり非表示行を飛ばした。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "openpyxl_read = load_from_config(settings)",
@@ -11426,7 +12908,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_openpyxl_action()` のように関数・変数名に付く。Python標準の `openpyxl_read()` メソッドではない。"
     },
     {
@@ -11438,7 +12920,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のcommute_type）",
       "meaning_programming_ja": "通所形態（開始/終了報告の分岐）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Select commute type: train, bus, or bicycle.",
+          "ja": "通勤種別を選ぶ：電車、バス、自転車。"
+        },
+        {
+          "en": "Her commute type changed after she moved.",
+          "ja": "引っ越し後、彼女の通勤種別が変わった。"
+        },
+        {
+          "en": "The form requires commute type for tax records.",
+          "ja": "税務記録のためフォームに通勤種別が必要だ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "commute_type = load_from_config(settings)",
@@ -11473,7 +12968,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_commute_action()` のように関数・変数名に付く。Python標準の `commute_type()` メソッドではない。"
     },
     {
@@ -11485,7 +12980,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のstart_report）",
       "meaning_programming_ja": "開始報告メッセージ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Send the start report when you begin work.",
+          "ja": "勤務開始時に開始報告を送る。"
+        },
+        {
+          "en": "His start report arrived one minute early today.",
+          "ja": "今日の彼の開始報告は1分早く届いた。"
+        },
+        {
+          "en": "The start report includes location and task.",
+          "ja": "開始報告には場所と作業内容が含まれる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "start_report = load_from_config(settings)",
@@ -11520,7 +13028,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_start_action()` のように関数・変数名に付く。Python標準の `start_report()` メソッドではない。"
     },
     {
@@ -11532,7 +13040,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のend_report）",
       "meaning_programming_ja": "終了報告メッセージ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Post the end report before you shut the laptop.",
+          "ja": "ノートPCを閉じる前に終了報告を投稿する。"
+        },
+        {
+          "en": "Forgot end report messages appear at six pm.",
+          "ja": "終了報告忘れのメッセージは18時に出る。"
+        },
+        {
+          "en": "The end report summarizes hours and breaks.",
+          "ja": "終了報告は勤務時間と休憩をまとめる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "end_report = load_from_config(settings)",
@@ -11567,7 +13088,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_end_action()` のように関数・変数名に付く。Python標準の `end_report()` メソッドではない。"
     },
     {
@@ -11581,16 +13102,16 @@
       "meaning_programming_ja": "レガシー命名。何のデータ変換か名前に含める",
       "examples_general": [
         {
-          "en": "We need more data for the report.",
-          "ja": "レポート用にもっとデータが必要だ。"
+          "en": "We need more data for the quarterly review.",
+          "ja": "四半期レビューにはもっとデータが必要だ。"
         },
         {
-          "en": "The data was converted to CSV.",
-          "ja": "データはCSVに変換された。"
+          "en": "The recipe data was converted from cups to grams.",
+          "ja": "レシピのデータはカップからグラムに換算された。"
         },
         {
-          "en": "Check the source data before converting.",
-          "ja": "変換前に元データを確認する。"
+          "en": "In code, data_conv alone does not say what is converted.",
+          "ja": "コードでは data_conv だけでは何を変換するか分からない。"
         }
       ],
       "examples_code": [
@@ -11644,7 +13165,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のjob_record）",
       "meaning_programming_ja": "求人1件の構造化レコード",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She kept a job record of every application this year.",
+          "ja": "彼女は今年の応募ごとに求人記録を残した。"
+        },
+        {
+          "en": "Each job record includes title, company, and date.",
+          "ja": "各求人記録には職種・会社・日付が入る。"
+        },
+        {
+          "en": "The recruiter filed the job record after the call.",
+          "ja": "リクルーターは通話後に求人記録を整理した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "job_record = load_from_config(settings)",
@@ -11679,7 +13213,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_job_action()` のように関数・変数名に付く。Python標準の `job_record()` メソッドではない。"
     },
     {
@@ -11691,7 +13225,20 @@
       "word_class": "noun",
       "meaning_general_ja": "雇用",
       "meaning_programming_ja": "雇用形態（正社員・契約等）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Full-time employment starts next month at the new office.",
+          "ja": "新しいオフィスでの正社員雇用は来月始まる。"
+        },
+        {
+          "en": "She asked about employment benefits during the interview.",
+          "ja": "面接で雇用福利厚生について質問した。"
+        },
+        {
+          "en": "Rising employment in the town brought new shops.",
+          "ja": "町の雇用増加で新しい店が開いた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "employment = load_from_config(settings)",
@@ -11726,7 +13273,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_employment_action()` のように関数・変数名に付く。Python標準の `employment()` メソッドではない。"
     },
     {
@@ -11738,7 +13285,20 @@
       "word_class": "noun",
       "meaning_general_ja": "報酬、補償",
       "meaning_programming_ja": "給与・待遇のまとまり",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The offer letter explained compensation and bonuses.",
+          "ja": "オファーレターに給与とボーナスが書かれていた。"
+        },
+        {
+          "en": "Fair compensation matters when comparing two jobs.",
+          "ja": "2つの仕事を比べるとき公正な報酬が重要だ。"
+        },
+        {
+          "en": "They discussed compensation after the trial period.",
+          "ja": "試用期間の後に報酬を話し合った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "compensation = load_from_config(settings)",
@@ -11773,7 +13333,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_compensation_action()` のように関数・変数名に付く。Python標準の `compensation()` メソッドではない。"
     },
     {
@@ -11785,7 +13345,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のjob_description）",
       "meaning_programming_ja": "仕事内容の説明",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Read the job description before you apply.",
+          "ja": "応募前に職務記述書を読む。"
+        },
+        {
+          "en": "The job description lists daily tasks and tools.",
+          "ja": "職務記述書には日常の業務と使うツールが載っている。"
+        },
+        {
+          "en": "She highlighted skills mentioned in the job description.",
+          "ja": "彼女は職務記述書に書かれたスキルを強調した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "job_description = load_from_config(settings)",
@@ -11820,7 +13393,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_job_action()` のように関数・変数名に付く。Python標準の `job_description()` メソッドではない。"
     },
     {
@@ -11832,7 +13405,20 @@
       "word_class": "noun",
       "meaning_general_ja": "目標、的",
       "meaning_programming_ja": "求める人物像",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The ad's target profile is mid-career engineers.",
+          "ja": "広告のターゲット像はミドルキャリアのエンジニアだ。"
+        },
+        {
+          "en": "Match your resume to the target profile in the posting.",
+          "ja": "求人のターゲット像に合わせて履歴書を調整する。"
+        },
+        {
+          "en": "Target profile notes helped the team write clearer copy.",
+          "ja": "ターゲット像メモがチームの文案を明確にした。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "target_profile = load_from_config(settings)",
@@ -11867,7 +13453,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_target_action()` のように関数・変数名に付く。Python標準の `target_profile()` メソッドではない。"
     },
     {
@@ -11879,7 +13465,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のextraction_ground）",
       "meaning_programming_ja": "AI抽出の根拠・出典",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Good ground rules make data extraction less messy.",
+          "ja": "良い基本ルールでデータ抽出が散らかりにくくなる。"
+        },
+        {
+          "en": "The extraction ground document lists allowed fields.",
+          "ja": "抽出の根拠文書に許可フィールドが列挙されている。"
+        },
+        {
+          "en": "Review extraction ground before scraping new sites.",
+          "ja": "新しいサイトを取得する前に抽出根拠を見直す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "extraction_ground = load_from_config(settings)",
@@ -11914,7 +13513,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_extraction_action()` のように関数・変数名に付く。Python標準の `extraction_ground()` メソッドではない。"
     },
     {
@@ -11926,7 +13525,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のselection_process）",
       "meaning_programming_ja": "選考フロー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The selection process includes two interviews and a task.",
+          "ja": "選考プロセスは2回の面接と課題を含む。"
+        },
+        {
+          "en": "Candidates asked about the selection process timeline.",
+          "ja": "候補者は選考プロセスの日程について聞いた。"
+        },
+        {
+          "en": "A clear selection process reduces applicant anxiety.",
+          "ja": "明確な選考プロセスは応募者の不安を減らす。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "selection_process = load_from_config(settings)",
@@ -11961,7 +13573,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_selection_action()` のように関数・変数名に付く。Python標準の `selection_process()` メソッドではない。"
     },
     {
@@ -11973,7 +13585,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のwelfare_insurances）",
       "meaning_programming_ja": "社会保険・福利厚生",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Welfare insurances were explained at the orientation.",
+          "ja": "オリエンテーションで福利厚生保険が説明された。"
+        },
+        {
+          "en": "Check welfare insurances when comparing public and private offers.",
+          "ja": "公務員と民間のオファーを比べるとき福利保険を確認する。"
+        },
+        {
+          "en": "The handbook lists welfare insurances and enrollment steps.",
+          "ja": "ハンドブックに福利保険と加入手順が載っている。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "welfare_insurances = load_from_config(settings)",
@@ -12008,7 +13633,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_welfare_action()` のように関数・変数名に付く。Python標準の `welfare_insurances()` メソッドではない。"
     },
     {
@@ -12020,7 +13645,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のatgp）",
       "meaning_programming_ja": "求人媒体 atGP",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The ATGP booth at the fair offered resume reviews.",
+          "ja": "フェアのATGPブースで履歴書レビューがあった。"
+        },
+        {
+          "en": "She registered with ATGP for disability-friendly listings.",
+          "ja": "彼女は障害者向け求人のためにATGPに登録した。"
+        },
+        {
+          "en": "ATGP counselors helped plan reasonable accommodations.",
+          "ja": "ATGPのカウンセラーが合理的配慮の計画を助けた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "atgp = load_from_config(settings)",
@@ -12055,7 +13693,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_atgp_action()` のように関数・変数名に付く。Python標準の `atgp()` メソッドではない。"
     },
     {
@@ -12067,7 +13705,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のhtml_import）",
       "meaning_programming_ja": "HTML求人票の取込",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "HTML import copied the table from the careers page.",
+          "ja": "HTMLインポートで採用ページの表を取り込んだ。"
+        },
+        {
+          "en": "Run HTML import after the site publishes new jobs.",
+          "ja": "サイトが新着求人を公開したらHTMLインポートを実行する。"
+        },
+        {
+          "en": "The HTML import skipped pages without listings.",
+          "ja": "HTMLインポートは求人一覧のないページを飛ばした。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "html_import = load_from_config(settings)",
@@ -12102,7 +13753,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_html_action()` のように関数・変数名に付く。Python標準の `html_import()` メソッドではない。"
     },
     {
@@ -12114,7 +13765,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のpending_pdf）",
       "meaning_programming_ja": "未処理のPDFキュー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Three pending PDF files waited in the intake folder.",
+          "ja": "受付フォルダに3件の保留PDFが待っていた。"
+        },
+        {
+          "en": "Clear pending PDFs before the weekly sync.",
+          "ja": "週次同期の前に保留PDFを処理する。"
+        },
+        {
+          "en": "Each pending PDF needs a manual title check.",
+          "ja": "各保留PDFは手動でタイトル確認が必要だ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "pending_pdf = load_from_config(settings)",
@@ -12149,7 +13813,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_pending_action()` のように関数・変数名に付く。Python標準の `pending_pdf()` メソッドではない。"
     },
     {
@@ -12161,7 +13825,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のsmartshelf）",
       "meaning_programming_ja": "運用名 SmartShelf（商品DB RPA）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The smart shelf lights up when stock runs low.",
+          "ja": "スマート棚は在庫が少なくなると点灯する。"
+        },
+        {
+          "en": "Grocers test smart shelf labels in one aisle.",
+          "ja": "食品店は1つの通路でスマート棚ラベルを試している。"
+        },
+        {
+          "en": "A smart shelf can show prices without paper tags.",
+          "ja": "スマート棚は紙の値札なしで価格を表示できる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "smartshelf = load_from_config(settings)",
@@ -12196,7 +13873,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_smartshelf_action()` のように関数・変数名に付く。Python標準の `smartshelf()` メソッドではない。"
     },
     {
@@ -12208,7 +13885,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のallergens）",
       "meaning_programming_ja": "アレルゲン情報",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The label lists allergens in bold red text.",
+          "ja": "ラベルはアレルゲンを太い赤文字で示している。"
+        },
+        {
+          "en": "Check allergens before serving the school lunch.",
+          "ja": "給食を出す前にアレルゲンを確認する。"
+        },
+        {
+          "en": "Nuts are common allergens in bakery items.",
+          "ja": "ナッツはベーカリー商品でよくあるアレルゲンだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "allergens = load_from_config(settings)",
@@ -12243,7 +13933,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_allergens_action()` のように関数・変数名に付く。Python標準の `allergens()` メソッドではない。"
     },
     {
@@ -12255,7 +13945,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のnet_content）",
       "meaning_programming_ja": "内容量",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Net content must appear on every packaged snack.",
+          "ja": "包装スナックには内容量の表示が必要だ。"
+        },
+        {
+          "en": "The jar's net content is five hundred grams.",
+          "ja": "瓶の内容量は500グラムだ。"
+        },
+        {
+          "en": "Shoppers compare net content when prices differ.",
+          "ja": "価格が違うとき買い物客は内容量を比べる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "net_content = load_from_config(settings)",
@@ -12290,7 +13993,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_net_action()` のように関数・変数名に付く。Python標準の `net_content()` メソッドではない。"
     },
     {
@@ -12302,7 +14005,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のexpiration_type）",
       "meaning_programming_ja": "期限の種別",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Expiration type tells you whether to use a best-by or use-by date.",
+          "ja": "賞味期限の種類は消費期限か賞味期限かを示す。"
+        },
+        {
+          "en": "Frozen foods may show a different expiration type.",
+          "ja": "冷凍食品は別の期限表示タイプになることがある。"
+        },
+        {
+          "en": "Read the expiration type before storing leftovers.",
+          "ja": "残り物を保存する前に期限の種類を読む。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "expiration_type = load_from_config(settings)",
@@ -12337,7 +14053,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_expiration_action()` のように関数・変数名に付く。Python標準の `expiration_type()` メソッドではない。"
     },
     {
@@ -12349,7 +14065,20 @@
       "word_class": "verb",
       "meaning_general_ja": "複製する",
       "meaning_programming_ja": "重複判定に使う列キー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A duplicate key set is kept at the front desk.",
+          "ja": "合鍵のセットはフロントに保管されている。"
+        },
+        {
+          "en": "The clerk flagged a duplicate key in the register.",
+          "ja": "店員はレジで重複キーを指摘した。"
+        },
+        {
+          "en": "Two duplicate keys cannot open the same locker.",
+          "ja": "同じロッカーを開ける重複キーは2つ作れない。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "duplicate_key = load_from_config(settings)",
@@ -12384,7 +14113,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_duplicate_action()` のように関数・変数名に付く。Python標準の `duplicate_key()` メソッドではない。"
     },
     {
@@ -12396,7 +14125,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のgemini_field_keys）",
       "meaning_programming_ja": "Geminiに抽出させるキー一覧",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Each form field has keys that match the printed labels.",
+          "ja": "各入力欄には印刷ラベルと一致するキーがある。"
+        },
+        {
+          "en": "Missing field keys caused errors in the import sheet.",
+          "ja": "フィールドキーの欠落が取込シートのエラーを招いた。"
+        },
+        {
+          "en": "Review field keys before sending the template.",
+          "ja": "テンプレートを送る前にフィールドキーを確認する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gemini_field_keys = load_from_config(settings)",
@@ -12431,7 +14173,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_gemini_action()` のように関数・変数名に付く。Python標準の `gemini_field_keys()` メソッドではない。"
     },
     {
@@ -12443,7 +14185,20 @@
       "word_class": "noun",
       "meaning_general_ja": "過程、処理する",
       "meaning_programming_ja": "未処理PDFを一括処理",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The kitchen will process all pending orders after the rush.",
+          "ja": "忙しい時間が過ぎたら厨房は保留中の注文をすべて処理する。"
+        },
+        {
+          "en": "She stayed late to process all pending paperwork.",
+          "ja": "彼女は保留中の書類をすべて処理するため残業した。"
+        },
+        {
+          "en": "Process all pending refunds before the bank closes.",
+          "ja": "銀行が閉まる前に保留中の返金をすべて処理する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "process_all_pending = load_from_config(settings)",
@@ -12478,7 +14233,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_process_action()` のように関数・変数名に付く。Python標準の `process_all_pending()` メソッドではない。"
     },
     {
@@ -12490,7 +14245,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のproduct_db）",
       "meaning_programming_ja": "商品DBシート",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The product database lists every SKU in the catalog.",
+          "ja": "製品データベースにはカタログの全SKUが載っている。"
+        },
+        {
+          "en": "Staff search the product db for allergen updates.",
+          "ja": "スタッフはアレルゲン更新を製品DBで検索する。"
+        },
+        {
+          "en": "A clean product db prevents label mismatches.",
+          "ja": "整った製品DBはラベルの不一致を防ぐ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "product_db = load_from_config(settings)",
@@ -12525,7 +14293,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_product_action()` のように関数・変数名に付く。Python標準の `product_db()` メソッドではない。"
     },
     {
@@ -12537,7 +14305,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のdrive_file_name）",
       "meaning_programming_ja": "Drive上のファイル名",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Rename the drive file name so teammates recognize it.",
+          "ja": "チームが分かるようにドライブのファイル名を変える。"
+        },
+        {
+          "en": "The drive file name included the batch date.",
+          "ja": "ドライブのファイル名にはバッチ日付が入っていた。"
+        },
+        {
+          "en": "Use a clear drive file name for scanned labels.",
+          "ja": "スキャンしたラベルには分かりやすいドライブファイル名を使う。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "drive_file_name = load_from_config(settings)",
@@ -12572,7 +14353,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_drive_action()` のように関数・変数名に付く。Python標準の `drive_file_name()` メソッドではない。"
     },
     {
@@ -12584,7 +14365,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のconfidence_notes）",
       "meaning_programming_ja": "AI読み取りの信頼度メモ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Her confidence notes helped her before the interview.",
+          "ja": "自信を持つためのメモが面接前に役立った。"
+        },
+        {
+          "en": "Add confidence notes when the scan is uncertain.",
+          "ja": "スキャン結果が不明確なときは確信度メモを付ける。"
+        },
+        {
+          "en": "The reviewer left confidence notes beside each field.",
+          "ja": "レビュアーは各欄の横に確信度メモを残した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "confidence_notes = load_from_config(settings)",
@@ -12619,7 +14413,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_confidence_action()` のように関数・変数名に付く。Python標準の `confidence_notes()` メソッドではない。"
     },
     {
@@ -12631,7 +14425,20 @@
       "word_class": "noun",
       "meaning_general_ja": "動画",
       "meaning_programming_ja": "YouTube動画のID",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The video id appears after watch?v= in the link.",
+          "ja": "リンクのwatch?v=の後に動画IDが出る。"
+        },
+        {
+          "en": "Save the video id when archiving clips.",
+          "ja": "クリップを保存するとき動画IDを残す。"
+        },
+        {
+          "en": "Duplicate video ids were filtered from the list.",
+          "ja": "重複した動画IDは一覧から除かれた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "video_id = load_from_config(settings)",
@@ -12666,7 +14473,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_video_action()` のように関数・変数名に付く。Python標準の `video_id()` メソッドではない。"
     },
     {
@@ -12678,7 +14485,20 @@
       "word_class": "noun",
       "meaning_general_ja": "チャンネル、水路",
       "meaning_programming_ja": "チャンネルのID",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The channel id stays stable when the display name changes.",
+          "ja": "表示名が変わってもチャンネルIDは安定する。"
+        },
+        {
+          "en": "Look up the channel id before bulk downloads.",
+          "ja": "一括ダウンロード前にチャンネルIDを調べる。"
+        },
+        {
+          "en": "Channel id mapping prevented mixed playlists.",
+          "ja": "チャンネルIDのマッピングでプレイリストの混在を防いだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "channel_id = load_from_config(settings)",
@@ -12713,7 +14533,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_channel_action()` のように関数・変数名に付く。Python標準の `channel_id()` メソッドではない。"
     },
     {
@@ -12725,7 +14545,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のvtt_parser）",
       "meaning_programming_ja": "字幕VTTファイルのパーサー",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The VTT parser turned captions into plain sentences.",
+          "ja": "VTTパーサーが字幕を平文の文に変えた。"
+        },
+        {
+          "en": "A VTT parser skips timing tags you do not need.",
+          "ja": "VTTパーサーは不要なタイミングタグを飛ばす。"
+        },
+        {
+          "en": "Test the VTT parser on one short clip first.",
+          "ja": "まず短いクリップでVTTパーサーを試す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "vtt_parser = load_from_config(settings)",
@@ -12760,7 +14593,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_vtt_action()` のように関数・変数名に付く。Python標準の `vtt_parser()` メソッドではない。"
     },
     {
@@ -12772,7 +14605,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のloudness）",
       "meaning_programming_ja": "音声のラウドネス（音量指標）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Adjust loudness so dialogue is easy to hear.",
+          "ja": "会話が聞き取りやすいようラウドネスを調整する。"
+        },
+        {
+          "en": "The podcast fixed uneven loudness between hosts.",
+          "ja": "ポッドキャストはホスト間のラウドネスのばらつきを直した。"
+        },
+        {
+          "en": "Loudness meters help balance exported audio.",
+          "ja": "ラウドネスメーターは出力音声のバランスを助ける。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "loudness = load_from_config(settings)",
@@ -12807,7 +14653,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_loudness_action()` のように関数・変数名に付く。Python標準の `loudness()` メソッドではない。"
     },
     {
@@ -12819,7 +14665,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のprosody）",
       "meaning_programming_ja": "話し方の抑揚・リズム分析",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Her prosody made the poem sound natural aloud.",
+          "ja": "彼女の韻律で詩が自然に聞こえた。"
+        },
+        {
+          "en": "Language learners practice prosody with short phrases.",
+          "ja": "語学学習者は短いフレーズで韻律を練習する。"
+        },
+        {
+          "en": "Prosody analysis flagged flat sentences in the clip.",
+          "ja": "韻律分析がクリップ内の平板な文を指摘した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "prosody = load_from_config(settings)",
@@ -12854,7 +14713,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_prosody_action()` のように関数・変数名に付く。Python標準の `prosody()` メソッドではない。"
     },
     {
@@ -12866,7 +14725,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のnotebooklm）",
       "meaning_programming_ja": "NotebookLM登録用テキスト出力",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "NotebookLM summarized the lecture sources overnight.",
+          "ja": "NotebookLMが講義ソースを夜間に要約した。"
+        },
+        {
+          "en": "She asked NotebookLM to compare two talk transcripts.",
+          "ja": "彼女はNotebookLMに2つの講演書き起こしの比較を依頼した。"
+        },
+        {
+          "en": "NotebookLM works best with clean subtitle text.",
+          "ja": "NotebookLMはきれいな字幕テキストで最もよく機能する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "notebooklm = load_from_config(settings)",
@@ -12901,7 +14773,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_notebooklm_action()` のように関数・変数名に付く。Python標準の `notebooklm()` メソッドではない。"
     },
     {
@@ -12913,7 +14785,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のhistory_csv）",
       "meaning_programming_ja": "過去取得URLの履歴CSV",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The history CSV logs every fetched URL with a date.",
+          "ja": "履歴CSVは取得したURLを日付付きで記録する。"
+        },
+        {
+          "en": "Archive the history CSV before deleting old files.",
+          "ja": "古いファイルを消す前に履歴CSVを保管する。"
+        },
+        {
+          "en": "Sort the history CSV to find the newest channels.",
+          "ja": "履歴CSVを並べ替えて最新チャンネルを見つける。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "history_csv = load_from_config(settings)",
@@ -12948,7 +14833,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_history_action()` のように関数・変数名に付く。Python標準の `history_csv()` メソッドではない。"
     },
     {
@@ -12960,7 +14845,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のnew_urls）",
       "meaning_programming_ja": "前回以降の新規URL一覧",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "New URLs appear when the channel posts overnight.",
+          "ja": "チャンネルが夜中に投稿すると新しいURLが出る。"
+        },
+        {
+          "en": "The job emails a list of new URLs each morning.",
+          "ja": "ジョブは毎朝新しいURLの一覧をメールする。"
+        },
+        {
+          "en": "Filter new URLs against the history file first.",
+          "ja": "まず履歴ファイルと照合して新しいURLを絞る。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "new_urls = load_from_config(settings)",
@@ -12995,7 +14893,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_new_action()` のように関数・変数名に付く。Python標準の `new_urls()` メソッドではない。"
     },
     {
@@ -13007,7 +14905,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のffmpeg）",
       "meaning_programming_ja": "音声・動画変換の外部ツール",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "FFmpeg trimmed the intro without re-encoding the whole file.",
+          "ja": "FFmpegが全体を再エンコードせずイントロを切り詰めた。"
+        },
+        {
+          "en": "She used FFmpeg to extract audio from the clip.",
+          "ja": "彼女はFFmpegでクリップから音声を抽出した。"
+        },
+        {
+          "en": "FFmpeg commands are chained in the nightly script.",
+          "ja": "FFmpegコマンドは夜間スクリプトで連鎖される。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "ffmpeg = load_from_config(settings)",
@@ -13042,7 +14953,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_ffmpeg_action()` のように関数・変数名に付く。Python標準の `ffmpeg()` メソッドではない。"
     },
     {
@@ -13054,7 +14965,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のwhisper_model）",
       "meaning_programming_ja": "文字起こしモデル",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The whisper model ran locally on her laptop.",
+          "ja": "Whisperモデルは彼女のノートPCでローカル実行された。"
+        },
+        {
+          "en": "Pick a smaller whisper model for faster drafts.",
+          "ja": "下書きを速くするには小さいWhisperモデルを選ぶ。"
+        },
+        {
+          "en": "The whisper model struggled with overlapping speakers.",
+          "ja": "Whisperモデルは話者が重なる部分で苦戦した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "whisper_model = load_from_config(settings)",
@@ -13089,7 +15013,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_whisper_action()` のように関数・変数名に付く。Python標準の `whisper_model()` メソッドではない。"
     },
     {
@@ -13101,7 +15025,20 @@
       "word_class": "noun",
       "meaning_general_ja": "しおり、ブックマーク",
       "meaning_programming_ja": "Xのブックマーク投稿",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "She bookmarked the article to read on the train.",
+          "ja": "彼女は電車で読むために記事をブックマークした。"
+        },
+        {
+          "en": "My browser bookmark bar is full of recipes.",
+          "ja": "ブラウザのブックマークバーはレシピでいっぱいだ。"
+        },
+        {
+          "en": "Remove old bookmarks when the links go dead.",
+          "ja": "リンクが切れたら古いブックマークを削除する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "bookmark = load_from_config(settings)",
@@ -13136,7 +15073,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_bookmark_action()` のように関数・変数名に付く。Python標準の `bookmark()` メソッドではない。"
     },
     {
@@ -13148,7 +15085,20 @@
       "word_class": "verb",
       "meaning_general_ja": "（英語のmerge_csv）",
       "meaning_programming_ja": "CSVとシートの差分マージ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Merge CSV files from two export folders.",
+          "ja": "2つの出力フォルダのCSVファイルを結合する。"
+        },
+        {
+          "en": "The merge CSV step removed duplicate tweet URLs.",
+          "ja": "merge CSVの段階で重複ツイートURLが除かれた。"
+        },
+        {
+          "en": "Run merge CSV after each weekend scrape.",
+          "ja": "週末の取得のあとにmerge CSVを実行する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "merge_csv = load_from_config(settings)",
@@ -13183,7 +15133,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_merge_action()` のように関数・変数名に付く。Python標準の `merge_csv()` メソッドではない。"
     },
     {
@@ -13195,7 +15145,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のexisting_urls）",
       "meaning_programming_ja": "シートに既にあるURL一覧",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Skip existing URLs so you do not import twice.",
+          "ja": "二重取込を避けるため既存URLは飛ばす。"
+        },
+        {
+          "en": "The sheet lists existing URLs in the first column.",
+          "ja": "シートの1列目に既存URLが並ぶ。"
+        },
+        {
+          "en": "Compare new links against existing URLs nightly.",
+          "ja": "新しいリンクを毎夜既存URLと照合する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "existing_urls = load_from_config(settings)",
@@ -13230,7 +15193,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_existing_action()` のように関数・変数名に付く。Python標準の `existing_urls()` メソッドではない。"
     },
     {
@@ -13242,7 +15205,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のnew_rows）",
       "meaning_programming_ja": "新規追記する行",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Highlight new rows before sharing the sheet.",
+          "ja": "シートを共有する前に新規行を強調する。"
+        },
+        {
+          "en": "New rows appeared after the last bookmark sync.",
+          "ja": "前回のブックマーク同期後に新規行が現れた。"
+        },
+        {
+          "en": "Sort new rows by date for easier reading.",
+          "ja": "読みやすくするため新規行を日付で並べる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "new_rows = load_from_config(settings)",
@@ -13277,7 +15253,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_new_action()` のように関数・変数名に付く。Python標準の `new_rows()` メソッドではない。"
     },
     {
@@ -13289,7 +15265,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のuser_entered）",
       "meaning_programming_ja": "スプレッドシートの入力形式（ユーザー入力扱い）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "User entered tags help group related tweets.",
+          "ja": "ユーザー入力タグが関連ツイートの整理を助ける。"
+        },
+        {
+          "en": "Mark cells as user entered when typed manually.",
+          "ja": "手入力したセルはuser enteredとマークする。"
+        },
+        {
+          "en": "User entered notes explain why a link was saved.",
+          "ja": "user enteredメモはリンク保存理由を説明する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "user_entered = load_from_config(settings)",
@@ -13324,7 +15313,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_user_action()` のように関数・変数名に付く。Python標準の `user_entered()` メソッドではない。"
     },
     {
@@ -13336,7 +15325,20 @@
       "word_class": "verb",
       "meaning_general_ja": "豊かにする、補強する",
       "meaning_programming_ja": "Geminiでブックマークを補足",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Enrich Gemini summaries with links from the sheet.",
+          "ja": "シートのリンクでGemini要約を補強する。"
+        },
+        {
+          "en": "The enrich Gemini step adds topics to each row.",
+          "ja": "enrich Geminiの段階で各行にトピックが付く。"
+        },
+        {
+          "en": "Run enrich Gemini only on new bookmarks.",
+          "ja": "新規ブックマークだけにenrich Geminiを実行する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "enrich_gemini = load_from_config(settings)",
@@ -13371,7 +15373,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_enrich_action()` のように関数・変数名に付く。Python標準の `enrich_gemini()` メソッドではない。"
     },
     {
@@ -13383,7 +15385,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のtampermonkey）",
       "meaning_programming_ja": "ブラウザ拡張でページから抽出",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Tampermonkey scripts can add buttons to a page.",
+          "ja": "Tampermonkeyスクリプトはページにボタンを足せる。"
+        },
+        {
+          "en": "She installed Tampermonkey to export bookmarks faster.",
+          "ja": "彼女はブックマーク出力を速くするためTampermonkeyを入れた。"
+        },
+        {
+          "en": "Update Tampermonkey when the browser upgrades.",
+          "ja": "ブラウザ更新時はTampermonkeyも更新する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "tampermonkey = load_from_config(settings)",
@@ -13418,7 +15433,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_tampermonkey_action()` のように関数・変数名に付く。Python標準の `tampermonkey()` メソッドではない。"
     },
     {
@@ -13430,7 +15445,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のtweet_url）",
       "meaning_programming_ja": "投稿のURL",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Copy the tweet URL before the thread disappears.",
+          "ja": "スレッドが消える前にツイートURLをコピーする。"
+        },
+        {
+          "en": "Each tweet URL opens the post in a new tab.",
+          "ja": "各ツイートURLは新しいタブで投稿を開く。"
+        },
+        {
+          "en": "Store tweet URLs in the first column for sorting.",
+          "ja": "並べ替え用にツイートURLを1列目に保存する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "tweet_url = load_from_config(settings)",
@@ -13465,7 +15493,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_tweet_action()` のように関数・変数名に付く。Python標準の `tweet_url()` メソッドではない。"
     },
     {
@@ -13477,7 +15505,20 @@
       "word_class": "noun",
       "meaning_general_ja": "一枚（紙・布）",
       "meaning_programming_ja": "スプレッドシート操作クライアント",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The sheet client writes rows without opening the browser.",
+          "ja": "sheet clientはブラウザを開かずに行を書き込む。"
+        },
+        {
+          "en": "Authenticate the sheet client with a service account.",
+          "ja": "サービスアカウントでsheet clientを認証する。"
+        },
+        {
+          "en": "The sheet client batches updates to avoid quotas.",
+          "ja": "sheet clientは上限回避のため更新をまとめる。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "sheet_client = load_from_config(settings)",
@@ -13517,7 +15558,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_sheet_action()` のように関数・変数名に付く。Python標準の `sheet_client()` メソッドではない。"
     },
     {
@@ -13529,7 +15570,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（専門）LINE Bot",
       "meaning_programming_ja": "LINE Bot SDK",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The line bot greeted visitors in the museum chat.",
+          "ja": "LINEボットが博物館チャットで来客に挨拶した。"
+        },
+        {
+          "en": "Tourists used the line bot to find nearby shrines.",
+          "ja": "観光客はLINEボットで近くの神社を探した。"
+        },
+        {
+          "en": "The line bot answers common questions in Japanese.",
+          "ja": "LINEボットはよくある質問に日本語で答える。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "linebot = load_from_config(settings)",
@@ -13564,7 +15618,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_linebot_action()` のように関数・変数名に付く。Python標準の `linebot()` メソッドではない。"
     },
     {
@@ -13576,7 +15630,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（技術用語）Webhook",
       "meaning_programming_ja": "LINEからのPOSTを受ける入口",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "A webhook handler forwards payment alerts to finance.",
+          "ja": "Webhookハンドラが支払い警告を経理へ転送する。"
+        },
+        {
+          "en": "The webhook handler runs whenever the form is submitted.",
+          "ja": "フォーム送信のたびにWebhookハンドラが動く。"
+        },
+        {
+          "en": "Test the webhook handler with a sample message first.",
+          "ja": "まずサンプルメッセージでWebhookハンドラを試す。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "webhook_handler = load_from_config(settings)",
@@ -13611,7 +15678,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_webhook_action()` のように関数・変数名に付く。Python標準の `webhook_handler()` メソッドではない。"
     },
     {
@@ -13623,7 +15690,20 @@
       "word_class": "noun",
       "meaning_general_ja": "よくある質問",
       "meaning_programming_ja": "よくある質問DB",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The FAQ page answers hours and ticket prices.",
+          "ja": "FAQページに開館時間と料金が載っている。"
+        },
+        {
+          "en": "Staff updated the FAQ after the festival schedule changed.",
+          "ja": "祭り日程変更後、スタッフがFAQを更新した。"
+        },
+        {
+          "en": "Visitors searched the FAQ before calling the desk.",
+          "ja": "来客は電話する前にFAQを調べた。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "faq = load_from_config(settings)",
@@ -13658,7 +15738,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_faq_action()` のように関数・変数名に付く。Python標準の `faq()` メソッドではない。"
     },
     {
@@ -13670,7 +15750,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のspot）",
       "meaning_programming_ja": "観光スポットDB",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "This spot on the map marks the statue.",
+          "ja": "地図のこの地点が像の場所を示す。"
+        },
+        {
+          "en": "Tourists asked for a quiet spot to rest.",
+          "ja": "観光客は休める静かな場所を尋ねた。"
+        },
+        {
+          "en": "The guide highlighted a photo spot by the river.",
+          "ja": "ガイドは川辺の撮影スポットを案内した。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "spot = load_from_config(settings)",
@@ -13705,7 +15798,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_spot_action()` のように関数・変数名に付く。Python標準の `spot()` メソッドではない。"
     },
     {
@@ -13717,7 +15810,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のreply_token）",
       "meaning_programming_ja": "LINE返信の一回限りトークン",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Your reply token expires if you wait too long.",
+          "ja": "返信トークンは待ちすぎると失効する。"
+        },
+        {
+          "en": "The chat API needs a fresh reply token each turn.",
+          "ja": "チャットAPIは各ターンで新しい返信トークンが必要だ。"
+        },
+        {
+          "en": "Save the reply token before sending the answer.",
+          "ja": "回答を送る前に返信トークンを保存する。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "reply_token = load_from_config(settings)",
@@ -13752,7 +15858,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_reply_action()` のように関数・変数名に付く。Python標準の `reply_token()` メソッドではない。"
     },
     {
@@ -13764,7 +15870,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のpush_message）",
       "meaning_programming_ja": "ユーザーへ能動的にメッセージ送信",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The museum will push message alerts during busy hours.",
+          "ja": "博物館は混雑時間にプッシュメッセージで知らせる。"
+        },
+        {
+          "en": "She agreed to push message updates about events.",
+          "ja": "彼女はイベントのプッシュ通知に同意した。"
+        },
+        {
+          "en": "Push message reminders helped visitors catch tours.",
+          "ja": "プッシュメッセージのリマインドで見学ツアーに間に合った。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "push_message = load_from_config(settings)",
@@ -13799,7 +15918,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_push_action()` のように関数・変数名に付く。Python標準の `push_message()` メソッドではない。"
     },
     {
@@ -13811,7 +15930,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のflask_app）",
       "meaning_programming_ja": "Webサーバ（Flask）",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "He poured tea from a metal flask on the hike.",
+          "ja": "ハイキングで金属のフラスコからお茶を注いだ。"
+        },
+        {
+          "en": "A small Flask app routes chat messages to the bot.",
+          "ja": "小さなFlaskアプリがチャットメッセージをボットへ渡す。"
+        },
+        {
+          "en": "She keeps a warm flask in her bag during winter walks.",
+          "ja": "冬の散歩ではバッグに温かいフラスコを入れている。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "flask_app = load_from_config(settings)",
@@ -13846,7 +15978,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_flask_action()` のように関数・変数名に付く。Python標準の `flask_app()` メソッドではない。"
     },
     {
@@ -13858,7 +15990,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のgunicorn）",
       "meaning_programming_ja": "本番用WSGIサーバ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "The mural showed a green unicorn above the library door.",
+          "ja": "壁画には図書館の扉の上に緑のユニコーンが描かれていた。"
+        },
+        {
+          "en": "Gunicorn workers serve the chatbot in production.",
+          "ja": "本番ではGunicornワーカーがチャットボットを動かす。"
+        },
+        {
+          "en": "Kids chose a green unicorn sticker at the craft table.",
+          "ja": "工作コーナーで子どもたちは緑のユニコーンのシールを選んだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "gunicorn = load_from_config(settings)",
@@ -13893,7 +16038,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_gunicorn_action()` のように関数・変数名に付く。Python標準の `gunicorn()` メソッドではない。"
     },
     {
@@ -13905,7 +16050,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のbeautifulsoup）",
       "meaning_programming_ja": "HTMLパースライブラリ",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Grandma's beautiful soup warmed us after the rain.",
+          "ja": "おばあちゃんの美しいスープが雨の後に体を温めた。"
+        },
+        {
+          "en": "The cafe serves a beautiful soup with herbs on top.",
+          "ja": "カフェはハーブの載った見た目の良いスープを出す。"
+        },
+        {
+          "en": "Scraping pages feels like skimming soup for the good bits.",
+          "ja": "ページ取得はスープから良い部分をすくうような作業だ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "beautifulsoup = load_from_config(settings)",
@@ -13940,7 +16098,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_beautifulsoup_action()` のように関数・変数名に付く。Python標準の `beautifulsoup()` メソッドではない。"
     },
     {
@@ -13952,7 +16110,20 @@
       "word_class": "noun",
       "meaning_general_ja": "（英語のgenerative_ai）",
       "meaning_programming_ja": "Geminiで回答生成",
-      "examples_general": [],
+      "examples_general": [
+        {
+          "en": "Generative AI tools can draft short tour explanations.",
+          "ja": "生成AIツールは短い見学説明文の下書きができる。"
+        },
+        {
+          "en": "The museum tested generative AI for FAQ answers.",
+          "ja": "博物館はFAQ回答に生成AIを試した。"
+        },
+        {
+          "en": "Generative AI should be checked by a human guide.",
+          "ja": "生成AIの出力は人のガイドが確認すべきだ。"
+        }
+      ],
       "examples_code": [
         {
           "snippet": "generative_ai = load_from_config(settings)",
@@ -13987,7 +16158,7 @@
       ],
       "srs_level": null,
       "last_reviewed": null,
-      "enrichment_status": "partial",
+      "enrichment_status": "full",
       "usage_note_ja": "命名で使う英単語。自分のコードで `do_generative_action()` のように関数・変数名に付く。Python標準の `generative_ai()` メソッドではない。"
     }
   ]
