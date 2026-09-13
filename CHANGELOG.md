@@ -6,6 +6,11 @@
 
 ### Added
 
+- P1 デッキ 4 種（JavaScript / C# / C++ / GAS Workspace）54 枚 — GitHub 人気リポジトリ由来の語彙
+- クイズ UI 言語フィルタ（すべて / Python / JavaScript / C# / C++ / GAS）
+- `doc/life/career/dev-vocabulary/research/` — GitHub 語彙候補調査成果物（manifest・candidates・USER_REVIEW）
+- P1 デッキ `github_survey.json` 164 枚 — 調査候補 adopt+hold 未実装分の一括カード化（意味・例文・コード例付き）
+- `doc/life/career/dev-vocabulary/tools/extract_github_vocab.py` — リポジトリ走査・候補抽出スクリプト
 - `doc/life/career/dev-vocabulary/spec/解説フィールド執筆ガイド.md` — 意味/usage/コード例の執筆基準
 - Phase 4 学習モード（P2 / 命名パターン / DS）を `public/index.html` に追加
 - warm-palette モック準拠の UI 構造（タブ・カード・注釈・44px タップ領域）
@@ -22,6 +27,7 @@
 - `doc/spec/企画書.md` — Phase 2〜4 状態更新、Phase 5 次タスク節を追加
 - 例文供給を機械テンプレ廃止 → JSON 正本 + `examples_catalog.py` に変更（未作成は「例文は準備中」）
 - **全265カード**に `examples_general/` JSON 正本の例文を投入（P1 70 + P2 98 を追加）
+- 統合カード数 **265 → 319 → 483**（`sync_to_web.ps1` で `public/all_cards_v2.json` 同期）
 
 ### Added (template)
 
