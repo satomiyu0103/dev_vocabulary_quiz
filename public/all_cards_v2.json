@@ -254,7 +254,7 @@
       "term": "data",
       "word_class": "other",
       "meaning_general_ja": "データ、資料、事実",
-      "meaning_programming_ja": "JSON や API 応答など、プログラムが扱う情報の塊",
+      "meaning_programming_ja": "変数名 `data`、引数名 `data` として、JSON や API 応答を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "We need more data.",
@@ -322,7 +322,7 @@
       "term": "temp",
       "word_class": "other",
       "meaning_general_ja": "臨時の、一時的な（temporary の略）",
-      "meaning_programming_ja": "一時的に置く値・ファイルを表す語",
+      "meaning_programming_ja": "変数名 `temp` や `tmp` として、一時ファイル・一時変数を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "The temp dropped below freezing last night.",
@@ -385,7 +385,7 @@
       "term": "payload",
       "word_class": "other",
       "meaning_general_ja": "積荷、運ぶ中身（payload）",
-      "meaning_programming_ja": "HTTP リクエストやメッセージの本文部分",
+      "meaning_programming_ja": "変数名 `payload` として、HTTP リクエスト本文や POST データを入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "The rocket carried a heavy payload into orbit.",
@@ -448,7 +448,7 @@
       "term": "count",
       "word_class": "other",
       "meaning_general_ja": "数える、個数（count）",
-      "meaning_programming_ja": "件数や個数を表す値",
+      "meaning_programming_ja": "変数名 `count`、引数名 `count` として、件数を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "We did a quick count of the chairs.",
@@ -512,7 +512,7 @@
       "term": "result",
       "word_class": "other",
       "meaning_general_ja": "結果、Outcome",
-      "meaning_programming_ja": "処理の出力や戻り値",
+      "meaning_programming_ja": "変数名 `result` として、API 戻り値や計算結果を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "The election result surprised everyone.",
@@ -575,7 +575,7 @@
       "term": "handle",
       "word_class": "other",
       "meaning_general_ja": "取っ手、扱う（handle）",
-      "meaning_programming_ja": "「処理する」「扱う」を表す動詞句の一部",
+      "meaning_programming_ja": "関数名 `handle(...)` や `handle_xxx` として、何かを処理する関数名に単体で使われがち",
       "examples_general": [
         {
           "en": "Please handle this package with care.",
@@ -638,7 +638,7 @@
       "term": "process",
       "word_class": "other",
       "meaning_general_ja": "過程、処理する（process）",
-      "meaning_programming_ja": "一連の処理やパイプラインを指す語",
+      "meaning_programming_ja": "変数名 `process`、関数名 `process(...)` として、処理やパイプラインを指す名前に単体で使われがち",
       "examples_general": [
         {
           "en": "Learning a language is a slow process.",
@@ -700,7 +700,7 @@
       "term": "node",
       "word_class": "other",
       "meaning_general_ja": "結び目、節点（node）",
-      "meaning_programming_ja": "木構造や JSON の1要素",
+      "meaning_programming_ja": "変数名 `node` として、ツリー要素や JSON の1項目を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "Each node in the network can fail independently.",
@@ -762,7 +762,7 @@
       "term": "line",
       "word_class": "other",
       "meaning_general_ja": "線、行（line）",
-      "meaning_programming_ja": "テキストや表の1行",
+      "meaning_programming_ja": "変数名 `line` として、ログ1行・CSV 行・文字列1行を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "Please wait in line at the counter.",
@@ -824,7 +824,7 @@
       "term": "value",
       "word_class": "other",
       "meaning_general_ja": "価値、値（value）",
-      "meaning_programming_ja": "変数やセルに入っている中身",
+      "meaning_programming_ja": "変数名 `value`、引数名 `value` として、セル値や設定値を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "This ring has great sentimental value.",
@@ -887,7 +887,7 @@
       "term": "info",
       "word_class": "other",
       "meaning_general_ja": "情報（info）",
-      "meaning_programming_ja": "メタデータや付帯情報",
+      "meaning_programming_ja": "変数名 `info` として、メタ情報や付帯データを入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "I left more info in the email.",
@@ -950,7 +950,7 @@
       "term": "item",
       "word_class": "other",
       "meaning_general_ja": "項目、品物（item）",
-      "meaning_programming_ja": "リストや表の1要素",
+      "meaning_programming_ja": "変数名 `item` として、リスト要素・表項目・商品1件を入れる名前に単体で使われがち",
       "examples_general": [
         {
           "en": "Each item on the menu costs under ten dollars.",
@@ -12755,7 +12755,7 @@
       "term": "data_conv",
       "word_class": "other",
       "meaning_general_ja": "データ、資料",
-      "meaning_programming_ja": "日報 Excel から読み取った行データの変換処理",
+      "meaning_programming_ja": "変数名 `data_conv` として、データ変換結果や変換処理を入れる名前に使われがち（レガシー）",
       "examples_general": [
         {
           "en": "We need more data for the quarterly review.",
