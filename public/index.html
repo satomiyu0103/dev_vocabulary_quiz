@@ -230,6 +230,15 @@
         <button type="button" class="dads-tab" role="tab" data-mode="ds" aria-selected="false">データ分析（DS）</button>
       </nav>
 
+      <div class="dads-segment" id="lang-filters" role="group" aria-label="言語フィルタ">
+        <button type="button" class="dads-btn dads-btn--outline is-active" data-lang="all">すべて</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-lang="python">Python</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-lang="javascript">JavaScript</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-lang="csharp">C#</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-lang="cpp">C++</button>
+        <button type="button" class="dads-btn dads-btn--outline" data-lang="gas">GAS</button>
+      </div>
+
       <div class="dads-segment" id="directions" role="group" aria-label="出題方向">
         <button type="button" class="dads-btn dads-btn--outline is-active" data-direction="ja2en">日→英</button>
         <button type="button" class="dads-btn dads-btn--outline" data-direction="en2ja">英→日</button>
@@ -270,12 +279,22 @@
       mixed: "ミックス",
     };
 
+    const LANG_LABELS = {
+      all: "すべて",
+      python: "Python",
+      javascript: "JavaScript",
+      csharp: "C#",
+      cpp: "C++",
+      gas: "GAS",
+    };
+
     let allCards = [];
     let pool = [];
     let current = null;
     let choices = [];
     let correctIndex = -1;
     let mode = "basic";
+    let langFilter = "all";
     let questionDirection = "ja2en";
     let effectiveDirection = "ja2en";
     let meaningKind = "general";
@@ -299,26 +318,32 @@
       return questionDirection;
     }
 
+    function matchesLangFilter(card) {
+      if (langFilter === "all") {
+        return true;
+      }
+      const tags = card.tags || [];
+      return tags.includes(langFilter);
+    }
+
     function filterCards(cards) {
+      let filtered = cards;
       if (mode === "basic") {
-        return cards.filter((c) => c.type === "identifier" && c.tier === "P0");
+        filtered = filtered.filter((c) => c.type === "identifier" && c.tier === "P0");
+      } else if (mode === "anti") {
+        filtered = filtered.filter((c) => c.type === "anti_pattern");
+      } else if (mode === "lib") {
+        filtered = filtered.filter((c) => c.type === "method" || c.type === "package" || c.type === "stdlib");
+      } else if (mode === "p2") {
+        filtered = filtered.filter((c) => c.type === "identifier" && c.tier === "P2");
+      } else if (mode === "pattern") {
+        filtered = filtered.filter((c) => c.type === "pattern");
+      } else if (mode === "ds") {
+        filtered = filtered.filter((c) => c.type === "identifier" && c.tier === "DS");
+      } else {
+        return [];
       }
-      if (mode === "anti") {
-        return cards.filter((c) => c.type === "anti_pattern");
-      }
-      if (mode === "lib") {
-        return cards.filter((c) => c.type === "method" || c.type === "package" || c.type === "stdlib");
-      }
-      if (mode === "p2") {
-        return cards.filter((c) => c.type === "identifier" && c.tier === "P2");
-      }
-      if (mode === "pattern") {
-        return cards.filter((c) => c.type === "pattern");
-      }
-      if (mode === "ds") {
-        return cards.filter((c) => c.type === "identifier" && c.tier === "DS");
-      }
-      return [];
+      return filtered.filter(matchesLangFilter);
     }
 
     function pickDistractors(card, candidates) {
@@ -586,8 +611,9 @@
 
     function updateStats() {
       const total = filterCards(allCards).length;
+      const langNote = langFilter === "all" ? "" : ` · 言語: ${LANG_LABELS[langFilter]}`;
       $("stats").textContent =
-        `出題済み ${usedIds.size} / ${total} 語 · モード: ${MODE_LABELS[mode]} · 方向: ${DIRECTION_LABELS[questionDirection]}`;
+        `出題済み ${usedIds.size} / ${total} 語 · モード: ${MODE_LABELS[mode]}${langNote} · 方向: ${DIRECTION_LABELS[questionDirection]}`;
     }
 
     function startQuiz(cards) {
@@ -610,6 +636,12 @@
     function setActiveDirection(activeButton) {
       document.querySelectorAll("#directions .dads-btn--outline").forEach((dirButton) => {
         dirButton.classList.toggle("is-active", dirButton === activeButton);
+      });
+    }
+
+    function setActiveLangFilter(activeButton) {
+      document.querySelectorAll("#lang-filters .dads-btn--outline").forEach((langButton) => {
+        langButton.classList.toggle("is-active", langButton === activeButton);
       });
     }
 
@@ -653,6 +685,16 @@
       if (!btn) return;
       setActiveDirection(btn);
       questionDirection = btn.dataset.direction;
+      usedIds.clear();
+      questionNum = 0;
+      nextQuestion();
+    });
+
+    $("lang-filters").addEventListener("click", (e) => {
+      const btn = e.target.closest(".dads-btn--outline");
+      if (!btn) return;
+      setActiveLangFilter(btn);
+      langFilter = btn.dataset.lang;
       usedIds.clear();
       questionNum = 0;
       nextQuestion();

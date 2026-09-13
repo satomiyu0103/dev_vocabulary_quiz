@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 2,
-    "card_count": 265
+    "card_count": 319
   },
   "cards": [
     {
@@ -8657,6 +8657,3206 @@
       "last_reviewed": null,
       "enrichment_status": "full",
       "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import clasp`"
+    },
+    {
+      "id": "js_use_state",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useState",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: React でコンポーネントの状態を保持する Hook",
+      "meaning_programming_ja": "React でコンポーネントの状態を保持する Hook",
+      "examples_general": [
+        {
+          "en": "The state of the kitchen changed after cooking.",
+          "ja": "料理のあと台所の状態が変わった。"
+        },
+        {
+          "en": "She wrote down the current state of the project.",
+          "ja": "彼女はプロジェクトの現状を書き留めた。"
+        },
+        {
+          "en": "Mental state affects how we solve problems.",
+          "ja": "心の状態は問題解決の仕方に影響する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const [count, setCount] = useState(0)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const [count, setCount] = useState(0)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const [count, setCount] = useState(0)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const [count, setCount] = useState(0)`"
+    },
+    {
+      "id": "js_use_effect",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useEffect",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 副作用（API 呼び出し等）を実行する React Hook",
+      "meaning_programming_ja": "副作用（API 呼び出し等）を実行する React Hook",
+      "examples_general": [
+        {
+          "en": "The medicine had a strong effect on his sleep.",
+          "ja": "その薬は彼の睡眠に強い効き目があった。"
+        },
+        {
+          "en": "The new policy took effect in April.",
+          "ja": "新しい方針は4月から効力を持った。"
+        },
+        {
+          "en": "Lighting can effect a dramatic mood change.",
+          "ja": "照明は劇的な雰囲気の変化をもたらせる。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "useEffect(() => { fetchData(); }, [])",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "useEffect(() => { fetchData(); }, [])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "useEffect(() => { fetchData(); }, [])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `useEffect(() => { fetchData(); }, [])`"
+    },
+    {
+      "id": "js_use_memo",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useMemo",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 計算結果をメモ化して再計算を抑える React Hook",
+      "meaning_programming_ja": "計算結果をメモ化して再計算を抑える React Hook",
+      "examples_general": [
+        {
+          "en": "She left a memo on the fridge.",
+          "ja": "彼女は冷蔵庫にメモを残した。"
+        },
+        {
+          "en": "Please memo the meeting time for the team.",
+          "ja": "会議の時間をチーム向けにメモしておいて。"
+        },
+        {
+          "en": "His memo reminded everyone about the deadline.",
+          "ja": "彼のメモが締切をみんなに思い出させた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const total = useMemo(() => sum(items), [items])",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const total = useMemo(() => sum(items), [items])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const total = useMemo(() => sum(items), [items])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const total = useMemo(() => sum(items), [items])`"
+    },
+    {
+      "id": "js_use_callback",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useCallback",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 関数参照をメモ化する React Hook",
+      "meaning_programming_ja": "関数参照をメモ化する React Hook",
+      "examples_general": [
+        {
+          "en": "The store will callback when the part arrives.",
+          "ja": "部品が届いたら店から折り返し電話がある。"
+        },
+        {
+          "en": "She asked for a callback after lunch.",
+          "ja": "昼食後に折り返し連絡を頼んだ。"
+        },
+        {
+          "en": "A callback number was printed on the receipt.",
+          "ja": "領収書に折り返し用の番号が印刷されていた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const onClick = useCallback(() => save(), [save])",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const onClick = useCallback(() => save(), [save])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const onClick = useCallback(() => save(), [save])",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const onClick = useCallback(() => save(), [save])`"
+    },
+    {
+      "id": "js_use_ref",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useRef",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 再レンダーせずに値や DOM 参照を保持する React Hook",
+      "meaning_programming_ja": "再レンダーせずに値や DOM 参照を保持する React Hook",
+      "examples_general": [
+        {
+          "en": "Check the ref number on your shipping label.",
+          "ja": "配送ラベルの参照番号を確認してください。"
+        },
+        {
+          "en": "The teacher handed out a ref sheet for citations.",
+          "ja": "先生は引用用の参照シートを配った。"
+        },
+        {
+          "en": "Keep this ref card for warranty claims.",
+          "ja": "保証請求用にこの参照カードを保管してください。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const inputRef = useRef(null)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const inputRef = useRef(null)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const inputRef = useRef(null)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const inputRef = useRef(null)`"
+    },
+    {
+      "id": "js_use_reducer",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useReducer",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 複雑な状態更新を reducer で扱う React Hook",
+      "meaning_programming_ja": "複雑な状態更新を reducer で扱う React Hook",
+      "examples_general": [
+        {
+          "en": "A noise reducer made the recording clearer.",
+          "ja": "ノイズ低減装置で録音がはっきりした。"
+        },
+        {
+          "en": "They installed a speed reducer on the conveyor.",
+          "ja": "コンベアに速度減速機を取り付けた。"
+        },
+        {
+          "en": "Stress reducers like walks help her focus.",
+          "ja": "散歩のようなストレス軽減が彼女の集中を助ける。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const [state, dispatch] = useReducer(reducer, init)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const [state, dispatch] = useReducer(reducer, init)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const [state, dispatch] = useReducer(reducer, init)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const [state, dispatch] = useReducer(reducer, init)`"
+    },
+    {
+      "id": "js_use_context",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "useContext",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: Context から共有値を読む React Hook",
+      "meaning_programming_ja": "Context から共有値を読む React Hook",
+      "examples_general": [
+        {
+          "en": "Read the quote in context to understand it.",
+          "ja": "文脈を読んで引用の意味を理解する。"
+        },
+        {
+          "en": "Historical context explains why the law changed.",
+          "ja": "歴史的背景が法改正の理由を説明する。"
+        },
+        {
+          "en": "Without context, the message sounds harsh.",
+          "ja": "背景がないと、そのメッセージはきつく聞こえる。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const theme = useContext(ThemeContext)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const theme = useContext(ThemeContext)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const theme = useContext(ThemeContext)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const theme = useContext(ThemeContext)`"
+    },
+    {
+      "id": "js_promise",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "Promise",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 非同期処理の完了・失敗を表すオブジェクト",
+      "meaning_programming_ja": "非同期処理の完了・失敗を表すオブジェクト",
+      "examples_general": [
+        {
+          "en": "He made a promise to call every week.",
+          "ja": "毎週電話する約束をした。"
+        },
+        {
+          "en": "The job offer came with a promise of training.",
+          "ja": "内定には研修の約束が付いていた。"
+        },
+        {
+          "en": "She kept her promise despite the rain.",
+          "ja": "雨なのに約束を守った。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "return new Promise((resolve, reject) => { ... })",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "return new Promise((resolve, reject) => { ... })",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "return new Promise((resolve, reject) => { ... })",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `return new Promise((resolve, reject) => { ... })`"
+    },
+    {
+      "id": "js_async",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "async",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 非同期関数を宣言する JavaScript キーワード",
+      "meaning_programming_ja": "非同期関数を宣言する JavaScript キーワード",
+      "examples_general": [
+        {
+          "en": "Their schedules are async, so meetings are rare.",
+          "ja": "予定がずれているので会議は少ない。"
+        },
+        {
+          "en": "We run async workshops across time zones.",
+          "ja": "タイムゾーンをまたいで非同期の研修を行う。"
+        },
+        {
+          "en": "Async communication works well for remote teams.",
+          "ja": "非同期の連絡はリモートチームに向いている。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "async function load() { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "async function load() { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "async function load() { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`async` は非同期関数を宣言する JavaScript キーワード。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "js_await",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "await",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: Promise の完了を待つ JavaScript キーワード",
+      "meaning_programming_ja": "Promise の完了を待つ JavaScript キーワード",
+      "examples_general": [
+        {
+          "en": "Guests await the host by the entrance.",
+          "ja": "来客は入口でホストを待っている。"
+        },
+        {
+          "en": "Packages await pickup at the front desk.",
+          "ja": "荷物は受付で受け取り待ちだ。"
+        },
+        {
+          "en": "We await your reply by Friday.",
+          "ja": "金曜までに返信をお待ちしています。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const data = await response.json()",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const data = await response.json()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const data = await response.json()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`await` はPromise の完了を待つ JavaScript キーワード。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "js_add_event_listener",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "addEventListener",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: DOM 要素にイベント処理を登録する",
+      "meaning_programming_ja": "DOM 要素にイベント処理を登録する",
+      "examples_general": [
+        {
+          "en": "The host added a listener for late arrivals.",
+          "ja": "主催者は遅刻者向けの案内を追加した。"
+        },
+        {
+          "en": "Volunteers listen for storm warnings on the radio.",
+          "ja": "ボランティアはラジオで暴風警報を聞いている。"
+        },
+        {
+          "en": "She trained her ear to listen for bird calls.",
+          "ja": "鳥のさえずりを聞き分ける耳を鍛えた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "button.addEventListener('click', handler)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "button.addEventListener('click', handler)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "button.addEventListener('click', handler)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `button.addEventListener('click', handler)`"
+    },
+    {
+      "id": "js_query_selector",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "querySelector",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: CSS セレクタで DOM 要素を1つ取得する",
+      "meaning_programming_ja": "CSS セレクタで DOM 要素を1つ取得する",
+      "examples_general": [
+        {
+          "en": "The librarian helped her query the catalog.",
+          "ja": "司書が目録の検索を手伝った。"
+        },
+        {
+          "en": "Use the search box to query past orders.",
+          "ja": "過去の注文は検索ボックスで調べる。"
+        },
+        {
+          "en": "He queried the price before buying.",
+          "ja": "購入前に価格を問い合わせた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "document.querySelector('.menu')",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "document.querySelector('.menu')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "document.querySelector('.menu')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `document.querySelector('.menu')`"
+    },
+    {
+      "id": "js_json_parse",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "JSON.parse",
+      "word_class": "method",
+      "meaning_general_ja": "文法を分解して理解する、解析する",
+      "meaning_programming_ja": "JSON 文字列を JavaScript オブジェクトに変換する",
+      "examples_general": [
+        {
+          "en": "It took time to parse the legal document.",
+          "ja": "法的文書の解析に時間がかかった。"
+        },
+        {
+          "en": "Students parse sentences in grammar class.",
+          "ja": "文法の授業で生徒は文を分解する。"
+        },
+        {
+          "en": "The tool can parse dates in many formats.",
+          "ja": "そのツールは多くの形式の日付を解釈できる。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const obj = JSON.parse(text)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const obj = JSON.parse(text)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const obj = JSON.parse(text)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [
+        {
+          "term": "extract",
+          "diff_ja": "extract は抜き出し。parse は構造を解釈してオブジェクト化"
+        }
+      ],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const obj = JSON.parse(text)`"
+    },
+    {
+      "id": "js_json_stringify",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "JSON.stringify",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: JavaScript オブジェクトを JSON 文字列に変換する",
+      "meaning_programming_ja": "JavaScript オブジェクトを JSON 文字列に変換する",
+      "examples_general": [
+        {
+          "en": "Stringify the list before sending it.",
+          "ja": "送る前にリストを文字列にまとめて。"
+        },
+        {
+          "en": "The report stringify complex results for logs.",
+          "ja": "報告書は複雑な結果をログ用に文字列化する。"
+        },
+        {
+          "en": "She stringify her notes into one paragraph.",
+          "ja": "彼女はメモを1段落の文章にまとめた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const text = JSON.stringify(obj)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const text = JSON.stringify(obj)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const text = JSON.stringify(obj)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const text = JSON.stringify(obj)`"
+    },
+    {
+      "id": "js_fs_read_file",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "fs.readFile",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: Node.js でファイル内容を非同期読み込みする",
+      "meaning_programming_ja": "Node.js でファイル内容を非同期読み込みする",
+      "examples_general": [
+        {
+          "en": "Read the file aloud for the team.",
+          "ja": "チームのためにファイルを声に出して読んだ。"
+        },
+        {
+          "en": "He read the file on the USB drive.",
+          "ja": "USB のファイルを読み取った。"
+        },
+        {
+          "en": "Please read the file before the meeting.",
+          "ja": "会議前にファイルを読んでください。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "fs.readFile(path, 'utf8', callback)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "fs.readFile(path, 'utf8', callback)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "fs.readFile(path, 'utf8', callback)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `fs.readFile(path, 'utf8', callback)`"
+    },
+    {
+      "id": "js_path_join",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "path.join",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: Node.js でパス区切りを安全に結合する",
+      "meaning_programming_ja": "Node.js でパス区切りを安全に結合する",
+      "examples_general": [
+        {
+          "en": "Two trails join at the old bridge.",
+          "ja": "古い橋で2本の道が合流する。"
+        },
+        {
+          "en": "Several rivers join near the delta.",
+          "ja": "三角州の近くでいくつかの川が合流する。"
+        },
+        {
+          "en": "We will join the groups after lunch.",
+          "ja": "昼食後にグループを合流させる。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const full = path.join(dir, 'data.json')",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const full = path.join(dir, 'data.json')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const full = path.join(dir, 'data.json')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const full = path.join(dir, 'data.json')`"
+    },
+    {
+      "id": "js_middleware",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "middleware",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: リクエスト処理の前後に挟む共通処理",
+      "meaning_programming_ja": "リクエスト処理の前後に挟む共通処理（Express/Next 等）",
+      "examples_general": [
+        {
+          "en": "Middleware sat between the client and the server.",
+          "ja": "ミドルウェアはクライアントとサーバーの間に入った。"
+        },
+        {
+          "en": "The integration layer acts as middleware.",
+          "ja": "連携層はミドルウェアの役割を果たす。"
+        },
+        {
+          "en": "They added middleware to log every request.",
+          "ja": "全リクエストを記録するミドルウェアを追加した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "app.use(loggingMiddleware)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "app.use(loggingMiddleware)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "app.use(loggingMiddleware)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "javascript"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`middleware` はリクエスト処理の前後に挟む共通処理（Express/Next 等）。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_async",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "async",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 非同期メソッドを宣言する C# キーワード",
+      "meaning_programming_ja": "非同期メソッドを宣言する C# キーワード",
+      "examples_general": [
+        {
+          "en": "Their async schedules made planning harder.",
+          "ja": "非同期の予定で計画が難しくなった。"
+        },
+        {
+          "en": "Async lessons let students learn at night.",
+          "ja": "非同期の教材で夜にも学べる。"
+        },
+        {
+          "en": "The team prefers async updates in chat.",
+          "ja": "チームはチャットでの非同期更新を好む。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "public async Task RunAsync() { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "public async Task RunAsync() { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "public async Task RunAsync() { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`async` は非同期メソッドを宣言する C# キーワード。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_await",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "await",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: Task の完了を待つ C# キーワード",
+      "meaning_programming_ja": "Task の完了を待つ C# キーワード",
+      "examples_general": [
+        {
+          "en": "We await confirmation from the bank.",
+          "ja": "銀行からの確認を待っている。"
+        },
+        {
+          "en": "Tickets await buyers at the box office.",
+          "ja": "チケットは窓口で購入者を待っている。"
+        },
+        {
+          "en": "Results await review by the committee.",
+          "ja": "結果は委員会の審査待ちだ。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "var result = await client.GetAsync(url)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "var result = await client.GetAsync(url)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "var result = await client.GetAsync(url)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`await` はTask の完了を待つ C# キーワード。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_task",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "Task",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: .NET の非同期処理単位（完了を表す型）",
+      "meaning_programming_ja": ".NET の非同期処理単位（完了を表す型）",
+      "examples_general": [
+        {
+          "en": "Her first task was sorting the mail.",
+          "ja": "最初の仕事は郵便物の仕分けだった。"
+        },
+        {
+          "en": "The team split the task into small steps.",
+          "ja": "チームは作業を小さな段階に分けた。"
+        },
+        {
+          "en": "Finishing the task early earned praise.",
+          "ja": "作業を早く終えて称賛された。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "Task<int> ComputeAsync()",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "Task<int> ComputeAsync()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "Task<int> ComputeAsync()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `Task<int> ComputeAsync()`"
+    },
+    {
+      "id": "cs_ienumerable",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "IEnumerable",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 列挙可能なコレクションのインターフェース",
+      "meaning_programming_ja": "列挙可能なコレクションのインターフェース",
+      "examples_general": [
+        {
+          "en": "The list is enumerable one item at a time.",
+          "ja": "リストは1件ずつ列挙できる。"
+        },
+        {
+          "en": "Enumerable rows were printed in order.",
+          "ja": "列挙可能な行が順に出力された。"
+        },
+        {
+          "en": "She made the collection enumerable for export.",
+          "ja": "コレクションを列挙可能にして出力した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "IEnumerable<string> names",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "IEnumerable<string> names",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "IEnumerable<string> names",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `IEnumerable<string> names`"
+    },
+    {
+      "id": "cs_controller",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "Controller",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: ASP.NET で HTTP エンドポイントを担うクラス",
+      "meaning_programming_ja": "ASP.NET で HTTP エンドポイントを担うクラス",
+      "examples_general": [
+        {
+          "en": "The traffic controller waved us through.",
+          "ja": "交通整理員が通過を合図した。"
+        },
+        {
+          "en": "A game controller lay on the couch.",
+          "ja": "ゲームコントローラがソファに置いてあった。"
+        },
+        {
+          "en": "The project controller tracked spending.",
+          "ja": "プロジェクト管理者が支出を追跡した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "public class UsersController : ControllerBase",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "public class UsersController : ControllerBase",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "public class UsersController : ControllerBase",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`Controller` はASP.NET で HTTP エンドポイントを担うクラス。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_middleware",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "Middleware",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: HTTP パイプラインに挟む共通処理",
+      "meaning_programming_ja": "HTTP パイプラインに挟む共通処理",
+      "examples_general": [
+        {
+          "en": "Security middleware scanned each packet.",
+          "ja": "セキュリティの中間層が各パケットを検査した。"
+        },
+        {
+          "en": "They deployed middleware before the API.",
+          "ja": "API の前にミドルウェアを配置した。"
+        },
+        {
+          "en": "Middleware translated old requests to new ones.",
+          "ja": "ミドルウェアが旧形式の要求を新形式に変換した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "app.UseMiddleware<ErrorHandlingMiddleware>()",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "app.UseMiddleware<ErrorHandlingMiddleware>()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "app.UseMiddleware<ErrorHandlingMiddleware>()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`Middleware` はHTTP パイプラインに挟む共通処理。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_iservice_collection",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "IServiceCollection",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: DI コンテナへサービスを登録するための型",
+      "meaning_programming_ja": "DI コンテナへサービスを登録するための型",
+      "examples_general": [
+        {
+          "en": "The service collection opens at nine.",
+          "ja": "サービス窓口は9時に開く。"
+        },
+        {
+          "en": "Staff updated the service collection schedule.",
+          "ja": "スタッフがサービス提供の予定を更新した。"
+        },
+        {
+          "en": "A service collection point was set near the gate.",
+          "ja": "ゲート近くにサービス集約ポイントが設置された。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "services.AddScoped<IRepo, Repo>()",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "services.AddScoped<IRepo, Repo>()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "services.AddScoped<IRepo, Repo>()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `services.AddScoped<IRepo, Repo>()`"
+    },
+    {
+      "id": "cs_namespace",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "namespace",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: C# で型を論理的にグループ化する宣言",
+      "meaning_programming_ja": "C# で型を論理的にグループ化する宣言",
+      "examples_general": [
+        {
+          "en": "Each team chose a unique namespace for files.",
+          "ja": "各チームはファイル用に固有の名前空間を選んだ。"
+        },
+        {
+          "en": "The namespace avoids naming conflicts.",
+          "ja": "名前空間が命名の衝突を避ける。"
+        },
+        {
+          "en": "Register the namespace before publishing.",
+          "ja": "公開前に名前空間を登録する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "namespace MyApp.Services { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "namespace MyApp.Services { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "namespace MyApp.Services { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`namespace` はC# で型を論理的にグループ化する宣言。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_interface",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "interface",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 実装クラスが守るメソッド契約を定義する",
+      "meaning_programming_ja": "実装クラスが守るメソッド契約を定義する",
+      "examples_general": [
+        {
+          "en": "The new interface is easier to read.",
+          "ja": "新しい画面は読みやすい。"
+        },
+        {
+          "en": "They redesigned the user interface.",
+          "ja": "ユーザーインターフェースを再設計した。"
+        },
+        {
+          "en": "A simple interface helps beginners.",
+          "ja": "シンプルな操作画面は初心者を助ける。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "public interface IEmailSender { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "public interface IEmailSender { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "public interface IEmailSender { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`interface` は実装クラスが守るメソッド契約を定義する。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cs_linq",
+      "schema_version": 2,
+      "type": "package",
+      "tier": "P1",
+      "term": "LINQ",
+      "word_class": "package",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: コレクションを宣言的に問い合わせる .NET 機能",
+      "meaning_programming_ja": "コレクションを宣言的に問い合わせる .NET 機能",
+      "examples_general": [
+        {
+          "en": "Each link in the chain must be strong.",
+          "ja": "鎖の各リンクは強くなければならない。"
+        },
+        {
+          "en": "Click the link to open the guide.",
+          "ja": "リンクをクリックしてガイドを開く。"
+        },
+        {
+          "en": "The video link was shared in chat.",
+          "ja": "動画リンクがチャットで共有された。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "var active = users.Where(u => u.IsActive)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "var active = users.Where(u => u.IsActive)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "var active = users.Where(u => u.IsActive)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import LINQ`"
+    },
+    {
+      "id": "cs_select",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "Select",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: LINQ で各要素を別の形に射影する",
+      "meaning_programming_ja": "LINQ で各要素を別の形に射影する",
+      "examples_general": [
+        {
+          "en": "Please select a seat near the window.",
+          "ja": "窓側の席を選んでください。"
+        },
+        {
+          "en": "She selected the blue fabric for the dress.",
+          "ja": "彼女はドレス用に青い生地を選んだ。"
+        },
+        {
+          "en": "Select the best photo for the cover.",
+          "ja": "表紙用に最良の写真を選ぶ。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "items.Select(x => x.Name)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "items.Select(x => x.Name)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "items.Select(x => x.Name)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `items.Select(x => x.Name)`"
+    },
+    {
+      "id": "cs_where",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "Where",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: LINQ で条件に合う要素だけ残す",
+      "meaning_programming_ja": "LINQ で条件に合う要素だけ残す",
+      "examples_general": [
+        {
+          "en": "Where did you put the keys?",
+          "ja": "鍵はどこに置いた？"
+        },
+        {
+          "en": "This is where we met last year.",
+          "ja": "ここが去年会った場所だ。"
+        },
+        {
+          "en": "Show me where the error appears.",
+          "ja": "エラーが出る場所を見せて。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "users.Where(u => u.Age >= 18)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "users.Where(u => u.Age >= 18)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "users.Where(u => u.Age >= 18)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "csharp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `users.Where(u => u.Age >= 18)`"
+    },
+    {
+      "id": "cpp_std_vector",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "std::vector",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: C++ 標準の動的配列コンテナ",
+      "meaning_programming_ja": "C++ 標準の動的配列コンテナ",
+      "examples_general": [
+        {
+          "en": "Wind vector charts helped pilots land.",
+          "ja": "風向ベクトル図がパイロットの着陸を助けた。"
+        },
+        {
+          "en": "The vector pointed toward the harbor.",
+          "ja": "ベクトルは港の方向を指していた。"
+        },
+        {
+          "en": "Draw a vector from start to finish.",
+          "ja": "始点から終点へのベクトルを描く。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "std::vector<int> scores;",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "std::vector<int> scores;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "std::vector<int> scores;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `std::vector<int> scores;`"
+    },
+    {
+      "id": "cpp_std_string",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "std::string",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: C++ 標準の文字列型",
+      "meaning_programming_ja": "C++ 標準の文字列型",
+      "examples_general": [
+        {
+          "en": "She tied a string around the package.",
+          "ja": "彼女は荷物に紐を巻いた。"
+        },
+        {
+          "en": "A string quartet played at the reception.",
+          "ja": "弦楽四重奏が披露宴で演奏した。"
+        },
+        {
+          "en": "Pull the string to open the blinds.",
+          "ja": "ブラインドを開ける紐を引く。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "std::string name = \"sample\";",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "std::string name = \"sample\";",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "std::string name = \"sample\";",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `std::string name = \"sample\";`"
+    },
+    {
+      "id": "cpp_std_unique_ptr",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "std::unique_ptr",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 単一所有者のスマートポインタ",
+      "meaning_programming_ja": "単一所有者のスマートポインタ",
+      "examples_general": [
+        {
+          "en": "Each ticket has a unique number.",
+          "ja": "各チケットには固有の番号がある。"
+        },
+        {
+          "en": "The design is unique to this region.",
+          "ja": "そのデザインはこの地域特有だ。"
+        },
+        {
+          "en": "A unique key opens the side door.",
+          "ja": "固有の鍵が脇門を開ける。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "auto ptr = std::make_unique<Buffer>();",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "auto ptr = std::make_unique<Buffer>();",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "auto ptr = std::make_unique<Buffer>();",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `auto ptr = std::make_unique<Buffer>();`"
+    },
+    {
+      "id": "cpp_std_shared_ptr",
+      "schema_version": 2,
+      "type": "stdlib",
+      "tier": "P1",
+      "term": "std::shared_ptr",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 共有所有者のスマートポインタ",
+      "meaning_programming_ja": "共有所有者のスマートポインタ",
+      "examples_general": [
+        {
+          "en": "They shared a pointer during the lesson.",
+          "ja": "授業中に指し棒を共有した。"
+        },
+        {
+          "en": "Shared tools must be cleaned after use.",
+          "ja": "共有工具は使用後に清掃する。"
+        },
+        {
+          "en": "The shared pointer aimed at the chart.",
+          "ja": "共有の指示棒が図を指した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "std::shared_ptr<Config> cfg = ...;",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "std::shared_ptr<Config> cfg = ...;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "std::shared_ptr<Config> cfg = ...;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "Python 標準ライブラリのクラス・関数。例: `std::shared_ptr<Config> cfg = ...;`"
+    },
+    {
+      "id": "cpp_namespace",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "namespace",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: C++ で名前の衝突を避けるスコープ",
+      "meaning_programming_ja": "C++ で名前の衝突を避けるスコープ",
+      "examples_general": [
+        {
+          "en": "Use a namespace to group related names.",
+          "ja": "関連する名前をまとめる名前空間を使う。"
+        },
+        {
+          "en": "The XML namespace prevented clashes.",
+          "ja": "XML の名前空間が衝突を防いだ。"
+        },
+        {
+          "en": "Declare the namespace at the top of the file.",
+          "ja": "ファイル先頭で名前空間を宣言する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "namespace cv { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "namespace cv { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "namespace cv { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`namespace` はC++ で名前の衝突を避けるスコープ。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cpp_template",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "template",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 型や値をパラメータ化する C++ 機能",
+      "meaning_programming_ja": "型や値をパラメータ化する C++ 機能",
+      "examples_general": [
+        {
+          "en": "Follow the template for weekly reports.",
+          "ja": "週報のテンプレートに従う。"
+        },
+        {
+          "en": "She used a letter template from HR.",
+          "ja": "人事部の手紙テンプレートを使った。"
+        },
+        {
+          "en": "The template speeds up document creation.",
+          "ja": "テンプレートが文書作成を速める。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "template<typename T> T max(T a, T b)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "template<typename T> T max(T a, T b)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "template<typename T> T max(T a, T b)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`template` は型や値をパラメータ化する C++ 機能。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cpp_override",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "override",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 基底クラスの仮想関数を上書きしたことを明示する",
+      "meaning_programming_ja": "基底クラスの仮想関数を上書きしたことを明示する",
+      "examples_general": [
+        {
+          "en": "Do not override safety rules on site.",
+          "ja": "現場で安全規則を上書きしてはいけない。"
+        },
+        {
+          "en": "Managers may override the default schedule.",
+          "ja": "管理者は既定の予定を上書きできる。"
+        },
+        {
+          "en": "The pilot chose to override autopilot.",
+          "ja": "パイロットは自動操縦を手動で上書きした。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "void draw() override;",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "void draw() override;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "void draw() override;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`override` は基底クラスの仮想関数を上書きしたことを明示する。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cpp_virtual",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "virtual",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: 派生クラスで上書き可能な関数を示す",
+      "meaning_programming_ja": "派生クラスで上書き可能な関数を示す",
+      "examples_general": [
+        {
+          "en": "The museum offered a virtual tour.",
+          "ja": "博物館はバーチャルツアーを提供した。"
+        },
+        {
+          "en": "Virtual meetings saved travel time.",
+          "ja": "オンライン会議が移動時間を省いた。"
+        },
+        {
+          "en": "She attended a virtual conference.",
+          "ja": "彼女はオンライン会議に参加した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "virtual ~Base() = default;",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "virtual ~Base() = default;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "virtual ~Base() = default;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`virtual` は派生クラスで上書き可能な関数を示す。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cpp_nullptr",
+      "schema_version": 2,
+      "type": "identifier",
+      "tier": "P1",
+      "term": "nullptr",
+      "word_class": "noun",
+      "meaning_general_ja": "日常ではあまり使わない。コードでは: ヌルポインタを表す C++11 リテラル",
+      "meaning_programming_ja": "ヌルポインタを表す C++11 リテラル",
+      "examples_general": [
+        {
+          "en": "A null result meant the test failed.",
+          "ja": "空の結果はテスト失敗を意味した。"
+        },
+        {
+          "en": "The pointer was null after reset.",
+          "ja": "リセット後ポインタは空だった。"
+        },
+        {
+          "en": "Check for null before using the value.",
+          "ja": "値を使う前に空か確認する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "int* p = nullptr;",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "int* p = nullptr;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "int* p = nullptr;",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "`nullptr` はヌルポインタを表す C++11 リテラル。変数名・関数名・設定キーなどに使う。（出典: github_vocab）"
+    },
+    {
+      "id": "cpp_cv_mat",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "cv::Mat",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: OpenCV の画像・行列データ型",
+      "meaning_programming_ja": "OpenCV の画像・行列データ型",
+      "examples_general": [
+        {
+          "en": "Place the mat by the front door.",
+          "ja": "玄関にマットを置く。"
+        },
+        {
+          "en": "She rolled out a yoga mat.",
+          "ja": "ヨガマットを広げた。"
+        },
+        {
+          "en": "The welcome mat said hello.",
+          "ja": "ウェルカムマットに挨拶が書いてあった。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "cv::Mat image = cv::imread(path);",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::Mat image = cv::imread(path);",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::Mat image = cv::imread(path);",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `cv::Mat image = cv::imread(path);`"
+    },
+    {
+      "id": "cpp_imread",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "imread",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: OpenCV で画像ファイルを読み込む",
+      "meaning_programming_ja": "OpenCV で画像ファイルを読み込む",
+      "examples_general": [
+        {
+          "en": "Imread the chapter before class.",
+          "ja": "授業前に章を読み直す。"
+        },
+        {
+          "en": "Please reread the instructions carefully.",
+          "ja": "指示を注意深く読み直してください。"
+        },
+        {
+          "en": "He reread the email twice.",
+          "ja": "彼はメールを2回読み直した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "cv::Mat img = cv::imread(\"photo.png\");",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::Mat img = cv::imread(\"photo.png\");",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::Mat img = cv::imread(\"photo.png\");",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `cv::Mat img = cv::imread(\"photo.png\");`"
+    },
+    {
+      "id": "cpp_imwrite",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "imwrite",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: OpenCV で画像をファイルに書き出す",
+      "meaning_programming_ja": "OpenCV で画像をファイルに書き出す",
+      "examples_general": [
+        {
+          "en": "Imwrite your name at the top.",
+          "ja": "上部に名前を書き込む。"
+        },
+        {
+          "en": "She will write the summary tonight.",
+          "ja": "今夜要約を書き込む。"
+        },
+        {
+          "en": "Write the date on each page.",
+          "ja": "各ページに日付を書き込む。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "cv::imwrite(\"out.jpg\", image);",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::imwrite(\"out.jpg\", image);",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "cv::imwrite(\"out.jpg\", image);",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "cpp"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `cv::imwrite(\"out.jpg\", image);`"
+    },
+    {
+      "id": "gas_html_service",
+      "schema_version": 2,
+      "type": "package",
+      "tier": "P1",
+      "term": "HtmlService",
+      "word_class": "package",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS で HTML ダイアログや Web UI を作るサービス",
+      "meaning_programming_ja": "GAS で HTML ダイアログや Web UI を作るサービス",
+      "examples_general": [
+        {
+          "en": "She learned basic HTML to fix the page.",
+          "ja": "ページ修正のために基本 HTML を学んだ。"
+        },
+        {
+          "en": "The email used simple HTML for headings.",
+          "ja": "メールは見出しにシンプルな HTML を使った。"
+        },
+        {
+          "en": "HTML tags structure the article online.",
+          "ja": "HTML タグがオンライン記事の構造を作る。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "HtmlService.createHtmlOutput('<p>Hi</p>')",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "HtmlService.createHtmlOutput('<p>Hi</p>')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "HtmlService.createHtmlOutput('<p>Hi</p>')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import HtmlService`"
+    },
+    {
+      "id": "gas_show_modal_dialog",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "showModalDialog",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: スプレッドシート上にモーダルダイアログを表示する",
+      "meaning_programming_ja": "スプレッドシート上にモーダルダイアログを表示する",
+      "examples_general": [
+        {
+          "en": "A modal dialog blocked the background.",
+          "ja": "モーダルダイアログが背景を遮った。"
+        },
+        {
+          "en": "Show the dialog after saving the file.",
+          "ja": "ファイル保存後にダイアログを表示する。"
+        },
+        {
+          "en": "The dialog asked for confirmation.",
+          "ja": "ダイアログが確認を求めた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "SpreadsheetApp.getUi().showModalDialog(html, 'Title')",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "SpreadsheetApp.getUi().showModalDialog(html, 'Title')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "SpreadsheetApp.getUi().showModalDialog(html, 'Title')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `SpreadsheetApp.getUi().showModalDialog(html, 'Title')`"
+    },
+    {
+      "id": "gas_get_oauth_token",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "ScriptApp.getOAuthToken",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS 実行ユーザーの OAuth トークンを取得する",
+      "meaning_programming_ja": "GAS 実行ユーザーの OAuth トークンを取得する",
+      "examples_general": [
+        {
+          "en": "Get the token from the front desk.",
+          "ja": "受付でトークンを受け取る。"
+        },
+        {
+          "en": "The app needs a token to access mail.",
+          "ja": "アプリはメールアクセス用のトークンが必要だ。"
+        },
+        {
+          "en": "Refresh the token before it expires.",
+          "ja": "期限前にトークンを更新する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "authorization: `Bearer ${ScriptApp.getOAuthToken()}`",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "authorization: `Bearer ${ScriptApp.getOAuthToken()}`",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "authorization: `Bearer ${ScriptApp.getOAuthToken()}`",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `authorization: `Bearer ${ScriptApp.getOAuthToken()}``"
+    },
+    {
+      "id": "gas_url_fetch",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "UrlFetchApp.fetch",
+      "word_class": "method",
+      "meaning_general_ja": "（遠くから）取ってきてくる、連れてくる",
+      "meaning_programming_ja": "GAS から HTTP リクエストを送る",
+      "examples_general": [
+        {
+          "en": "Fetch water from the well nearby.",
+          "ja": "近くの井戸から水を汲む。"
+        },
+        {
+          "en": "The dog loves to fetch the ball.",
+          "ja": "犬はボールを取ってくるのが好きだ。"
+        },
+        {
+          "en": "Fetch the latest prices from the site.",
+          "ja": "サイトから最新価格を取得する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "const res = UrlFetchApp.fetch(url, options)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "const res = UrlFetchApp.fetch(url, options)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "const res = UrlFetchApp.fetch(url, options)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [
+        {
+          "term": "get",
+          "diff_ja": "get は汎用的に「得る」。fetch は遠くから取ってくるイメージ"
+        },
+        {
+          "term": "download",
+          "diff_ja": "download はファイル保存が主。fetch は取得全般"
+        }
+      ],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `const res = UrlFetchApp.fetch(url, options)`"
+    },
+    {
+      "id": "gas_script_properties",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "PropertiesService.getScriptProperties",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: スクリプト単位の設定値を読み書きする",
+      "meaning_programming_ja": "スクリプト単位の設定値を読み書きする",
+      "examples_general": [
+        {
+          "en": "Script properties define character voices.",
+          "ja": "脚本の属性がキャラの声を決める。"
+        },
+        {
+          "en": "Change script properties in the editor.",
+          "ja": "エディタで脚本の設定を変える。"
+        },
+        {
+          "en": "Saved script properties speed rehearsal.",
+          "ja": "保存した脚本設定が稽古を速める。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "PropertiesService.getScriptProperties().getProperty('KEY')",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "PropertiesService.getScriptProperties().getProperty('KEY')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "PropertiesService.getScriptProperties().getProperty('KEY')",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `PropertiesService.getScriptProperties().getProperty('KEY')`"
+    },
+    {
+      "id": "gas_new_trigger",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "ScriptApp.newTrigger",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: 時間・イベントベースのトリガーを作成する",
+      "meaning_programming_ja": "時間・イベントベースのトリガーを作成する",
+      "examples_general": [
+        {
+          "en": "Loud noise can trigger the alarm.",
+          "ja": "大きな音が警報の引き金になる。"
+        },
+        {
+          "en": "Stress may trigger headaches for her.",
+          "ja": "ストレスが彼女の頭痛を引き起こすことがある。"
+        },
+        {
+          "en": "The sensor triggers lights at dusk.",
+          "ja": "センサーが夕暮れに照明を起動する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "ScriptApp.newTrigger('runJob').timeBased().everyHours(1).create()",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "ScriptApp.newTrigger('runJob').timeBased().everyHours(1).create()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "ScriptApp.newTrigger('runJob').timeBased().everyHours(1).create()",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `ScriptApp.newTrigger('runJob').timeBased().everyHours(1).create()`"
+    },
+    {
+      "id": "gas_logger_log",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "Logger.log",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS の実行ログにメッセージを出力する",
+      "meaning_programming_ja": "GAS の実行ログにメッセージを出力する",
+      "examples_general": [
+        {
+          "en": "The logger recorded each tree cut.",
+          "ja": "伐採担当者が切った木を記録した。"
+        },
+        {
+          "en": "Check the ship logger for arrival time.",
+          "ja": "船の航海日誌で到着時刻を確認する。"
+        },
+        {
+          "en": "The camp logger noted weather changes.",
+          "ja": "キャンプの記録係が天気の変化を書いた。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "Logger.log('processed rows: ' + n)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "Logger.log('processed rows: ' + n)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "Logger.log('processed rows: ' + n)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `Logger.log('processed rows: ' + n)`"
+    },
+    {
+      "id": "gas_gmail_app",
+      "schema_version": 2,
+      "type": "package",
+      "tier": "P1",
+      "term": "GmailApp",
+      "word_class": "package",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS から Gmail を操作するグローバル API",
+      "meaning_programming_ja": "GAS から Gmail を操作するグローバル API",
+      "examples_general": [
+        {
+          "en": "Install the mail app on your phone.",
+          "ja": "携帯にメールアプリを入れる。"
+        },
+        {
+          "en": "The Gmail app syncs across devices.",
+          "ja": "Gmail アプリは端末間で同期する。"
+        },
+        {
+          "en": "She checked the app for new messages.",
+          "ja": "彼女はアプリで新着メッセージを確認した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "GmailApp.sendEmail(to, subject, body)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "GmailApp.sendEmail(to, subject, body)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "GmailApp.sendEmail(to, subject, body)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import GmailApp`"
+    },
+    {
+      "id": "gas_calendar_app",
+      "schema_version": 2,
+      "type": "package",
+      "tier": "P1",
+      "term": "CalendarApp",
+      "word_class": "package",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS から Google カレンダーを操作する API",
+      "meaning_programming_ja": "GAS から Google カレンダーを操作する API",
+      "examples_general": [
+        {
+          "en": "The calendar app reminded her of the trip.",
+          "ja": "カレンダーアプリが旅行を思い出させた。"
+        },
+        {
+          "en": "Open the calendar app to see meetings.",
+          "ja": "会議を見るにはカレンダーアプリを開く。"
+        },
+        {
+          "en": "He shared a calendar app with the team.",
+          "ja": "彼はチームとカレンダーアプリを共有した。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "CalendarApp.getDefaultCalendar().createEvent(title, start, end)",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "CalendarApp.getDefaultCalendar().createEvent(title, start, end)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "CalendarApp.getDefaultCalendar().createEvent(title, start, end)",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import CalendarApp`"
+    },
+    {
+      "id": "gas_content_service",
+      "schema_version": 2,
+      "type": "package",
+      "tier": "P1",
+      "term": "ContentService",
+      "word_class": "package",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS Web アプリの HTTP レスポンスを返すサービス",
+      "meaning_programming_ja": "GAS Web アプリの HTTP レスポンスを返すサービス",
+      "examples_general": [
+        {
+          "en": "The content service updated articles daily.",
+          "ja": "コンテンツサービスが毎日記事を更新した。"
+        },
+        {
+          "en": "Subscribe to the content service online.",
+          "ja": "オンラインでコンテンツサービスに登録する。"
+        },
+        {
+          "en": "Content service fees are billed monthly.",
+          "ja": "コンテンツサービス料は月次請求だ。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "return ContentService.createTextOutput(JSON.stringify(data))",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "return ContentService.createTextOutput(JSON.stringify(data))",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "return ContentService.createTextOutput(JSON.stringify(data))",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "import するパッケージ・ライブラリ名。例: `import ContentService`"
+    },
+    {
+      "id": "gas_on_edit",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "onEdit",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: セル編集時に自動実行される GAS トリガー関数",
+      "meaning_programming_ja": "セル編集時に自動実行される GAS トリガー関数",
+      "examples_general": [
+        {
+          "en": "Turn on edit mode to fix typos.",
+          "ja": "誤字を直すには編集モードをオンにする。"
+        },
+        {
+          "en": "On edit, save a copy of the draft.",
+          "ja": "編集時は草稿のコピーを保存する。"
+        },
+        {
+          "en": "Editors on edit must track changes.",
+          "ja": "編集中の担当者は変更を追跡する。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "function onEdit(e) { ... }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "function onEdit(e) { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "function onEdit(e) { ... }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `function onEdit(e) { ... }`"
+    },
+    {
+      "id": "gas_do_get",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "doGet",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS Web アプリの GET リクエスト入口",
+      "meaning_programming_ja": "GAS Web アプリの GET リクエスト入口",
+      "examples_general": [
+        {
+          "en": "Do get some rest before the exam.",
+          "ja": "試験前にしっかり休んで。"
+        },
+        {
+          "en": "Please do get in touch after you arrive.",
+          "ja": "到着後ぜひ連絡してください。"
+        },
+        {
+          "en": "Do get the forms from the office.",
+          "ja": "事務室から用紙を受け取ってください。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "function doGet(e) { return HtmlService.createHtmlOutput('OK'); }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "function doGet(e) { return HtmlService.createHtmlOutput('OK'); }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "function doGet(e) { return HtmlService.createHtmlOutput('OK'); }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `function doGet(e) { return HtmlService.createHtmlOutput('OK'); }`"
+    },
+    {
+      "id": "gas_do_post",
+      "schema_version": 2,
+      "type": "method",
+      "tier": "P1",
+      "term": "doPost",
+      "word_class": "method",
+      "meaning_general_ja": "日常会話ではほとんど使わない。コードでは: GAS Web アプリの POST リクエスト入口",
+      "meaning_programming_ja": "GAS Web アプリの POST リクエスト入口",
+      "examples_general": [
+        {
+          "en": "Do post the notice on the board.",
+          "ja": "掲示板に告知を投稿してください。"
+        },
+        {
+          "en": "She will post photos after the trip.",
+          "ja": "旅行後に写真を投稿する。"
+        },
+        {
+          "en": "Do post updates in the group chat.",
+          "ja": "グループチャットに更新を投稿して。"
+        }
+      ],
+      "examples_code": [
+        {
+          "snippet": "function doPost(e) { const body = e.postData.contents; }",
+          "note_ja": "コード例",
+          "source_file": null
+        },
+        {
+          "snippet": "function doPost(e) { const body = e.postData.contents; }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        },
+        {
+          "snippet": "function doPost(e) { const body = e.postData.contents; }",
+          "note_ja": "別の文脈での同型",
+          "source_file": null
+        }
+      ],
+      "confusable_with": [],
+      "bad_example": null,
+      "good_alternative": null,
+      "pattern": null,
+      "source_project": "github_vocab",
+      "source_file": null,
+      "related_terms": [],
+      "cloze_template": null,
+      "returns_or_effect": null,
+      "disambiguation": null,
+      "pronunciation_note": null,
+      "tags": [
+        "gas"
+      ],
+      "srs_level": null,
+      "last_reviewed": null,
+      "enrichment_status": "full",
+      "usage_note_ja": "ライブラリに実在するメソッド・API。例: `function doPost(e) { const body = e.postData.contents; }`"
     },
     {
       "id": "pkg_httpx",
