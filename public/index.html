@@ -482,10 +482,34 @@
       explainRoot.appendChild(value);
     }
 
+    const FORBIDDEN_EXAMPLE_PARTS = [
+      " is on the table.",
+      " setting is saved in config.",
+      "We updated the ",
+      "Open the latest ",
+      "(technical term — used in code",
+      "Developers use ",
+      "See documentation for ",
+    ];
+
+    function isForbiddenGeneralExample(sentence) {
+      const text = (sentence || "").trim();
+      if (!text) {
+        return true;
+      }
+      return FORBIDDEN_EXAMPLE_PARTS.some((part) => text.includes(part));
+    }
+
+    function pickDisplayExamples(examples) {
+      return (examples || [])
+        .filter((row) => row && row.en && !isForbiddenGeneralExample(row.en))
+        .slice(0, 2);
+    }
+
     function buildExampleList(exampleRows) {
       if (!exampleRows.length) {
         const emptyText = document.createElement("span");
-        emptyText.textContent = "—";
+        emptyText.textContent = "例文は準備中です";
         return emptyText;
       }
       const list = document.createElement("ul");
@@ -513,7 +537,7 @@
         line.className = "result-line result-line--ng";
       }
 
-      const exampleRows = (current.examples_general || []).slice(0, 2);
+      const exampleRows = pickDisplayExamples(current.examples_general);
       const codeExample = (current.examples_code || [])[0];
       const explainRoot = $("explain");
       explainRoot.replaceChildren();
