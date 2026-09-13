@@ -15,6 +15,7 @@
 ### Changed
 
 - カード解説品質: `card_quality.py` + `enrichment_catalog.py` でテンプレ生成廃止（anti 13 語個別・P2/DS 意味/usage 自動執筆）
+- anti（単体の汎用名）の `meaning_programming_ja` を変数名・引数名・関数名の使われ方の記述に変更
 - `public/index.html` — コード例 `note_ja` 表示・anti の `good_alternative` 表示
 - `scripts/validate_export_json.py` — プレースホルダ・テンプレ usage 検出を追加
 - `doc/life` 正本の例文品質改善（anti_pattern 全件・テンプレ例文・import のみコード例）を `sync_to_web.ps1` で同期
