@@ -565,6 +565,20 @@
       const codeBlock = document.createElement("code");
       codeBlock.textContent = codeExample ? codeExample.snippet : "—";
       appendExplainRow(explainRoot, "コードでの例", codeBlock);
+      if (codeExample && codeExample.note_ja) {
+        appendExplainRow(
+          explainRoot,
+          "コード例の補足",
+          document.createTextNode(codeExample.note_ja)
+        );
+      }
+      if (current.type === "anti_pattern" && current.good_alternative) {
+        appendExplainRow(
+          explainRoot,
+          "置き換え例",
+          document.createTextNode(current.good_alternative)
+        );
+      }
 
       usedIds.add(current.id);
       updateStats();

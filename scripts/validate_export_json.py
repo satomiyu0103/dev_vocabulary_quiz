@@ -14,6 +14,35 @@ REQUIRED_CARD_FIELDS = (
 )
 MAX_EXAMPLES_GENERAL = 3
 
+# Mirror dev-vocabulary card_quality rules (keep in sync manually).
+FORBIDDEN_USAGE_MARKERS = ("do_", "_action()")
+FORBIDDEN_MEANING_PREFIX = "単体の変数名・引数名として禁止。"
+PLACEHOLDER_GENERAL_PREFIXES = (
+    "（専門用語",
+    "（英語の",
+    "（技術用語",
+)
+
+
+def _quality_errors(card: dict, index: int) -> list[str]:
+    errors: list[str] = []
+    card_id = card.get("id", f"cards[{index}]")
+    mg = card.get("meaning_general_ja", "")
+    if any(str(mg).startswith(prefix) for prefix in PLACEHOLDER_GENERAL_PREFIXES):
+        errors.append(f"cards[{index}] ({card_id}) placeholder meaning_general_ja")
+    mp = card.get("meaning_programming_ja", "")
+    if str(mp).startswith(FORBIDDEN_MEANING_PREFIX):
+        errors.append(f"cards[{index}] ({card_id}) templated meaning_programming_ja")
+    un = card.get("usage_note_ja", "")
+    if "do_" in str(un) and "_action()" in str(un):
+        errors.append(f"cards[{index}] ({card_id}) do_*_action usage_note_ja")
+    if un == "変数名・引数名として単体では使わない語。具体的な名前（例: parsed_json）に置き換える。":
+        errors.append(f"cards[{index}] ({card_id}) duplicate anti usage_note_ja")
+    for j, ex in enumerate(card.get("examples_code") or []):
+        if not ex.get("note_ja"):
+            errors.append(f"cards[{index}] ({card_id}) examples_code[{j}] missing note_ja")
+    return errors
+
 
 def validate_export(data: object) -> list[str]:
     """Return a list of validation error messages (empty if valid)."""
@@ -62,6 +91,8 @@ def validate_export(data: object) -> list[str]:
                 errors.append(
                     f"cards[{index}] ({card_id}) examples_general exceeds {MAX_EXAMPLES_GENERAL}"
                 )
+
+        errors.extend(_quality_errors(card, index))
 
     return errors
 
